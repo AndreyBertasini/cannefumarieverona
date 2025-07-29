@@ -1,0 +1,102 @@
+/* 
+ * Cards and Grid Stylesheet for Canne Fumarie Verona
+ * Contains styles for content cards, grids, and city links
+ */
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Content Card */
+.content-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+}
+
+.content-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.content-card h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* City Links Grid */
+.city-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.city-link {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #1e3c72;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.city-link:hover {
+    background: #1e3c72;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Contact Info Card */
+.contact-info {
+    margin: 2rem 0; 
+    padding: 1rem; 
+    background-color: #f8f9fa; 
+    border-radius: 8px; 
+    border-left: 4px solid #1e3c72;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-card {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+    
+    .city-links {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .content-card {
+        padding: 12px;
+    }
+}

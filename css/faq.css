@@ -1,0 +1,103 @@
+/* 
+ * FAQ Stylesheet for Canne Fumarie Verona
+ * Contains styles for FAQ sections, questions, and search functionality
+ */
+
+/* FAQ Categories */
+.faq-categories {
+    margin-bottom: 2rem;
+}
+
+.faq-category {
+    margin-bottom: 1.5rem;
+}
+
+.faq-category h3 {
+    color: #1e3c72;
+    border-bottom: 2px solid #1e3c72;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* FAQ Questions */
+.faq-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.faq-question-item {
+    padding: 0.75rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.faq-question-item:hover {
+    background-color: #e9ecef;
+}
+
+.faq-question-link {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+/* FAQ Breadcrumb */
+.faq-breadcrumb {
+    margin-bottom: 1.5rem;
+}
+
+.faq-breadcrumb a {
+    color: #1e3c72;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.faq-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Search */
+.faq-search {
+    margin-bottom: 1.5rem;
+}
+
+#faq-search-input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#faq-search-input:focus {
+    border-color: #1e3c72;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(30, 60, 114, 0.2);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .faq-question-item {
+        padding: 0.5rem;
+    }
+    
+    /* FAQ Specific */
+    .faq-question-item {
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .faq-breadcrumb {
+        margin-bottom: 15px;
+    }
+    
+    #faq-search-input {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+}
