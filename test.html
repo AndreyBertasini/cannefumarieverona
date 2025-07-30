@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+    <title>Test Page - Canne Fumarie Verona</title>
+    <!-- Cloudflare Cache Control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #1e3c72;
+        }
+        
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        
+        .failure {
+            color: red;
+            font-weight: bold;
+        }
+        
+        button {
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: linear-gradient(45deg, #2a5298, #1e3c72);
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Page - Canne Fumarie Verona</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: JavaScript Execution</h2>
+        <p>This test checks if JavaScript is executing properly.</p>
+        <div id="js-test-result">Testing...</div>
+        <button onclick="runJsTest()">Run Test</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 2: DOM Content Loaded</h2>
+        <p>This test checks if the DOMContentLoaded event is firing properly.</p>
+        <div id="dom-test-result">Waiting for DOMContentLoaded...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 3: Page Content Display</h2>
+        <p>This test checks if page content can be shown and hidden properly.</p>
+        <div id="page-test-container">
+            <div id="page1" class="page-content" style="display: none;">This is Page 1 content.</div>
+            <div id="page2" class="page-content" style="display: none;">This is Page 2 content.</div>
+        </div>
+        <div id="page-test-result">Ready to test</div>
+        <button onclick="showTestPage('page1')">Show Page 1</button>
+        <button onclick="showTestPage('page2')">Show Page 2</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>Next Steps</h2>
+        <p>If all tests pass, the changes made to fix the blank page issue should work when the site is hosted on GitHub Pages with Cloudflare.</p>
+        <p>Please follow these steps to deploy the changes:</p>
+        <ol>
+            <li>Commit and push all changes to your GitHub repository</li>
+            <li>Wait a few minutes for GitHub Pages to build and deploy your site</li>
+            <li>Clear your browser cache or use an incognito/private browsing window to access your site</li>
+            <li>If you still see a blank page, check the browser's developer console for any errors</li>
+        </ol>
+    </div>
+    
+    <script>
+        // Test 1: JavaScript Execution
+        function runJsTest() {
+            document.getElementById('js-test-result').innerHTML = '<span class="success">Success! JavaScript is executing properly.</span>';
+        }
+        
+        // Test 2: DOM Content Loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('dom-test-result').innerHTML = '<span class="success">Success! DOMContentLoaded event fired properly.</span>';
+        });
+        
+        // Test 3: Page Content Display
+        function showTestPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+            
+            // Show the selected page
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.style.display = 'block';
+                document.getElementById('page-test-result').innerHTML = '<span class="success">Success! Page content is displaying properly.</span>';
+            } else {
+                document.getElementById('page-test-result').innerHTML = '<span class="failure">Failure! Could not find page with ID: ' + pageId + '</span>';
+            }
+        }
+        
+        // Run JavaScript test automatically
+        window.onload = function() {
+            runJsTest();
+        };
+    </script>
+</body>
+</html>
