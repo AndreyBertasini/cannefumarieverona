@@ -1,0 +1,42 @@
+/* 
+ * Dropdown Submenu Stylesheet for Canne Fumarie Verona
+ * Contains styles for dropdown submenus in the navigation
+ */
+
+/* Dropdown Submenu Styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-toggle::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 100%;
+    left: 0;
+    margin-top: 0;
+    margin-left: 0;
+    border-top-left-radius: 0;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Submenu Adjustments */
+@media (max-width: 768px) {
+    .dropdown-submenu .dropdown-menu {
+        left: 0;
+        top: 100%;
+        margin-left: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+}

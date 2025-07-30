@@ -1220,18 +1220,192 @@
         }
     }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKW9BN5J16"></script>
+    <!-- Google tag (gtag.js) - Will be loaded conditionally based on cookie consent -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-GKW9BN5J16');
+      // Cookie consent management
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+      
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+      
+      function loadGoogleAnalytics() {
+        // Create script element for Google Analytics
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-GKW9BN5J16";
+        document.head.appendChild(gaScript);
+        
+        // Initialize Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GKW9BN5J16');
+      }
+      
+      // Check for existing consent when DOM is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        var cookieConsent = document.getElementById('cookie-consent');
+        var cookieAccept = document.getElementById('cookie-accept');
+        var cookieDecline = document.getElementById('cookie-decline');
+        
+        // Check if user has already made a choice
+        var consentCookie = getCookie('cookie-consent');
+        
+        if (consentCookie === 'accepted') {
+          cookieConsent.style.display = 'none';
+          loadGoogleAnalytics();
+        } else if (consentCookie === 'declined') {
+          cookieConsent.style.display = 'none';
+        }
+        
+        // Handle accept button click
+        cookieAccept.addEventListener('click', function() {
+          setCookie('cookie-consent', 'accepted', 365);
+          cookieConsent.style.display = 'none';
+          loadGoogleAnalytics();
+        });
+        
+        // Handle decline button click
+        cookieDecline.addEventListener('click', function() {
+          setCookie('cookie-consent', 'declined', 365);
+          cookieConsent.style.display = 'none';
+        });
+      });
     </script>
+    
+    <!-- Cookie Consent Styles -->
+    <style>
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .cookie-consent-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .cookie-consent h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #ffd700;
+            font-size: 1.3rem;
+        }
+        
+        .cookie-consent p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        
+        .cookie-consent-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        .cookie-accept-btn {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        .cookie-decline-btn {
+            background: transparent;
+            color: white;
+            padding: 10px 20px;
+            border: 1px solid white;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cookie-accept-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+        
+        .cookie-decline-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .cookie-consent {
+                padding: 15px;
+            }
+            
+            .cookie-consent h3 {
+                font-size: 1.1rem;
+            }
+            
+            .cookie-consent p {
+                font-size: 0.9rem;
+            }
+            
+            .cookie-consent-buttons {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+            
+            .cookie-accept-btn, .cookie-decline-btn {
+                width: 100%;
+                padding: 12px 15px;
+            }
+        }
+    </style>
     </head>
 <body>
-<div class="menu-overlay"></div>
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent" class="cookie-consent">
+    <div class="cookie-consent-content">
+        <h3>This website uses cookies</h3>
+        <p>Utilizziamo i cookie per migliorare la tua esperienza sul nostro sito. I cookie sono necessari per il funzionamento del sito e ci aiutano a offrirti contenuti personalizzati. Utilizziamo anche cookie di terze parti per analisi statistiche. Cliccando "Accetta", acconsenti all'uso di tutti i cookie. Puoi anche scegliere di rifiutare i cookie non essenziali.</p>
+        <div class="cookie-consent-buttons">
+            <button id="cookie-accept" class="cookie-accept-btn">Accetta</button>
+            <button id="cookie-decline" class="cookie-decline-btn">Rifiuta</button>
+        </div>
+    </div>
+</div>
+
+
 <nav class="nav">
 <div class="nav-container">
 <div class="logo">🏠 Preventivi Canne Fumarie Verona</div>
@@ -1250,44 +1424,18 @@
 </ul>
 </li>
 <li class="dropdown">
-<a class="dropdown-toggle" href="#">FAQ</a>
+<a class="dropdown-toggle" href="#">Prodotti</a>
 <ul class="dropdown-menu">
-<li><a href="#" onclick="showPage('faq')">Tutte le Domande Frequenti</a></li>
-<li><a href="faq/index.html">Archivio FAQ Completo</a></li>
-<li class="dropdown-submenu">
-<a class="dropdown-toggle" href="#">Categorie FAQ</a>
-<ul class="dropdown-menu">
-<li><a href="faq/index.html#stufe-pellet">Stufe a Pellet</a></li>
 <li><a href="faq/index.html#stufe-legna">Stufe a Legna</a></li>
 <li><a href="faq/index.html#caminetti">Caminetti</a></li>
 <li><a href="faq/index.html#termostufe">Termostufe</a></li>
 <li><a href="faq/index.html#caldaie">Caldaie</a></li>
-<li><a href="faq/index.html#canne-fumarie">Canne Fumarie</a></li>
-<li><a href="faq/index.html#pellet">Pellet</a></li>
-<li><a href="faq/index.html#bioetanolo">Bioetanolo</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="dropdown">
-<a class="dropdown-toggle" href="#">Stufe a Pellet</a>
-<ul class="dropdown-menu">
-<li><a href="#" onclick="showPage('stufe-pellet-intro')">Introduzione e Normativa</a></li>
-<li><a href="#" onclick="showPage('stufe-pellet-tipologie')">Tipologie di Stufe</a></li>
-<li><a href="#" onclick="showPage('stufe-pellet-confronto')">Con o Senza Canna Fumaria</a></li>
-<li><a href="#" onclick="showPage('stufe-pellet-dimensioni')">Dimensioni e Materiali</a></li>
-<li><a href="#" onclick="showPage('stufe-pellet-marche')">Migliori Marche</a></li>
-<li><a href="#" onclick="showPage('stufe-pellet-installazione')">Installazione</a></li>
-<li><a href="#" onclick="showPage('stufe-pellet-ibridi')">Sistemi Ibridi</a></li>
-<li><a href="#" onclick="showPage('stufe-pellet-prezzi')">Prezzi e Accessori</a></li>
-<li><a href="faq/index.html#stufe-pellet">FAQ Stufe a Pellet</a></li>
-<li><a href="#" onclick="showPage('stufe-pellet-manutenzione')">Manutenzione</a></li>
-</ul>
-</li>
 <li><a href="materiali.html">Materiali</a></li>
+</ul>
+</li>
+<li><a href="faq/index.html">FAQ</a></li>
 <li><a href="comuni.html">Comuni Serviti</a></li>
 <li><a href="normative.html">Normative</a></li>
-<li><a class="cta-nav" href="preventivo.html">Preventivo</a></li>
 </ul>
 </div>
 </div>
@@ -1302,9 +1450,9 @@
                     Oltre 25 anni di esperienza • Garanzia decennale • Materiali certificati CE</p>
 <div style="margin: 2rem 0;">
 <a class="phone-cta" href="tel:+393801568721">📞 Chiama Ora: 380 156 8721</a>
+<a class="phone-cta" href="https://wa.me/393801568721" style="background: linear-gradient(45deg, #25D366, #128C7E); margin-top: 1rem;">📱 Contattaci su WhatsApp</a>
 </div>
 <div class="cta-buttons-container">
-<a class="cta-button" href="preventivo.html">Richiedi Preventivo Gratuito</a>
 <a class="cta-button" href="#" onclick="showPage('servizi')">Scopri i Servizi</a>
 </div>
 </div>
@@ -1847,51 +1995,6 @@
 </div>
 </section>
 </div>
-<!-- PREVENTIVO PAGE -->
-<div class="page-content" id="preventivo">
-<div class="breadcrumb">
-<div class="container">
-<a href="#" onclick="showPage('home')">Home</a> &gt; Richiedi Preventivo
-            </div>
-</div>
-<section class="section">
-<div class="container">
-<h1>Richiedi un Preventivo Gratuito</h1>
-<div class="contact-form">
-<form id="preventivo-form">
-<div class="form-group">
-<label for="nome">Nome e Cognome*</label>
-<input id="nome" name="nome" required="" type="text"/>
-</div>
-<div class="form-group">
-<label for="telefono">Telefono*</label>
-<input id="telefono" name="telefono" required="" type="tel"/>
-</div>
-<div class="form-group">
-<label for="comune">Comune*</label>
-<input id="comune" name="comune" required="" type="text"/>
-</div>
-<div class="form-group">
-<label for="tipo-intervento">Tipo di Intervento*</label>
-<select id="tipo-intervento" name="tipo-intervento" required="">
-<option value="">Seleziona...</option>
-<option value="installazione-nuova">Installazione Nuova Canna Fumaria</option>
-<option value="manutenzione">Manutenzione/Pulizia</option>
-<option value="riparazione">Riparazione</option>
-<option value="adeguamento">Adeguamento Normativo</option>
-<option value="consulenza">Consulenza Tecnica</option>
-</select>
-</div>
-<div class="form-group">
-<label for="messaggio">Descrivi brevemente le tue esigenze</label>
-<textarea id="messaggio" name="messaggio" rows="5"></textarea>
-</div>
-<button class="submit-btn" type="submit">Invia Richiesta</button>
-</form>
-</div>
-</div>
-</section>
-</div>
 <!-- COMUNI PAGE -->
 <div class="page-content" id="comuni">
 <div class="breadcrumb">
@@ -2283,185 +2386,6 @@
 </div>
 </section>
 </div>
-<!-- STUFE A PELLET INTRO PAGE -->
-<div class="page-content" id="stufe-pellet-intro">
-<div class="breadcrumb">
-<div class="container">
-<a href="#" onclick="showPage('home')">Home</a> &gt; <a href="#" onclick="showPage('stufe-pellet-intro')">Stufe a Pellet</a> &gt; Introduzione e Normativa
-            </div>
-</div>
-<section class="section">
-<div class="container">
-<h1>Guida 2025 a Stufe a Pellet e Canne Fumarie: Normativa, Scelta e Installazione</h1>
-<div class="seo-text">
-<p>L'installazione di una stufa a pellet in Italia richiede sempre una canna fumaria certificata: la UNI 10683 impone lo scarico a tetto, l'impiego di componenti marcati CE e la manutenzione annuale. L'obbligo si estende a qualunque potenza ≤ 35 kW, mentre il DM 37/2008, lettera c), stabilisce che solo imprese abilitate possono progettare e installare il sistema fumario, rilasciando la Dichiarazione di Conformità. Rispetto ai combustibili fossili, il pellet resta competitivo: ad aprile 2025 il costo medio si attesta a 75 €/MWh contro 106 €/MWh del gas naturale e 135 €/MWh del gasolio, con un risparmio rispettivamente del 30% e del 44%.</p>
-<h3>Costo energetico per MWh: pellet vs combustibili fossili (aprile 2025)</h3>
-<h3>1. Quadro Normativo e Autorizzazioni</h3>
-<h4>1.1 Gerarchia delle fonti</h4>
-<p>La legislazione nazionale (UNI 10683 : 2022, UNI EN 1443 : 2019, DM 37/08, DPR 412/93) prevale sui regolamenti edilizi comunali, che devono adeguarsi alle prescrizioni statali. In Veneto le Linee Guida regionali per gli impianti termici ribadiscono l'obbligo del tiraggio naturale con canna dedicata e il divieto di scarico a parete per generatori a biomassa.</p>
-<h4>1.2 Obblighi chiave</h4>
-<ul>
-<li>Canna fumaria verticale con sbocco ≥ 1 m oltre il colmo del tetto</li>
-<li>Divieto di canne collettive per stufe a pellet</li>
-<li>Componenti marcati CE secondo UNI EN 1856-2 e UNI EN 1443</li>
-<li>Installatore abilitato DM 37/08-c con compilazione Di.Co. entro 30 giorni dal collaudo</li>
-<li>Pulizia annuale e manutenzione straordinaria obbligatorie UNI 10683-§9</li>
-</ul>
-<h4>1.3 Deroghe allo scarico a parete</h4>
-<p>Lo scarico laterale ("balanced flue") è ammesso solo per caldaie a gas a condensazione in deroga art. 5 §9-bis DPR 412/93; non è mai consentito per stufe a pellet tradizionali. I modelli "vent-free" venduti come senza canna fumaria restano vietati negli edifici residenziali italiani salvo certificazione specifica e rispetto distanze UNI 7129.</p>
-<h3>2. Tipologie di Stufe a Pellet</h3>
-<h4>2.1 Ad Aria, Canalizzate e Idro</h4>
-<p>Le stufe ad aria diffondono calore per ventilazione forzata e riscaldano fino a 300 m³ con rendimenti &gt; 90%. Le versioni canalizzate impiegano condotti flessibili Ø 80 mm per convogliare l'aria calda in stanze adiacenti fino a 8 m (tecnologia Multifuoco® di Piazzetta). Le idro-stufe (termocamini) trasferiscono l'82% dell'energia all'acqua dell'impianto, integrando caloriferi e ACS.</p>
-<h4>2.2 Soluzioni senza canna: limiti normativi</h4>
-<p>I sistemi "scarico a parete" o balanced flue utilizzano un kit coassiale Ø 100/150 mm per espellere i fumi orizzontalmente, ma richiedono doppia certificazione apparecchio-terminali e non possono superare 35 kW. In condominio restano soggetti al regolamento assembleare e alle distanze minime UNI 7129.</p>
-<p>Per approfondire le diverse tipologie di stufe a pellet e le soluzioni disponibili, <a href="#" onclick="showPage('stufe-pellet-tipologie')">consulta la nostra guida completa</a>.</p>
-</div>
-<div class="content-grid">
-<div class="content-card">
-<h3>📋 Normative Essenziali</h3>
-<p>Le principali normative da rispettare per l'installazione di stufe a pellet e canne fumarie:</p>
-<ul style="margin-top: 1rem; padding-left: 1rem;">
-<li>UNI 10683:2022</li>
-<li>UNI EN 1443:2019</li>
-<li>DM 37/08, lettera c</li>
-<li>DPR 412/93</li>
-<li>Regolamenti edilizi locali</li>
-</ul>
-</div>
-<div class="content-card">
-<h3>🔍 Vantaggi Economici</h3>
-<p>Perché scegliere una stufa a pellet con canna fumaria certificata:</p>
-<ul style="margin-top: 1rem; padding-left: 1rem;">
-<li>Risparmio del 30% rispetto al gas</li>
-<li>Risparmio del 44% rispetto al gasolio</li>
-<li>Accesso a incentivi fiscali</li>
-<li>Maggiore efficienza energetica</li>
-<li>Lunga durata dell'impianto</li>
-</ul>
-</div>
-<div class="content-card">
-<h3>🛡️ Installazione Professionale</h3>
-<p>Affidati a professionisti qualificati per l'installazione della tua stufa a pellet e canna fumaria:</p>
-<ul style="margin-top: 1rem; padding-left: 1rem;">
-<li>Sopralluogo tecnico gratuito</li>
-<li>Installatori abilitati DM 37/08</li>
-<li>Rilascio Dichiarazione di Conformità</li>
-<li>Garanzia sul lavoro svolto</li>
-<li>Assistenza post-vendita</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-</div>
-<!-- STUFE A PELLET TIPOLOGIE PAGE -->
-<div class="page-content" id="stufe-pellet-tipologie">
-<div class="breadcrumb">
-<div class="container">
-<a href="#" onclick="showPage('home')">Home</a> &gt; <a href="#" onclick="showPage('stufe-pellet-intro')">Stufe a Pellet</a> &gt; Tipologie di Stufe
-            </div>
-</div>
-<section class="section">
-<div class="container">
-<h1>Tipologie di Stufe a Pellet e Soluzioni Senza Canna Fumaria</h1>
-<div class="seo-text">
-<p>Le stufe a pellet rappresentano una soluzione di riscaldamento efficiente ed ecologica, ma è fondamentale conoscere le diverse tipologie disponibili sul mercato per scegliere quella più adatta alle proprie esigenze. Ogni modello presenta caratteristiche specifiche in termini di potenza, efficienza, modalità di diffusione del calore e requisiti di installazione.</p>
-<h3>Stufe a Pellet ad Aria</h3>
-<p>Le stufe a pellet ad aria sono la tipologia più diffusa e rappresentano la soluzione ideale per riscaldare ambienti di dimensioni contenute (fino a 300 m³). Funzionano diffondendo il calore attraverso un sistema di ventilazione forzata che spinge l'aria calda direttamente nell'ambiente.</p>
-<p>Caratteristiche principali:</p>
-<ul>
-<li>Rendimento termico superiore al 90%</li>
-<li>Potenza variabile da 6 a 12 kW</li>
-<li>Ventilazione regolabile (alcuni modelli offrono anche la modalità silenziosa)</li>
-<li>Installazione semplice che richiede solo una presa elettrica e lo scarico fumi</li>
-<li>Costi contenuti rispetto ad altre tipologie</li>
-</ul>
-<h3>Stufe a Pellet Canalizzate</h3>
-<p>Le stufe canalizzate rappresentano un'evoluzione delle stufe ad aria e permettono di distribuire il calore in più ambienti attraverso un sistema di condotti. Sono ideali per chi desidera riscaldare più stanze con un unico apparecchio.</p>
-<p>Caratteristiche principali:</p>
-<ul>
-<li>Sistema di condotti flessibili (generalmente Ø 80 mm) che trasportano l'aria calda</li>
-<li>Possibilità di riscaldare stanze adiacenti fino a 8 metri di distanza</li>
-<li>Tecnologia avanzata come il sistema Multifuoco® di Piazzetta che permette di regolare la temperatura in ogni ambiente</li>
-<li>Potenza generalmente compresa tra 8 e 14 kW</li>
-<li>Controllo indipendente dei ventilatori per ogni zona</li>
-</ul>
-<h3>Termostufe a Pellet (Idro)</h3>
-<p>Le termostufe a pellet, dette anche stufe idro, sono progettate per riscaldare l'acqua dell'impianto di riscaldamento esistente. Rappresentano una soluzione ideale per chi desidera integrare o sostituire la caldaia tradizionale.</p>
-<p>Caratteristiche principali:</p>
-<ul>
-<li>Trasferiscono fino all'82% dell'energia prodotta all'acqua dell'impianto</li>
-<li>Alimentano radiatori, pannelli radianti a pavimento e producono acqua calda sanitaria</li>
-<li>Potenza elevata (da 15 a 25 kW) adatta anche a superfici ampie</li>
-<li>Possibilità di integrazione con impianti solari termici</li>
-<li>Richiedono un'installazione più complessa e l'intervento di un termoidraulico</li>
-</ul>
-<h3>Inserti a Pellet per Camini</h3>
-<p>Gli inserti a pellet sono progettati per essere installati all'interno di camini esistenti, trasformandoli in sistemi di riscaldamento più efficienti e meno inquinanti.</p>
-<p>Caratteristiche principali:</p>
-<ul>
-<li>Sfruttano la canna fumaria esistente (previa verifica di compatibilità)</li>
-<li>Mantengono l'estetica del camino tradizionale</li>
-<li>Offrono un rendimento molto superiore rispetto al camino a legna</li>
-<li>Disponibili in versione ad aria o idro</li>
-<li>Richiedono una presa elettrica nelle vicinanze</li>
-</ul>
-<h3>Stufe a Pellet "Senza Canna Fumaria"</h3>
-<p>Contrariamente a quanto suggerisce il nome, le cosiddette stufe a pellet "senza canna fumaria" non sono realmente prive di un sistema di evacuazione dei fumi, ma utilizzano soluzioni alternative allo scarico a tetto tradizionale.</p>
-<p>Queste stufe, dette anche "vent-free" o "balanced flue", utilizzano un sistema di scarico a parete con kit coassiale (generalmente Ø 100/150 mm). È importante sottolineare che in Italia, secondo la normativa UNI 10683 e il DPR 412/93, lo scarico a parete per stufe a pellet è generalmente vietato, con rare eccezioni:</p>
-<ul>
-<li>Sostituzione di caldaie pre-2013 già dotate di scarico a parete</li>
-<li>Presenza di vincoli storico-paesaggistici documentati</li>
-<li>Impossibilità tecnica certificata da un professionista</li>
-</ul>
-<p>Questi sistemi richiedono una doppia certificazione (apparecchio e terminali) e sono soggetti a limitazioni di potenza (≤ 35 kW) e alle distanze minime da finestre, balconi e proprietà confinanti secondo la UNI 7129.</p>
-<p>Per un confronto dettagliato tra stufe con e senza canna fumaria tradizionale, <a href="#" onclick="showPage('stufe-pellet-confronto')">consulta la nostra guida comparativa</a>.</p>
-</div>
-<div class="content-grid">
-<div class="content-card">
-<h3>🔥 Stufe ad Aria</h3>
-<p>Ideali per ambienti singoli fino a 300 m³, con ventilazione forzata per una diffusione rapida del calore.</p>
-<ul style="margin-top: 1rem; padding-left: 1rem;">
-<li>Rendimento &gt;90%</li>
-<li>Potenza 6-12 kW</li>
-<li>Installazione semplice</li>
-<li>Costi contenuti</li>
-<li>Manutenzione facile</li>
-</ul>
-</div>
-<div class="content-card">
-<h3>🌡️ Termostufe Idro</h3>
-<p>Perfette per chi vuole integrare o sostituire la caldaia tradizionale, riscaldando l'acqua dell'impianto.</p>
-<ul style="margin-top: 1rem; padding-left: 1rem;">
-<li>Alimentano radiatori</li>
-<li>Producono acqua calda</li>
-<li>Potenza 15-25 kW</li>
-<li>Integrabili con solare</li>
-<li>Alte prestazioni</li>
-</ul>
-</div>
-<div class="content-card">
-<h3>📋 Consulenza Personalizzata</h3>
-<p>Non sai quale tipologia di stufa a pellet fa al caso tuo? Contattaci per una consulenza gratuita.</p>
-<ul style="margin-top: 1rem; padding-left: 1rem;">
-<li>Analisi delle tue esigenze</li>
-<li>Valutazione degli spazi</li>
-<li>Calcolo della potenza necessaria</li>
-<li>Preventivo dettagliato</li>
-<li>Sopralluogo gratuito</li>
-</ul>
-<p style="margin-top: 1rem;"><a href="#" onclick="showPage('preventivo')" style="color: #1e3c72; font-weight: bold;">Richiedi consulenza gratuita →</a></p>
-</div>
-</div>
-</div>
-</section>
-</div>
-<!-- STUFE A PELLET CONFRONTO PAGE -->
-<div class="page-content" id="stufe-pellet-confronto">
-<div class="breadcrumb">
-<div class="container">
-<a href="#" onclick="showPage('home')">Home</a> &gt; <a href="#" onclick="showPage('stufe-pellet-intro')">Stufe a Pellet</a> &gt; Con o Senza Canna Fumaria
-            </div>
 </div>
 <section class="section">
 <div class="container">
@@ -2561,7 +2485,7 @@
 <p>In questi casi, è fondamentale affidarsi a un tecnico qualificato che possa valutare la fattibilità dell'installazione nel rispetto delle normative locali e nazionali.</p>
 <h3>La Nostra Raccomandazione</h3>
 <p>Per garantire sicurezza, conformità normativa e massima efficienza, raccomandiamo sempre l'installazione di stufe a pellet con canna fumaria tradizionale a tetto. Questa soluzione, sebbene inizialmente più costosa, offre vantaggi significativi in termini di sicurezza, efficienza e valore dell'immobile nel lungo periodo.</p>
-<p>Per conoscere le dimensioni, i materiali e le caratteristiche tecniche delle canne fumarie per stufe a pellet, <a href="#" onclick="showPage('stufe-pellet-dimensioni')">consulta la nostra guida tecnica</a>.</p>
+<p>Per conoscere le dimensioni, i materiali e le caratteristiche tecniche delle canne fumarie per stufe a pellet, la nostra guida.</p>
 </div>
 <div class="content-grid">
 <div class="content-card">
@@ -2596,18 +2520,13 @@
 <li>Preventivo dettagliato</li>
 <li>Assistenza autorizzativa</li>
 </ul>
-<p style="margin-top: 1rem;"><a href="#" onclick="showPage('preventivo')" style="color: #1e3c72; font-weight: bold;">Richiedi consulenza gratuita →</a></p>
+<p style="margin-top: 1rem;"><a href="https://wa.me/393801568721" style="color: #25D366; font-weight: bold;">Contattaci su WhatsApp →</a></p>
 </div>
 </div>
 </div>
 </section>
 </div>
-<!-- STUFE A PELLET DIMENSIONI PAGE -->
-<div class="page-content" id="stufe-pellet-dimensioni">
-<div class="breadcrumb">
-<div class="container">
-<a href="#" onclick="showPage('home')">Home</a> &gt; <a href="#" onclick="showPage('stufe-pellet-intro')">Stufe a Pellet</a> &gt; Dimensioni e Materiali
-            </div>
+
 </div>
 <section class="section">
 <div class="container">
@@ -2750,7 +2669,7 @@
 <li><strong>UNI EN 13384-1:</strong> metodi di calcolo termico e fluidodinamico per camini singoli</li>
 <li><strong>UNI 10683:</strong> requisiti di installazione per apparecchi a biomassa</li>
 </ul>
-<p>Per approfondire le caratteristiche delle migliori marche di stufe a pellet disponibili sul mercato italiano, <a href="#" onclick="showPage('stufe-pellet-marche')">consulta la nostra guida alle migliori marche</a>.</p>
+<p>Per approfondire le caratteristiche delle migliori marche di stufe a pellet disponibili sul mercato italiano, la nostra guida.</p>
 </div>
 <div class="content-grid">
 <div class="content-card">
@@ -2791,12 +2710,7 @@
 </div>
 </section>
 </div>
-<!-- STUFE A PELLET MARCHE PAGE -->
-<div class="page-content" id="stufe-pellet-marche">
-<div class="breadcrumb">
-<div class="container">
-<a href="#" onclick="showPage('home')">Home</a> &gt; <a href="#" onclick="showPage('stufe-pellet-intro')">Stufe a Pellet</a> &gt; Migliori Marche
-            </div>
+
 </div>
 <section class="section">
 <div class="container">
@@ -2888,7 +2802,7 @@
 <li><strong>Per sistemi idro avanzati:</strong> Palazzetti o La Nordica-Extraflame</li>
 <li><strong>Per assistenza capillare a Verona:</strong> MCZ, La Nordica-Extraflame o Palazzetti</li>
 </ul>
-<p>Per approfondire gli aspetti relativi all'installazione delle stufe a pellet, <a href="#" onclick="showPage('stufe-pellet-installazione')">consulta la nostra guida all'installazione</a>.</p>
+<p>Per approfondire gli aspetti relativi all'installazione delle stufe a pellet, la nostra guida.</p>
 </div>
 <div class="content-grid">
 <div class="content-card">
@@ -2928,12 +2842,7 @@
 </div>
 </section>
 </div>
-<!-- STUFE A PELLET INSTALLAZIONE PAGE -->
-<div class="page-content" id="stufe-pellet-installazione">
-<div class="breadcrumb">
-<div class="container">
-<a href="#" onclick="showPage('home')">Home</a> &gt; <a href="#" onclick="showPage('stufe-pellet-intro')">Stufe a Pellet</a> &gt; Installazione
-            </div>
+
 </div>
 <section class="section">
 <div class="container">
@@ -3058,7 +2967,7 @@
 <li>SCIA (Segnalazione Certificata Inizio Attività) per installazioni esterne che modificano l'aspetto dell'edificio</li>
 <li>Autorizzazione dell'amministratore in caso di condominio</li>
 </ul>
-<p>Per approfondire gli aspetti relativi ai sistemi ibridi legna/pellet e alle caldaie integrate, <a href="#" onclick="showPage('stufe-pellet-ibridi')">consulta la nostra guida ai sistemi ibridi</a>.</p>
+<p>Per approfondire gli aspetti relativi ai sistemi ibridi legna/pellet e alle caldaie integrate, la nostra guida.</p>
 </div>
 <div class="content-grid">
 <div class="content-card">
@@ -3099,12 +3008,7 @@
 </div>
 </section>
 </div>
-<!-- STUFE A PELLET IBRIDI PAGE -->
-<div class="page-content" id="stufe-pellet-ibridi">
-<div class="breadcrumb">
-<div class="container">
-<a href="#" onclick="showPage('home')">Home</a> &gt; <a href="#" onclick="showPage('stufe-pellet-intro')">Stufe a Pellet</a> &gt; Sistemi Ibridi
-            </div>
+
 </div>
 <section class="section">
 <div class="container">
@@ -3248,7 +3152,7 @@
 <li>Circolatore dedicato</li>
 <li>Valvola di sicurezza tarata a 3 bar</li>
 </ul>
-<p>Per approfondire gli aspetti relativi ai prezzi, agli accessori e ai modelli disponibili sul mercato, <a href="#" onclick="showPage('stufe-pellet-prezzi')">consulta la nostra guida a prezzi e accessori</a>.</p>
+<p>Per approfondire gli aspetti relativi ai prezzi, agli accessori e ai modelli disponibili sul mercato, la nostra guida.</p>
 </div>
 <div class="content-grid">
 <div class="content-card">
@@ -3289,12 +3193,7 @@
 </div>
 </section>
 </div>
-<!-- STUFE A PELLET PREZZI PAGE -->
-<div class="page-content" id="stufe-pellet-prezzi">
-<div class="breadcrumb">
-<div class="container">
-<a href="#" onclick="showPage('home')">Home</a> &gt; <a href="#" onclick="showPage('stufe-pellet-intro')">Stufe a Pellet</a> &gt; Prezzi e Accessori
-            </div>
+
 </div>
 <section class="section">
 <div class="container">
@@ -3415,7 +3314,7 @@
 <li><strong>Basamento girevole:</strong> per orientare la stufa in diverse direzioni (200-400 €)</li>
 </ul>
 <h3>Modelli Senza Canna Fumaria Tradizionale</h3>
-<p>Come già discusso nella sezione dedicata al <a href="#" onclick="showPage('stufe-pellet-confronto')">confronto tra stufe con e senza canna fumaria</a>, esistono sul mercato modelli che utilizzano sistemi alternativi di evacuazione dei fumi. È importante sottolineare che questi modelli non sono realmente "senza canna fumaria", ma utilizzano soluzioni diverse dallo scarico a tetto tradizionale.</p>
+<p>Come già discusso nella sezione dedicata al la nostra guida, esistono sul mercato modelli che utilizzano sistemi alternativi di evacuazione dei fumi. È importante sottolineare che questi modelli non sono realmente "senza canna fumaria", ma utilizzano soluzioni diverse dallo scarico a tetto tradizionale.</p>
 <h4>Tipologie Disponibili</h4>
 <ul>
 <li><strong>Stufe con scarico coassiale a parete:</strong> utilizzano un sistema di tubi concentrici per l'aspirazione dell'aria e l'espulsione dei fumi (1.200-2.500 €)</li>
@@ -3448,7 +3347,7 @@
 <li><strong>Sostituzione candeletta accensione:</strong> 30-60 € (quando necessario)</li>
 <li><strong>Revisione ventilatori:</strong> 80-150 € (ogni 3-4 anni)</li>
 </ul>
-<p>Per approfondire gli aspetti relativi alla manutenzione e alla sicurezza delle stufe a pellet, <a href="#" onclick="showPage('stufe-pellet-manutenzione')">consulta la nostra guida alla manutenzione</a>.</p>
+<p>Per approfondire gli aspetti relativi alla manutenzione e alla sicurezza delle stufe a pellet, la nostra guida.</p>
 </div>
 <div class="content-grid">
 <div class="content-card">
@@ -3489,12 +3388,7 @@
 </div>
 </section>
 </div>
-<!-- STUFE A PELLET FAQ PAGE -->
-<div class="page-content" id="stufe-pellet-faq">
-<div class="breadcrumb">
-<div class="container">
-<a href="#" onclick="showPage('home')">Home</a> &gt; <a href="#" onclick="showPage('stufe-pellet-intro')">Stufe a Pellet</a> &gt; FAQ
-            </div>
+
 </div>
 <section class="section">
 <div class="container">
@@ -3647,7 +3541,7 @@
 </table>
 </div>
 <p>La scelta tra i due sistemi dipende principalmente dalle esigenze di riscaldamento: le stufe ad aria sono ideali per riscaldare singoli ambienti o piccoli appartamenti, mentre le stufe idro sono più adatte per abitazioni più grandi o per sostituire/integrare la caldaia tradizionale.</p>
-<p>Per approfondire gli aspetti relativi alla manutenzione e alla sicurezza delle stufe a pellet, <a href="#" onclick="showPage('stufe-pellet-manutenzione')">consulta la nostra guida alla manutenzione</a>.</p>
+<p>Per approfondire gli aspetti relativi alla manutenzione e alla sicurezza delle stufe a pellet, la nostra guida.</p>
 </div>
 <div class="content-grid">
 <div class="content-card">
@@ -3689,12 +3583,7 @@
 </div>
 </section>
 </div>
-<!-- STUFE A PELLET MANUTENZIONE PAGE -->
-<div class="page-content" id="stufe-pellet-manutenzione">
-<div class="breadcrumb">
-<div class="container">
-<a href="#" onclick="showPage('home')">Home</a> &gt; <a href="#" onclick="showPage('stufe-pellet-intro')">Stufe a Pellet</a> &gt; Manutenzione
-            </div>
+
 </div>
 <section class="section">
 <div class="container">
@@ -3934,25 +3823,38 @@
 </footer>
 <script>
         function showPage(pageId) {
+            console.log("showPage called with pageId:", pageId);
+            
             // Hide all pages
             const pages = document.querySelectorAll('.page-content');
+            console.log("Found", pages.length, "pages");
+            
             pages.forEach(page => {
                 page.classList.remove('active');
             });
 
             // Show the selected page
             const selectedPage = document.getElementById(pageId);
+            console.log("Selected page:", selectedPage);
+            
             if (selectedPage) {
                 selectedPage.classList.add('active');
                 window.scrollTo(0, 0);
 
                 // Close mobile menu if open
                 closeMobileMenu();
+                
+                console.log("Page", pageId, "activated successfully");
+            } else {
+                console.error("Page with ID", pageId, "not found");
             }
 
             // Highlight current page in navigation
             highlightCurrentPage(pageId);
         }
+        
+        // Ensure showPage is in global scope
+        window.showPage = showPage;
 
         // Function to highlight current page in navigation
         function highlightCurrentPage(pageId) {
@@ -3998,48 +3900,28 @@
                 });
             }
 
-            // Toggle dropdowns on mobile
+            // Toggle dropdowns on click (both mobile and desktop)
             dropdownToggles.forEach(toggle => {
                 toggle.addEventListener('click', function(e) {
-                    // Only handle click for mobile view
-                    if (window.innerWidth <= 992) {
-                        e.preventDefault();
-                        const dropdown = this.closest('.dropdown');
+                    // Prevent default action for all views
+                    e.preventDefault();
+                    const dropdown = this.closest('.dropdown');
 
-                        // Close other open dropdowns
-                        document.querySelectorAll('.dropdown.active').forEach(item => {
-                            if (item !== dropdown) {
-                                item.classList.remove('active');
-                            }
-                        });
+                    // Close other open dropdowns
+                    document.querySelectorAll('.dropdown.active').forEach(item => {
+                        if (item !== dropdown) {
+                            item.classList.remove('active');
+                        }
+                    });
 
-                        // Toggle current dropdown
-                        dropdown.classList.toggle('active');
-                    }
+                    // Toggle current dropdown
+                    dropdown.classList.toggle('active');
+                    
+                    console.log("Dropdown toggled:", dropdown);
                 });
             });
 
-            // Form submission handling
-            const form = document.getElementById('preventivo-form');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-
-                    // Get form data
-                    const formData = new FormData(form);
-                    const data = {};
-                    formData.forEach((value, key) => {
-                        data[key] = value;
-                    });
-
-                    // Send form data via email
-                    sendFormData(data);
-
-                    // Show success message and reset form
-                    alert('Grazie per la tua richiesta! Ti contatteremo al più presto.');
-                    form.reset();
-                });
-            }
+            // Form submission handling removed - no longer needed
 
             // Highlight current page on load
             const currentPage = document.querySelector('.page-content.active');
@@ -4094,42 +3976,7 @@
             }
         }
 
-        // Function to send form data to andreybertasini@gmail.com
-        function sendFormData(data) {
-            // Create a hidden form to send data
-            const emailForm = document.createElement('form');
-            emailForm.method = 'POST';
-            emailForm.action = 'https://formsubmit.co/andreybertasini@gmail.com';
-            emailForm.style.display = 'none';
-
-            // Add form data as hidden inputs
-            for (const key in data) {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = key;
-                input.value = data[key];
-                emailForm.appendChild(input);
-            }
-
-            // Add additional configuration for FormSubmit.co
-            const configInput = document.createElement('input');
-            configInput.type = 'hidden';
-            configInput.name = '_subject';
-            configInput.value = 'Nuova richiesta preventivo canne fumarie';
-            emailForm.appendChild(configInput);
-
-            // Add redirect back to the site
-            const redirectInput = document.createElement('input');
-            redirectInput.type = 'hidden';
-            redirectInput.name = '_next';
-            redirectInput.value = window.location.href;
-            emailForm.appendChild(redirectInput);
-
-            // Append form to body, submit it, and remove it
-            document.body.appendChild(emailForm);
-            emailForm.submit();
-            document.body.removeChild(emailForm);
-        }
+        // Form submission function removed - no longer needed
     </script>
 <!-- FAQ PAGE -->
 <!-- FAQ MAIN PAGE -->

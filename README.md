@@ -1,63 +1,88 @@
-# Canne Fumarie Verona Website
+# Perplexity API Blog Generator
 
-## Recent Changes
+Questo script genera articoli di blog in formato HTML utilizzando l'API di Perplexity. Legge una lista di domande da un file di testo, genera contenuti per ciascuna domanda utilizzando l'API di Perplexity, e salva i risultati come file HTML utilizzando un template predefinito.
 
-The following changes were made to fix the issue of a blank page when hosting the site on GitHub Pages with Cloudflare:
+## Requisiti
 
-1. **Added explicit page initialization**: Added code to explicitly call `showPage('home')` when the page loads, ensuring that the home page content is displayed properly.
-   - Location: `index.html`, in the DOMContentLoaded event handler around line 3981
+- Python 3.6 o superiore
+- Libreria `requests` (installabile con `pip install requests`)
+- Un API key valido per Perplexity
 
-2. **Fixed duplicate JavaScript code**: Removed duplicate `setupFaqSearch()` function and its associated DOMContentLoaded event handler to prevent potential JavaScript execution issues.
-   - Location: `index.html`, around lines 225-294
+## File del Progetto
 
-3. **Added Cloudflare cache control meta tags**: Added meta tags to prevent Cloudflare and browsers from caching the page, ensuring that the latest version of the JavaScript is always loaded and executed properly.
-   - Location: `index.html`, in the head section around line 25
+- `perplaxyty.py`: Script principale che genera gli articoli
+- `domande.txt`: File contenente le domande/titoli per gli articoli
+- `template.html`: Template HTML utilizzato per formattare gli articoli
 
-## Recommendations for Future Maintenance
+## Installazione
 
-1. **JavaScript Organization**: Consider moving JavaScript code to external files in the `js` directory instead of embedding it directly in the HTML files. This will make the code easier to maintain and debug.
+1. Clona o scarica questo repository
+2. Installa le dipendenze:
 
-2. **Cloudflare Configuration**: If you continue to experience issues with Cloudflare, consider adjusting the Cloudflare settings in the Cloudflare dashboard:
-   - Set the caching level to "Standard" instead of "Aggressive"
-   - Enable the "Development Mode" temporarily when making changes to the site
-   - Configure Page Rules to bypass cache for specific URLs if needed
+```bash
+pip install requests
+```
 
-3. **GitHub Pages Configuration**: Ensure that your GitHub Pages repository is properly configured:
-   - Make sure the repository is public
-   - Verify that the GitHub Pages source is set to the correct branch (usually `main` or `master`)
-   - Consider using a custom domain if you're experiencing issues with the default GitHub Pages domain
+3. Assicurati che l'API key di Perplexity sia correttamente configurato nello script (già impostato come `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`)
 
-4. **Testing**: Always test the site locally before deploying to GitHub Pages with Cloudflare to ensure that everything works as expected.
+## Utilizzo
 
-5. **Error Handling**: Add error handling to the JavaScript code to catch and log any errors that might occur during execution. This will make it easier to diagnose issues in the future.
+### Comando Base
 
-## Testing the Solution
+```bash
+python perplaxyty.py
+```
 
-A test page has been created to help verify that the JavaScript is working properly before deploying to GitHub Pages with Cloudflare:
+Questo comando elaborerà tutte le domande nel file `domande.txt` e salverà gli articoli HTML nella directory `articoli`.
 
-1. Open the `test.html` file in your browser
-2. Run the tests on the page to verify that:
-   - JavaScript is executing properly
-   - The DOMContentLoaded event is firing correctly
-   - Page content can be shown and hidden properly
+### Opzioni
 
-If all tests pass locally, the changes should work when deployed to GitHub Pages with Cloudflare.
+- `--limit N`: Limita il numero di domande da processare a N (utile per test o per elaborare solo una parte delle domande)
+- `--output DIR`: Specifica una directory di output personalizzata per gli articoli HTML
 
-## Deployment Instructions
+### Esempi
 
-1. Commit and push all changes to your GitHub repository
-2. Wait a few minutes for GitHub Pages to build and deploy your site
-3. Clear your browser cache or use an incognito/private browsing window to access your site
-4. If you still see a blank page, check the browser's developer console for any errors
+Elabora solo le prime 5 domande:
+```bash
+python perplaxyty.py --limit 5
+```
 
-## Troubleshooting
+Salva gli articoli in una directory personalizzata:
+```bash
+python perplaxyty.py --output miei_articoli
+```
 
-If you continue to experience issues with the site showing a blank page when hosted on GitHub Pages with Cloudflare, try the following:
+Combina entrambe le opzioni:
+```bash
+python perplaxyty.py --limit 10 --output articoli_test
+```
 
-1. Clear your browser cache and cookies
-2. Try accessing the site in an incognito/private browsing window
-3. Temporarily disable Cloudflare by setting the DNS records to point directly to GitHub Pages
-4. Check the browser's developer console for any JavaScript errors
-5. Verify that all JavaScript files are being loaded properly
+## Funzionamento
 
-If none of these solutions work, consider reaching out to Cloudflare support for assistance with your specific configuration.
+1. Lo script legge le domande dal file `domande.txt`
+2. Per ogni domanda:
+   - Genera contenuto utilizzando l'API di Perplexity
+   - Formatta il contenuto utilizzando il template HTML
+   - Salva il risultato come file HTML nella directory di output
+   - Aggiunge un ritardo di 2 secondi tra le richieste API per evitare limiti di frequenza
+
+## Personalizzazione
+
+### Modificare il Template HTML
+
+Il file `template.html` contiene il template utilizzato per formattare gli articoli. Puoi modificarlo per cambiare l'aspetto degli articoli generati. Il template utilizza i seguenti segnaposto:
+
+- `{TITLE}`: Titolo della pagina
+- `{DESCRIPTION}`: Meta descrizione
+- `{H1}`: Intestazione principale
+- `{CONTENT}`: Contenuto principale dell'articolo
+
+### Modificare il Prompt di Sistema
+
+Puoi modificare il prompt di sistema nella funzione `generate_blog_content` nello script `perplaxyty.py` per personalizzare le istruzioni inviate all'API di Perplexity.
+
+## Note
+
+- L'elaborazione di un gran numero di domande può richiedere molto tempo e consumare molti crediti API
+- Utilizza l'opzione `--limit` per testare lo script con un piccolo numero di domande prima di elaborare l'intero file
+- I file HTML generati includono timestamp nei nomi file per garantire l'unicità
