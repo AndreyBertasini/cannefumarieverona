@@ -1,0 +1,22 @@
+# Files to Remove
+
+## Development Files
+- README.md
+- README_FAQ.md
+- come-vedere-il-sito.md
+- domande.txt
+- fix_html_structure.ps1
+- remove_stufe_pellet_sections.ps1
+- template.html
+- test.html
+- update_faq_pages.py
+- update_main_pages.py
+
+## Hugo Site (New Site Not Yet Built)
+- hugo-site/ (entire directory)
+- hugo-temp/ (entire directory)
+
+## IDE and Configuration Files
+- .idea/ (entire directory)
+- .junie/ (entire directory)
+- .output.txt

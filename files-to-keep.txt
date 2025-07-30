@@ -1,0 +1,22 @@
+# Files to Keep for Server Upload
+
+## HTML Files
+- home.html
+- comuni.html
+- guida-installazione.html
+- materiali.html
+- normative.html
+- preventivo.html
+- sitemap.xml
+
+## CSS Directory
+- css/ (entire directory)
+
+## JavaScript Files
+- js/ (entire directory)
+
+## FAQ Directory
+- faq/ (entire directory)
+
+## Templates
+- templates/ (entire directory)
