@@ -4,624 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ: Camino a legna: Quali sono le soluzioni più innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente? | Preventivi Canne Fumarie Verona | Preventivi Canne Fumarie Verona</title>
-    <meta name="description" content="Domande Frequenti: Camino a legna: Quali sono le soluzioni più innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente?">
-    
-    <!-- Styles -->
+
     <style>
-        /* Base styles */
         body {
             font-family: sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Navigation styles */
-        .nav {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-        
-        .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-        
-        .nav-menu {
-            display: flex;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .nav-links li {
-            position: relative;
-            margin: 0 10px;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-            transition: background-color 0.3s;
-        }
-        
-        .nav-links a:hover, 
-        .nav-links a.active {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-        
-        /* Dropdown styles */
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 5px 0;
-        }
-        
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        
-        .dropdown-menu a {
-            color: #333;
-            padding: 10px 15px;
-        }
-        
-        .dropdown-menu a:hover {
-            background-color: #f5f5f5;
-        }
-        
-        /* Mobile menu */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 5px;
-        }
-        
-        .hamburger {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: white;
-            position: relative;
-            transition: background 0.2s;
-        }
-        
-        .hamburger:before,
-        .hamburger:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            background: white;
-            transition: transform 0.2s;
-        }
-        
-        .hamburger:before {
-            top: -8px;
-        }
-        
-        .hamburger:after {
-            bottom: -8px;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger {
-            background: transparent;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger:before {
-            transform: rotate(45deg);
-            top: 0;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger:after {
-            transform: rotate(-45deg);
-            bottom: 0;
-        }
-        
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-        
-        .menu-overlay.active {
-            display: block;
-        }
-        
-        /* Wiki-style content */
-        .wiki-container {
-            display: flex;
-            margin: 20px 0;
-        }
-        
-        .wiki-sidebar {
-            width: 250px;
+            max-width: 800px;
             padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            margin-right: 20px;
         }
-        
-        .wiki-sidebar h3 {
-            margin-top: 0;
-            border-bottom: 2px solid #1e3c72;
-            padding-bottom: 10px;
-            color: #1e3c72;
-        }
-        
-        .wiki-sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .wiki-sidebar li {
-            margin-bottom: 10px;
-        }
-        
-        .wiki-sidebar a {
-            color: #1e3c72;
-            text-decoration: none;
-            display: block;
-            padding: 5px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .wiki-sidebar a:hover {
-            background-color: #f0f0f0;
-        }
-        
-        .wiki-content {
-            flex: 1;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .wiki-content h1 {
-            color: #1e3c72;
-            margin-top: 0;
-        }
-        
-        .wiki-content img {
-            max-width: 100%;
+        img,
+        iframe.movie {
+            max-width: 100%; /* Usa max-width per la responsività */
             height: auto;
-            border-radius: 8px;
-            margin: 20px 0;
+            border-radius: 8px; /* Angoli arrotondati per un look moderno */
         }
-        
-        .wiki-breadcrumb {
-            margin-bottom: 20px;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+        iframe.movie {
+            aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
+            width: 100%;
         }
-        
-        .wiki-breadcrumb a {
-            color: #1e3c72;
-            text-decoration: none;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
         }
-        
-        .wiki-related {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
         }
-        
-        .wiki-related h3 {
-            color: #1e3c72;
-        }
-        
-        .wiki-related ul {
-            padding-left: 20px;
-        }
-        
-        .wiki-related li {
-            margin-bottom: 10px;
-        }
-        
-        .wiki-related a {
-            color: #1e3c72;
-            text-decoration: none;
-        }
-        
-        .wiki-related a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #1e3c72;
-            color: white;
-            padding: 30px 0;
-            margin-top: 40px;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-section h3 {
-            margin-top: 0;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-            padding-bottom: 10px;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-section li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-section a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .footer-section a:hover {
-            text-decoration: underline;
-        }
-        
-        .copyright {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        /* Responsive styles */
-        @media (max-width: 992px) {
-            .nav-container {
-                flex-wrap: wrap;
-            }
-            
-            .menu-toggle {
-                display: block;
-            }
-            
-            .nav-menu {
-                display: none;
-                width: 100%;
-                order: 3;
-            }
-            
-            .nav-menu.active {
-                display: block;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .nav-links li {
-                margin: 0;
-                border-top: 1px solid rgba(255,255,255,0.1);
-            }
-            
-            .dropdown-menu {
-                position: static;
-                box-shadow: none;
-                background-color: rgba(0,0,0,0.1);
-                display: none;
-            }
-            
-            .dropdown.active .dropdown-menu {
-                display: block;
-            }
-            
-            .wiki-container {
-                flex-direction: column;
-            }
-            
-            .wiki-sidebar {
-                width: 100%;
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
+        blockquote {
+            border-left: 4px solid #eee;
+            padding-left: 1em;
+            margin-left: 0;
+            font-style: italic;
         }
     </style>
+
+    
+    <title>FAQ: Camino a legna: Quali sono le soluzioni più innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente?</title>
+    
+
+    
+    <meta name="description" content="Domande Frequenti: Camino a legna: Quali sono le soluzioni più innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente?">
+    
 </head>
 
 <body>
-    <!-- Menu Overlay -->
-    <div class="menu-overlay"></div>
-    
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="logo">🏠 Preventivi Canne Fumarie Verona</div>
-            <button aria-expanded="false" aria-label="Toggle menu" class="menu-toggle">
-                <span class="hamburger"></span>
-            </button>
-            <div class="nav-menu">
-                <ul class="nav-links">
-                    <!-- Home -->
-                    <li><a href="../index.html" class="home-link">Home</a></li>
-                    
-                    <!-- Servizi -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">Servizi</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../index.html#servizi" class="spa-link" data-page="servizi">Tutti i Servizi</a></li>
-                            <li><a href="../guida-installazione.html">Guida Installazione</a></li>
-                            <li><a href="../index.html#canna-fumaria-esterna" class="spa-link" data-page="canna-fumaria-esterna">Canna Fumaria Esterna</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Prodotti -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">Prodotti</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                            <li><a href="index.html#caminetti">Caminetti</a></li>
-                            <li><a href="index.html#termostufe">Termostufe</a></li>
-                            <li><a href="index.html#caldaie">Caldaie</a></li>
-                            <li><a href="../materiali.html">Materiali</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- FAQ -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">FAQ</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../index.html#faq" class="spa-link" data-page="faq">Domande Frequenti</a></li>
-                            <li><a href="index.html">Archivio FAQ Completo</a></li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-toggle" href="#">Categorie FAQ</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
-                                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                                    <li><a href="index.html#caminetti">Caminetti</a></li>
-                                    <li><a href="index.html#termostufe">Termostufe</a></li>
-                                    <li><a href="index.html#caldaie">Caldaie</a></li>
-                                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
-                                    <li><a href="index.html#pellet">Pellet</a></li>
-                                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Comuni Serviti -->
-                    <li><a href="../comuni.html">Comuni Serviti</a></li>
-                    
-                    <!-- Normative -->
-                    <li><a href="../normative.html">Normative</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Main Content -->
-    <div class="container">
-        <div class="wiki-container">
-            <!-- Sidebar -->
-            <div class="wiki-sidebar">
-                <h3>Categorie FAQ</h3>
-                <ul>
-                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
-                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                    <li><a href="index.html#caminetti">Caminetti</a></li>
-                    <li><a href="index.html#termostufe">Termostufe</a></li>
-                    <li><a href="index.html#caldaie">Caldaie</a></li>
-                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
-                    <li><a href="index.html#pellet">Pellet</a></li>
-                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
-                </ul>
-                
-                <h3>Nella stessa categoria</h3>
-                <ul>
-                    <li><a href="a-caminetti-cosa-significa-la-dicitura-a-caminetti-in-alcuni-contesti-di-vendita.html">A caminetti: Cosa significa la dicitura "a caminetti" in alcuni contesti di vendita?</a></li>
-<li><a href="cade-fuliggine-dai-tubi-come-posso-risolvere.html">Cade fuliggine dai tubi, come posso risolvere?</a></li>
-<li><a href="caminetti-a-bioetanolo-è-possibile-utilizzare-oli-essenziali-nel-bioetanolo-per-profumare-lambiente.html">Caminetti a bioetanolo: È possibile utilizzare oli essenziali nel bioetanolo per profumare l'ambiente?</a></li>
-<li><a href="caminetti-a-legna-per-interni-come-si-sceglie-il-rivestimento-perfetto-per-un-caminetto-a-legna-da-interni-in-base-allo-stile-della-casa.html">Caminetti a legna per interni: Come si sceglie il rivestimento perfetto per un caminetto a legna da interni in base allo stile della casa?</a></li>
-<li><a href="caminetti-a-legna-per-interni-prezzi-quanto-costa-in-media-il-rivestimento-su-misura-per-un-caminetto-a-legna-interno.html">Caminetti a legna per interni prezzi: Quanto costa in media il rivestimento su misura per un caminetto a legna interno?</a></li>
 
-                </ul>
-            </div>
-            
-            <!-- Content -->
-            <div class="wiki-content">
-                <div class="wiki-breadcrumb">
-                    <a href="../index.html">Home</a> &gt; 
-                    <a href="index.html">FAQ</a> &gt; 
-                    <a href="index.html#caminetti">Caminetti</a> &gt; 
-                    Camino a legna: Quali sono le soluzioni più innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente?
-                </div>
-                
-                <h1>Camino a legna: Quali sono le soluzioni più innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente?</h1>
-                
-                <article>
-<!-- 
+    <header>
+        <h1>Camino a legna: Quali sono le soluzioni più innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente?</h1> </header>
+
+    <main>
+        <article>
+            <!-- 
             <figure>
                 <img src="{MAIN_IMAGE}" alt="Camino a legna: Quali sono le soluzioni più innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente?" title="Camino a legna: Quali sono le soluzioni più innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente?" loading="lazy" />
                 </figure>
              -->
-<!-- 
+
+            <!-- 
             <figure>
                 <iframe class="movie" src="https://www.youtube.com/embed/{MAIN_MOVIE}" title="Camino a legna: Quali sono le soluzioni più innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </figure>
              -->
-<div>
-<h2>Guida completa: Soluzioni innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente</h2>
-<p>
+
+            
+            <div>
+  <h2>Guida completa: Soluzioni innovative per trasformare un vecchio camino aperto in una fonte di calore efficiente</h2>
+  
+  <p>
     Un <strong>camino a legna aperto</strong> offre fascino e atmosfera, ma dal punto di vista energetico è estremamente inefficiente: gran parte del calore prodotto viene disperso attraverso la canna fumaria e il rendimento termico raramente supera il 15-20%. Oggi esistono soluzioni tecnologiche che permettono di <strong>trasformare un vecchio camino aperto in una fonte di calore efficiente, sicura e sostenibile</strong>.
   </p>
-<h3>1. Inserto camino a legna (o inserto a pellet)</h3>
-<p>
+  
+  <h3>1. Inserto camino a legna (o inserto a pellet)</h3>
+  <p>
     L’<strong>inserto camino</strong> è un dispositivo prefabbricato che si installa direttamente nella bocca del camino esistente. È dotato di porta in vetro ceramico, camera di combustione chiusa e, spesso, di sistemi di ventilazione forzata. I vantaggi principali sono:
   </p>
-<ul>
-<li><strong>Rendimento termico elevato</strong> (fino al 70-80%) grazie alla combustione controllata e alla riduzione delle dispersioni.</li>
-<li><strong>Riduzione delle emissioni</strong> inquinanti rispetto al camino aperto.</li>
-<li><strong>Sicurezza aumentata</strong>: nessuna fuoriuscita di fumo o scintille nell’ambiente domestico.</li>
-<li><strong>Possibilità di canalizzazione dell’aria calda</strong> in più stanze, tramite kit opzionali.</li>
-<li><strong>Facilità di installazione</strong> senza opere murarie invasive.</li>
-</ul>
-<p>
+  <ul>
+    <li><strong>Rendimento termico elevato</strong> (fino al 70-80%) grazie alla combustione controllata e alla riduzione delle dispersioni.</li>
+    <li><strong>Riduzione delle emissioni</strong> inquinanti rispetto al camino aperto.</li>
+    <li><strong>Sicurezza aumentata</strong>: nessuna fuoriuscita di fumo o scintille nell’ambiente domestico.</li>
+    <li><strong>Possibilità di canalizzazione dell’aria calda</strong> in più stanze, tramite kit opzionali.</li>
+    <li><strong>Facilità di installazione</strong> senza opere murarie invasive.</li>
+  </ul>
+  <p>
     Esistono anche <strong>inserti a pellet</strong>, che offrono automazione, accensione programmabile e autonomia superiore.
   </p>
-<h3>2. Termocamino</h3>
-<p>
+  
+  <h3>2. Termocamino</h3>
+  <p>
     Il <strong>termocamino</strong> è una soluzione più avanzata che consente di collegare il camino all’impianto di riscaldamento domestico, producendo acqua calda per i termosifoni o per l’acqua sanitaria. Le caratteristiche principali:
   </p>
-<ul>
-<li><strong>Alto rendimento</strong> (fino all’85%).</li>
-<li><strong>Possibilità di integrazione con altri sistemi</strong> (caldaia a gas, pompe di calore, solare termico).</li>
-<li><strong>Gestione centralizzata del riscaldamento</strong> tramite centraline elettroniche.</li>
-<li><strong>Soluzioni a legna o a pellet</strong> per massimizzare l’efficienza e l’automazione.</li>
-</ul>
-<p>
+  <ul>
+    <li><strong>Alto rendimento</strong> (fino all’85%).</li>
+    <li><strong>Possibilità di integrazione con altri sistemi</strong> (caldaia a gas, pompe di calore, solare termico).</li>
+    <li><strong>Gestione centralizzata del riscaldamento</strong> tramite centraline elettroniche.</li>
+    <li><strong>Soluzioni a legna o a pellet</strong> per massimizzare l’efficienza e l’automazione.</li>
+  </ul>
+  <p>
     L’installazione richiede interventi più strutturali e deve essere eseguita da personale qualificato, con verifica della canna fumaria e adeguamento degli impianti esistenti.
   </p>
-<h3>3. Ventilazione forzata e canalizzazione dell’aria calda</h3>
-<p>
+  
+  <h3>3. Ventilazione forzata e canalizzazione dell’aria calda</h3>
+  <p>
     Molti inserti e termocamini moderni sono dotati di <strong>ventilatori integrati</strong> che spingono l’aria calda nell’ambiente o la distribuiscono in più stanze tramite canalizzazioni. Questo sistema:
   </p>
-<ul>
-<li>Permette di <strong>riscaldare più ambienti</strong> con una sola fonte.</li>
-<li>Ottimizza la <strong>distribuzione del calore</strong> e riduce i consumi.</li>
-<li>Può essere regolato tramite termostati e centraline.</li>
-</ul>
-<h3>4. Vetro di chiusura per camini aperti</h3>
-<p>
+  <ul>
+    <li>Permette di <strong>riscaldare più ambienti</strong> con una sola fonte.</li>
+    <li>Ottimizza la <strong>distribuzione del calore</strong> e riduce i consumi.</li>
+    <li>Può essere regolato tramite termostati e centraline.</li>
+  </ul>
+  
+  <h3>4. Vetro di chiusura per camini aperti</h3>
+  <p>
     Una soluzione semplice e poco invasiva è l’<strong>installazione di un vetro di chiusura</strong> su misura per il camino aperto. Questo intervento:
   </p>
-<ul>
-<li>Riduce le dispersioni di calore e l’ingresso di aria fredda dalla canna fumaria.</li>
-<li>Aumenta la sicurezza, evitando la fuoriuscita di scintille.</li>
-<li>Non raggiunge l’efficienza di un inserto, ma migliora sensibilmente le prestazioni del camino esistente.</li>
-</ul>
-<h3>5. Considerazioni tecniche e pratiche</h3>
-<ul>
-<li><strong>Verifica della canna fumaria:</strong> Prima di qualsiasi intervento, è fondamentale controllare lo stato e la compatibilità della canna fumaria con i nuovi dispositivi, per garantire sicurezza e rispetto delle normative.</li>
-<li><strong>Normative:</strong> Gli apparecchi devono essere certificati secondo le norme europee (EN 13229 per inserti, EN 13240 per stufe) e rispettare i limiti di emissioni previsti dal D.Lgs. 152/2006 e dalle normative locali.</li>
-<li><strong>Detrazioni fiscali:</strong> Molti interventi di riqualificazione energetica danno diritto a detrazioni fiscali (Ecobonus, Bonus Casa) se eseguiti da professionisti abilitati e con prodotti certificati.</li>
-<li><strong>Manutenzione:</strong> È essenziale prevedere la pulizia periodica della canna fumaria e la manutenzione degli apparecchi per garantire efficienza e sicurezza.</li>
-</ul>
-<h3>6. Soluzioni innovative e design</h3>
-<p>
+  <ul>
+    <li>Riduce le dispersioni di calore e l’ingresso di aria fredda dalla canna fumaria.</li>
+    <li>Aumenta la sicurezza, evitando la fuoriuscita di scintille.</li>
+    <li>Non raggiunge l’efficienza di un inserto, ma migliora sensibilmente le prestazioni del camino esistente.</li>
+  </ul>
+  
+  <h3>5. Considerazioni tecniche e pratiche</h3>
+  <ul>
+    <li><strong>Verifica della canna fumaria:</strong> Prima di qualsiasi intervento, è fondamentale controllare lo stato e la compatibilità della canna fumaria con i nuovi dispositivi, per garantire sicurezza e rispetto delle normative.</li>
+    <li><strong>Normative:</strong> Gli apparecchi devono essere certificati secondo le norme europee (EN 13229 per inserti, EN 13240 per stufe) e rispettare i limiti di emissioni previsti dal D.Lgs. 152/2006 e dalle normative locali.</li>
+    <li><strong>Detrazioni fiscali:</strong> Molti interventi di riqualificazione energetica danno diritto a detrazioni fiscali (Ecobonus, Bonus Casa) se eseguiti da professionisti abilitati e con prodotti certificati.</li>
+    <li><strong>Manutenzione:</strong> È essenziale prevedere la pulizia periodica della canna fumaria e la manutenzione degli apparecchi per garantire efficienza e sicurezza.</li>
+  </ul>
+  
+  <h3>6. Soluzioni innovative e design</h3>
+  <p>
     I produttori propongono oggi <strong>inserti e termocamini dal design moderno</strong>, con ampie superfici vetrate, comandi elettronici, gestione da remoto tramite app e materiali ad alta efficienza. Esistono anche rivestimenti in cartongesso e materiali isolanti che permettono di personalizzare l’estetica del camino, integrandolo perfettamente nell’arredamento contemporaneo<sup>[3]</sup>.
   </p>
-<h3>Conclusioni</h3>
-<p>
-<strong>Trasformare un vecchio camino aperto in una fonte di calore efficiente è oggi possibile grazie a inserti, termocamini e sistemi di ventilazione innovativi</strong>. La scelta della soluzione più adatta dipende dalle esigenze di comfort, dal budget e dalle caratteristiche dell’abitazione. È sempre consigliabile affidarsi a professionisti qualificati per la progettazione e l’installazione, così da garantire sicurezza, rispetto delle normative e massima efficienza energetica.
+  
+  <h3>Conclusioni</h3>
+  <p>
+    <strong>Trasformare un vecchio camino aperto in una fonte di calore efficiente è oggi possibile grazie a inserti, termocamini e sistemi di ventilazione innovativi</strong>. La scelta della soluzione più adatta dipende dalle esigenze di comfort, dal budget e dalle caratteristiche dell’abitazione. È sempre consigliabile affidarsi a professionisti qualificati per la progettazione e l’installazione, così da garantire sicurezza, rispetto delle normative e massima efficienza energetica.
   </p>
 </div>
-<div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
-<h3>Hai altre domande?</h3>
-<p>Contattaci direttamente per una consulenza personalizzata:</p>
-<p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
-</div>
-</article>
-                
-                <div class="wiki-related">
-                    <h3>Domande correlate</h3>
-                    <ul>
-                        <li><a href="a-caminetti-cosa-significa-la-dicitura-a-caminetti-in-alcuni-contesti-di-vendita.html">A caminetti: Cosa significa la dicitura "a caminetti" in alcuni contesti di vendita?</a></li>
-<li><a href="cade-fuliggine-dai-tubi-come-posso-risolvere.html">Cade fuliggine dai tubi, come posso risolvere?</a></li>
-<li><a href="caminetti-a-bioetanolo-è-possibile-utilizzare-oli-essenziali-nel-bioetanolo-per-profumare-lambiente.html">Caminetti a bioetanolo: È possibile utilizzare oli essenziali nel bioetanolo per profumare l'ambiente?</a></li>
 
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+    <div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
+        <h3>Hai altre domande?</h3>
+        <p>Contattaci direttamente per una consulenza personalizzata:</p>
+        <p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
     </div>
     
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contatti</h3>
-                    <p>📞 Telefono: 380 156 8721</p>
-                    <p>📧 Email: info@cannefumarieverona.it</p>
-                    <p>🏠 Indirizzo: Verona, Italia</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Collegamenti Rapidi</h3>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../index.html#servizi">Servizi</a></li>
-                        <li><a href="index.html">FAQ</a></li>
-                        <li><a href="../comuni.html">Comuni Serviti</a></li>
-                        <li><a href="../normative.html">Normative</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Seguici</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">YouTube</a></li>
-                    </ul>
-                </div>
-            </div>
             
-            <div class="copyright">
-                <p>&copy; 2025 Preventivi Canne Fumarie Verona. Tutti i diritti riservati.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Scripts -->
-    <script src="../js/unified-menu.js"></script>
-</body>
+        </article>
 
+        <!-- 
+        <section>
+            <h2>Caratteristiche</h2> <table>
+                <tbody>
+                    [FUTURES] <tr>
+                        <td>{NAME}</td> <td>{VALUE}</td> </tr>
+                    [/FUTURES] </tbody>
+            </table>
+        </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Breve descrizione</h2> <p>{SHORT}</p>
+        </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Descrizione completa</h2> {FULL} </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Video</h2> [MOVIES] <article>
+                <h3>{MOVIE_TITLE}</h3> <p>{MOVIE_DESCRIPTION}</p> <iframe class="movie" src="https://www.youtube.com/embed/{MOVIE}" title="{MOVIE_TITLE}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </article>
+            [/MOVIES] </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Domande Frequenti (FAQ)</h2> [FAQ] <div>
+                <h4>{QUESTION}</h4> <p>{ANSWER}</p> </div>
+            [/FAQ] </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Recensioni</h2> [REVIEWS] <blockquote>
+                <p>{REVIEW}</p> <footer>— <cite>{AUTHOR}</cite></footer> </blockquote>
+            [/REVIEWS] </section>
+         -->
+
+    </main>
+
+</body>
 </html>

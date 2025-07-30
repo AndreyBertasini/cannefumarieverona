@@ -4,656 +4,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ: Stufa con bombola a gas: Quali sono le procedure corrette per sostituire la bombola del gas in una stufa in totale sicurezza? | Preventivi Canne Fumarie Verona | Preventivi Canne Fumarie Verona</title>
-    <meta name="description" content="Domande Frequenti: Stufa con bombola a gas: Quali sono le procedure corrette per sostituire la bombola del gas in una stufa in totale sicurezza?">
-    
-    <!-- Styles -->
+
     <style>
-        /* Base styles */
         body {
             font-family: sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Navigation styles */
-        .nav {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-        
-        .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-        
-        .nav-menu {
-            display: flex;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .nav-links li {
-            position: relative;
-            margin: 0 10px;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-            transition: background-color 0.3s;
-        }
-        
-        .nav-links a:hover, 
-        .nav-links a.active {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-        
-        /* Dropdown styles */
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 5px 0;
-        }
-        
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        
-        .dropdown-menu a {
-            color: #333;
-            padding: 10px 15px;
-        }
-        
-        .dropdown-menu a:hover {
-            background-color: #f5f5f5;
-        }
-        
-        /* Mobile menu */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 5px;
-        }
-        
-        .hamburger {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: white;
-            position: relative;
-            transition: background 0.2s;
-        }
-        
-        .hamburger:before,
-        .hamburger:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            background: white;
-            transition: transform 0.2s;
-        }
-        
-        .hamburger:before {
-            top: -8px;
-        }
-        
-        .hamburger:after {
-            bottom: -8px;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger {
-            background: transparent;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger:before {
-            transform: rotate(45deg);
-            top: 0;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger:after {
-            transform: rotate(-45deg);
-            bottom: 0;
-        }
-        
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-        
-        .menu-overlay.active {
-            display: block;
-        }
-        
-        /* Wiki-style content */
-        .wiki-container {
-            display: flex;
-            margin: 20px 0;
-        }
-        
-        .wiki-sidebar {
-            width: 250px;
+            max-width: 800px;
             padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            margin-right: 20px;
         }
-        
-        .wiki-sidebar h3 {
-            margin-top: 0;
-            border-bottom: 2px solid #1e3c72;
-            padding-bottom: 10px;
-            color: #1e3c72;
-        }
-        
-        .wiki-sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .wiki-sidebar li {
-            margin-bottom: 10px;
-        }
-        
-        .wiki-sidebar a {
-            color: #1e3c72;
-            text-decoration: none;
-            display: block;
-            padding: 5px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .wiki-sidebar a:hover {
-            background-color: #f0f0f0;
-        }
-        
-        .wiki-content {
-            flex: 1;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .wiki-content h1 {
-            color: #1e3c72;
-            margin-top: 0;
-        }
-        
-        .wiki-content img {
-            max-width: 100%;
+        img,
+        iframe.movie {
+            max-width: 100%; /* Usa max-width per la responsività */
             height: auto;
-            border-radius: 8px;
-            margin: 20px 0;
+            border-radius: 8px; /* Angoli arrotondati per un look moderno */
         }
-        
-        .wiki-breadcrumb {
-            margin-bottom: 20px;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+        iframe.movie {
+            aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
+            width: 100%;
         }
-        
-        .wiki-breadcrumb a {
-            color: #1e3c72;
-            text-decoration: none;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
         }
-        
-        .wiki-related {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
         }
-        
-        .wiki-related h3 {
-            color: #1e3c72;
-        }
-        
-        .wiki-related ul {
-            padding-left: 20px;
-        }
-        
-        .wiki-related li {
-            margin-bottom: 10px;
-        }
-        
-        .wiki-related a {
-            color: #1e3c72;
-            text-decoration: none;
-        }
-        
-        .wiki-related a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #1e3c72;
-            color: white;
-            padding: 30px 0;
-            margin-top: 40px;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-section h3 {
-            margin-top: 0;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-            padding-bottom: 10px;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-section li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-section a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .footer-section a:hover {
-            text-decoration: underline;
-        }
-        
-        .copyright {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        /* Responsive styles */
-        @media (max-width: 992px) {
-            .nav-container {
-                flex-wrap: wrap;
-            }
-            
-            .menu-toggle {
-                display: block;
-            }
-            
-            .nav-menu {
-                display: none;
-                width: 100%;
-                order: 3;
-            }
-            
-            .nav-menu.active {
-                display: block;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .nav-links li {
-                margin: 0;
-                border-top: 1px solid rgba(255,255,255,0.1);
-            }
-            
-            .dropdown-menu {
-                position: static;
-                box-shadow: none;
-                background-color: rgba(0,0,0,0.1);
-                display: none;
-            }
-            
-            .dropdown.active .dropdown-menu {
-                display: block;
-            }
-            
-            .wiki-container {
-                flex-direction: column;
-            }
-            
-            .wiki-sidebar {
-                width: 100%;
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
+        blockquote {
+            border-left: 4px solid #eee;
+            padding-left: 1em;
+            margin-left: 0;
+            font-style: italic;
         }
     </style>
+
+    
+    <title>FAQ: Stufa con bombola a gas: Quali sono le procedure corrette per sostituire la bombola del gas in una stufa in totale sicurezza?</title>
+    
+
+    
+    <meta name="description" content="Domande Frequenti: Stufa con bombola a gas: Quali sono le procedure corrette per sostituire la bombola del gas in una stufa in totale sicurezza?">
+    
 </head>
 
 <body>
-    <!-- Menu Overlay -->
-    <div class="menu-overlay"></div>
-    
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="logo">🏠 Preventivi Canne Fumarie Verona</div>
-            <button aria-expanded="false" aria-label="Toggle menu" class="menu-toggle">
-                <span class="hamburger"></span>
-            </button>
-            <div class="nav-menu">
-                <ul class="nav-links">
-                    <!-- Home -->
-                    <li><a href="../index.html" class="home-link">Home</a></li>
-                    
-                    <!-- Servizi -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">Servizi</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../index.html#servizi" class="spa-link" data-page="servizi">Tutti i Servizi</a></li>
-                            <li><a href="../guida-installazione.html">Guida Installazione</a></li>
-                            <li><a href="../index.html#canna-fumaria-esterna" class="spa-link" data-page="canna-fumaria-esterna">Canna Fumaria Esterna</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Prodotti -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">Prodotti</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                            <li><a href="index.html#caminetti">Caminetti</a></li>
-                            <li><a href="index.html#termostufe">Termostufe</a></li>
-                            <li><a href="index.html#caldaie">Caldaie</a></li>
-                            <li><a href="../materiali.html">Materiali</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- FAQ -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">FAQ</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../index.html#faq" class="spa-link" data-page="faq">Domande Frequenti</a></li>
-                            <li><a href="index.html">Archivio FAQ Completo</a></li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-toggle" href="#">Categorie FAQ</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
-                                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                                    <li><a href="index.html#caminetti">Caminetti</a></li>
-                                    <li><a href="index.html#termostufe">Termostufe</a></li>
-                                    <li><a href="index.html#caldaie">Caldaie</a></li>
-                                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
-                                    <li><a href="index.html#pellet">Pellet</a></li>
-                                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Comuni Serviti -->
-                    <li><a href="../comuni.html">Comuni Serviti</a></li>
-                    
-                    <!-- Normative -->
-                    <li><a href="../normative.html">Normative</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Main Content -->
-    <div class="container">
-        <div class="wiki-container">
-            <!-- Sidebar -->
-            <div class="wiki-sidebar">
-                <h3>Categorie FAQ</h3>
-                <ul>
-                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
-                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                    <li><a href="index.html#caminetti">Caminetti</a></li>
-                    <li><a href="index.html#termostufe">Termostufe</a></li>
-                    <li><a href="index.html#caldaie">Caldaie</a></li>
-                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
-                    <li><a href="index.html#pellet">Pellet</a></li>
-                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
-                </ul>
-                
-                <h3>Nella stessa categoria</h3>
-                <ul>
-                    <li><a href="bioetanolo-bricoman-qual-è-il-rapporto-qualitàprezzo-del-bioetanolo-venduto-da-bricoman-rispetto-a-marchi-specializzati.html">Bioetanolo Bricoman: Qual è il rapporto qualità/prezzo del bioetanolo venduto da Bricoman rispetto a marchi specializzati?</a></li>
-<li><a href="bioetanolo-stufa-quali-sono-le-differenze-tra-bioetanolo-denaturato-a-96-e-altre-gradazioni-per-luso-nelle-stufe.html">Bioetanolo stufa: Quali sono le differenze tra bioetanolo denaturato a 96° e altre gradazioni per l'uso nelle stufe?</a></li>
-<li><a href="biofire-stufe-qual-è-la-caratteristica-distintiva-delle-stufe-ad-accumulo-del-marchio-biofire.html">Biofire stufe: Qual è la caratteristica distintiva delle stufe ad accumulo del marchio Biofire?</a></li>
-<li><a href="che-differenza-estetica-cè-tra-una-finitura-lucida-e-una-opaca.html">Che differenza estetica c'è tra una finitura lucida e una opaca?</a></li>
-<li><a href="checklist-definitiva-cosa-chiedere-allinstallatore-prima-di-firmare-il-contratto.html">Checklist definitiva: cosa chiedere all'installatore prima di firmare il contratto.</a></li>
 
-                </ul>
-            </div>
-            
-            <!-- Content -->
-            <div class="wiki-content">
-                <div class="wiki-breadcrumb">
-                    <a href="../index.html">Home</a> &gt; 
-                    <a href="index.html">FAQ</a> &gt; 
-                    <a href="index.html#canne-fumarie">Canne Fumarie</a> &gt; 
-                    Stufa con bombola a gas: Quali sono le procedure corrette per sostituire la bombola del gas in una stufa in totale sicurezza?
-                </div>
-                
-                <h1>Stufa con bombola a gas: Quali sono le procedure corrette per sostituire la bombola del gas in una stufa in totale sicurezza?</h1>
-                
-                <article>
-<!-- 
+    <header>
+        <h1>Stufa con bombola a gas: Quali sono le procedure corrette per sostituire la bombola del gas in una stufa in totale sicurezza?</h1> </header>
+
+    <main>
+        <article>
+            <!-- 
             <figure>
                 <img src="{MAIN_IMAGE}" alt="Stufa con bombola a gas: Quali sono le procedure corrette per sostituire la bombola del gas in una stufa in totale sicurezza?" title="Stufa con bombola a gas: Quali sono le procedure corrette per sostituire la bombola del gas in una stufa in totale sicurezza?" loading="lazy" />
                 </figure>
              -->
-<!-- 
+
+            <!-- 
             <figure>
                 <iframe class="movie" src="https://www.youtube.com/embed/{MAIN_MOVIE}" title="Stufa con bombola a gas: Quali sono le procedure corrette per sostituire la bombola del gas in una stufa in totale sicurezza?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </figure>
              -->
-<section>
-<h1>Guida Completa: Sostituzione Sicura della Bombola del Gas in una Stufa</h1>
-<p>
+
+            
+            <section>
+  <h1>Guida Completa: Sostituzione Sicura della Bombola del Gas in una Stufa</h1>
+
+  <p>
     La sostituzione della bombola del gas in una stufa è un’operazione che richiede attenzione, precisione e il rispetto di alcune regole fondamentali di sicurezza. Di seguito troverai una guida dettagliata che illustra le procedure corrette, i consigli pratici e le principali considerazioni tecniche da seguire per effettuare questa operazione in totale sicurezza.
   </p>
-<h2>1. Preparazione e Sicurezza</h2>
-<ul>
-<li>
-<strong>Ambiente:</strong> Effettua la sostituzione in un ambiente ben ventilato, preferibilmente all’aperto o vicino a una finestra aperta.
+
+  <h2>1. Preparazione e Sicurezza</h2>
+  <ul>
+    <li>
+      <strong>Ambiente:</strong> Effettua la sostituzione in un ambiente ben ventilato, preferibilmente all’aperto o vicino a una finestra aperta.
     </li>
-<li>
-<strong>Assenza di fiamme libere:</strong> Assicurati che non ci siano fiamme, scintille o apparecchi elettrici accesi nelle vicinanze.
+    <li>
+      <strong>Assenza di fiamme libere:</strong> Assicurati che non ci siano fiamme, scintille o apparecchi elettrici accesi nelle vicinanze.
     </li>
-<li>
-<strong>Stufa spenta:</strong> La stufa deve essere completamente spenta e raffreddata prima di procedere.
+    <li>
+      <strong>Stufa spenta:</strong> La stufa deve essere completamente spenta e raffreddata prima di procedere.
     </li>
-<li>
-<strong>Controllo della bombola:</strong> Verifica che la nuova bombola sia integra, senza segni di ruggine, ammaccature o perdite.
+    <li>
+      <strong>Controllo della bombola:</strong> Verifica che la nuova bombola sia integra, senza segni di ruggine, ammaccature o perdite.
     </li>
-</ul>
-<h2>2. Rimozione della Bombola Esaurita</h2>
-<ol>
-<li>
-<strong>Chiudi la valvola della bombola:</strong> Ruota la manopola della valvola in senso orario fino a bloccarla completamente.
+  </ul>
+
+  <h2>2. Rimozione della Bombola Esaurita</h2>
+  <ol>
+    <li>
+      <strong>Chiudi la valvola della bombola:</strong> Ruota la manopola della valvola in senso orario fino a bloccarla completamente.
     </li>
-<li>
-<strong>Scollega il regolatore di pressione:</strong> Allenta il dado di collegamento (solitamente con una chiave inglese) e rimuovi il regolatore dalla bombola.
+    <li>
+      <strong>Scollega il regolatore di pressione:</strong> Allenta il dado di collegamento (solitamente con una chiave inglese) e rimuovi il regolatore dalla bombola.
     </li>
-<li>
-<strong>Allontana la bombola vuota:</strong> Spostala in un luogo sicuro, lontano da fonti di calore e ben ventilato.
+    <li>
+      <strong>Allontana la bombola vuota:</strong> Spostala in un luogo sicuro, lontano da fonti di calore e ben ventilato.
     </li>
-</ol>
-<h2>3. Collegamento della Nuova Bombola</h2>
-<ol>
-<li>
-<strong>Controlla la guarnizione:</strong> Verifica che la guarnizione del regolatore sia in buono stato e ben posizionata.
+  </ol>
+
+  <h2>3. Collegamento della Nuova Bombola</h2>
+  <ol>
+    <li>
+      <strong>Controlla la guarnizione:</strong> Verifica che la guarnizione del regolatore sia in buono stato e ben posizionata.
     </li>
-<li>
-<strong>Collega il regolatore:</strong> Avvita il regolatore alla valvola della nuova bombola, stringendo bene ma senza forzare eccessivamente.
+    <li>
+      <strong>Collega il regolatore:</strong> Avvita il regolatore alla valvola della nuova bombola, stringendo bene ma senza forzare eccessivamente.
     </li>
-<li>
-<strong>Apri lentamente la valvola:</strong> Ruota la manopola della valvola in senso antiorario, aprendo gradualmente per evitare sbalzi di pressione.
+    <li>
+      <strong>Apri lentamente la valvola:</strong> Ruota la manopola della valvola in senso antiorario, aprendo gradualmente per evitare sbalzi di pressione.
     </li>
-<li>
-<strong>Controllo delle perdite:</strong> Utilizza una soluzione di acqua e sapone (mai fiamma!) per verificare la presenza di eventuali bolle nei punti di collegamento, segno di una perdita.
+    <li>
+      <strong>Controllo delle perdite:</strong> Utilizza una soluzione di acqua e sapone (mai fiamma!) per verificare la presenza di eventuali bolle nei punti di collegamento, segno di una perdita.
     </li>
-<li>
-<strong>Se rilevi perdite:</strong> Chiudi subito la valvola, stringi nuovamente i raccordi o sostituisci la guarnizione, quindi ripeti il controllo.
+    <li>
+      <strong>Se rilevi perdite:</strong> Chiudi subito la valvola, stringi nuovamente i raccordi o sostituisci la guarnizione, quindi ripeti il controllo.
     </li>
-</ol>
-<h2>4. Considerazioni Tecniche Importanti</h2>
-<ul>
-<li>
-<strong>Regolatore di pressione:</strong> Deve essere omologato e adatto al tipo di bombola e stufa utilizzati (generalmente 28-30 mbar per GPL domestico).
+  </ol>
+
+  <h2>4. Considerazioni Tecniche Importanti</h2>
+  <ul>
+    <li>
+      <strong>Regolatore di pressione:</strong> Deve essere omologato e adatto al tipo di bombola e stufa utilizzati (generalmente 28-30 mbar per GPL domestico).
     </li>
-<li>
-<strong>Tubo flessibile:</strong> Deve essere conforme alle normative vigenti, privo di crepe e con scadenza ben visibile.
+    <li>
+      <strong>Tubo flessibile:</strong> Deve essere conforme alle normative vigenti, privo di crepe e con scadenza ben visibile.
     </li>
-<li>
-<strong>Posizionamento della bombola:</strong> Sempre in posizione verticale e su una superficie stabile.
+    <li>
+      <strong>Posizionamento della bombola:</strong> Sempre in posizione verticale e su una superficie stabile.
     </li>
-<li>
-<strong>Ventilazione:</strong> Non utilizzare mai la stufa in ambienti chiusi senza adeguata ventilazione.
+    <li>
+      <strong>Ventilazione:</strong> Non utilizzare mai la stufa in ambienti chiusi senza adeguata ventilazione.
     </li>
-</ul>
-<h2>5. Consigli Pratici</h2>
-<ul>
-<li>
-<strong>Non forzare mai i raccordi:</strong> Se il regolatore non si avvita facilmente, verifica la filettatura e la posizione della guarnizione.
+  </ul>
+
+  <h2>5. Consigli Pratici</h2>
+  <ul>
+    <li>
+      <strong>Non forzare mai i raccordi:</strong> Se il regolatore non si avvita facilmente, verifica la filettatura e la posizione della guarnizione.
     </li>
-<li>
-<strong>Non utilizzare attrezzi metallici vicino alla valvola aperta:</strong> Potrebbero generare scintille.
+    <li>
+      <strong>Non utilizzare attrezzi metallici vicino alla valvola aperta:</strong> Potrebbero generare scintille.
     </li>
-<li>
-<strong>Tenere a portata di mano un estintore:</strong> In caso di emergenza, è buona norma avere un estintore idoneo per fuochi di classe B (liquidi/gas).
+    <li>
+      <strong>Tenere a portata di mano un estintore:</strong> In caso di emergenza, è buona norma avere un estintore idoneo per fuochi di classe B (liquidi/gas).
     </li>
-<li>
-<strong>Smaltimento bombola vuota:</strong> Segui le indicazioni del fornitore o del centro di raccolta locale per lo smaltimento corretto.
+    <li>
+      <strong>Smaltimento bombola vuota:</strong> Segui le indicazioni del fornitore o del centro di raccolta locale per lo smaltimento corretto.
     </li>
-</ul>
-<h2>6. Normative e Responsabilità</h2>
-<p>
+  </ul>
+
+  <h2>6. Normative e Responsabilità</h2>
+  <p>
     Ricorda che la manipolazione delle bombole di gas deve sempre rispettare le normative vigenti (UNI 7131, UNI 9036, ecc.). In caso di dubbi o anomalie, affidati sempre a un tecnico qualificato.
   </p>
-<h2>7. Segnali di Allarme</h2>
-<ul>
-<li>Odore persistente di gas</li>
-<li>Sibilo proveniente dalla bombola o dai raccordi</li>
-<li>Presenza di bolle durante il test con acqua e sapone</li>
-</ul>
-<p>
+
+  <h2>7. Segnali di Allarme</h2>
+  <ul>
+    <li>Odore persistente di gas</li>
+    <li>Sibilo proveniente dalla bombola o dai raccordi</li>
+    <li>Presenza di bolle durante il test con acqua e sapone</li>
+  </ul>
+  <p>
     In presenza di questi segnali, chiudi immediatamente la valvola, arieggia il locale e contatta un tecnico specializzato.
   </p>
-<h2>Conclusione</h2>
-<p>
+
+  <h2>Conclusione</h2>
+  <p>
     La sostituzione della bombola del gas in una stufa è un’operazione semplice ma che richiede attenzione e rispetto delle procedure di sicurezza. Seguendo questa guida potrai operare in modo sicuro e conforme alle normative, garantendo il corretto funzionamento della tua stufa e la sicurezza della tua abitazione.
   </p>
 </section>
-<div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
-<h3>Hai altre domande?</h3>
-<p>Contattaci direttamente per una consulenza personalizzata:</p>
-<p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
-</div>
-</article>
-                
-                <div class="wiki-related">
-                    <h3>Domande correlate</h3>
-                    <ul>
-                        <li><a href="bioetanolo-bricoman-qual-è-il-rapporto-qualitàprezzo-del-bioetanolo-venduto-da-bricoman-rispetto-a-marchi-specializzati.html">Bioetanolo Bricoman: Qual è il rapporto qualità/prezzo del bioetanolo venduto da Bricoman rispetto a marchi specializzati?</a></li>
-<li><a href="bioetanolo-stufa-quali-sono-le-differenze-tra-bioetanolo-denaturato-a-96-e-altre-gradazioni-per-luso-nelle-stufe.html">Bioetanolo stufa: Quali sono le differenze tra bioetanolo denaturato a 96° e altre gradazioni per l'uso nelle stufe?</a></li>
-<li><a href="biofire-stufe-qual-è-la-caratteristica-distintiva-delle-stufe-ad-accumulo-del-marchio-biofire.html">Biofire stufe: Qual è la caratteristica distintiva delle stufe ad accumulo del marchio Biofire?</a></li>
 
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+    <div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
+        <h3>Hai altre domande?</h3>
+        <p>Contattaci direttamente per una consulenza personalizzata:</p>
+        <p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
     </div>
     
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contatti</h3>
-                    <p>📞 Telefono: 380 156 8721</p>
-                    <p>📧 Email: info@cannefumarieverona.it</p>
-                    <p>🏠 Indirizzo: Verona, Italia</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Collegamenti Rapidi</h3>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../index.html#servizi">Servizi</a></li>
-                        <li><a href="index.html">FAQ</a></li>
-                        <li><a href="../comuni.html">Comuni Serviti</a></li>
-                        <li><a href="../normative.html">Normative</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Seguici</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">YouTube</a></li>
-                    </ul>
-                </div>
-            </div>
             
-            <div class="copyright">
-                <p>&copy; 2025 Preventivi Canne Fumarie Verona. Tutti i diritti riservati.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Scripts -->
-    <script src="../js/unified-menu.js"></script>
-</body>
+        </article>
 
+        <!-- 
+        <section>
+            <h2>Caratteristiche</h2> <table>
+                <tbody>
+                    [FUTURES] <tr>
+                        <td>{NAME}</td> <td>{VALUE}</td> </tr>
+                    [/FUTURES] </tbody>
+            </table>
+        </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Breve descrizione</h2> <p>{SHORT}</p>
+        </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Descrizione completa</h2> {FULL} </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Video</h2> [MOVIES] <article>
+                <h3>{MOVIE_TITLE}</h3> <p>{MOVIE_DESCRIPTION}</p> <iframe class="movie" src="https://www.youtube.com/embed/{MOVIE}" title="{MOVIE_TITLE}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </article>
+            [/MOVIES] </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Domande Frequenti (FAQ)</h2> [FAQ] <div>
+                <h4>{QUESTION}</h4> <p>{ANSWER}</p> </div>
+            [/FAQ] </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Recensioni</h2> [REVIEWS] <blockquote>
+                <p>{REVIEW}</p> <footer>— <cite>{AUTHOR}</cite></footer> </blockquote>
+            [/REVIEWS] </section>
+         -->
+
+    </main>
+
+</body>
 </html>

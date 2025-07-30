@@ -4,661 +4,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ: Gli incentivi valgono anche per le seconde case? | Preventivi Canne Fumarie Verona | Preventivi Canne Fumarie Verona</title>
-    <meta name="description" content="Domande Frequenti: Gli incentivi valgono anche per le seconde case?">
-    
-    <!-- Styles -->
+
     <style>
-        /* Base styles */
         body {
             font-family: sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Navigation styles */
-        .nav {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-        
-        .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-        
-        .nav-menu {
-            display: flex;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .nav-links li {
-            position: relative;
-            margin: 0 10px;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-            transition: background-color 0.3s;
-        }
-        
-        .nav-links a:hover, 
-        .nav-links a.active {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-        
-        /* Dropdown styles */
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 5px 0;
-        }
-        
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        
-        .dropdown-menu a {
-            color: #333;
-            padding: 10px 15px;
-        }
-        
-        .dropdown-menu a:hover {
-            background-color: #f5f5f5;
-        }
-        
-        /* Mobile menu */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 5px;
-        }
-        
-        .hamburger {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: white;
-            position: relative;
-            transition: background 0.2s;
-        }
-        
-        .hamburger:before,
-        .hamburger:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            background: white;
-            transition: transform 0.2s;
-        }
-        
-        .hamburger:before {
-            top: -8px;
-        }
-        
-        .hamburger:after {
-            bottom: -8px;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger {
-            background: transparent;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger:before {
-            transform: rotate(45deg);
-            top: 0;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger:after {
-            transform: rotate(-45deg);
-            bottom: 0;
-        }
-        
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-        
-        .menu-overlay.active {
-            display: block;
-        }
-        
-        /* Wiki-style content */
-        .wiki-container {
-            display: flex;
-            margin: 20px 0;
-        }
-        
-        .wiki-sidebar {
-            width: 250px;
+            max-width: 800px;
             padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            margin-right: 20px;
         }
-        
-        .wiki-sidebar h3 {
-            margin-top: 0;
-            border-bottom: 2px solid #1e3c72;
-            padding-bottom: 10px;
-            color: #1e3c72;
-        }
-        
-        .wiki-sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .wiki-sidebar li {
-            margin-bottom: 10px;
-        }
-        
-        .wiki-sidebar a {
-            color: #1e3c72;
-            text-decoration: none;
-            display: block;
-            padding: 5px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .wiki-sidebar a:hover {
-            background-color: #f0f0f0;
-        }
-        
-        .wiki-content {
-            flex: 1;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .wiki-content h1 {
-            color: #1e3c72;
-            margin-top: 0;
-        }
-        
-        .wiki-content img {
-            max-width: 100%;
+        img,
+        iframe.movie {
+            max-width: 100%; /* Usa max-width per la responsività */
             height: auto;
-            border-radius: 8px;
-            margin: 20px 0;
+            border-radius: 8px; /* Angoli arrotondati per un look moderno */
         }
-        
-        .wiki-breadcrumb {
-            margin-bottom: 20px;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+        iframe.movie {
+            aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
+            width: 100%;
         }
-        
-        .wiki-breadcrumb a {
-            color: #1e3c72;
-            text-decoration: none;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
         }
-        
-        .wiki-related {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
         }
-        
-        .wiki-related h3 {
-            color: #1e3c72;
-        }
-        
-        .wiki-related ul {
-            padding-left: 20px;
-        }
-        
-        .wiki-related li {
-            margin-bottom: 10px;
-        }
-        
-        .wiki-related a {
-            color: #1e3c72;
-            text-decoration: none;
-        }
-        
-        .wiki-related a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #1e3c72;
-            color: white;
-            padding: 30px 0;
-            margin-top: 40px;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-section h3 {
-            margin-top: 0;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-            padding-bottom: 10px;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-section li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-section a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .footer-section a:hover {
-            text-decoration: underline;
-        }
-        
-        .copyright {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        /* Responsive styles */
-        @media (max-width: 992px) {
-            .nav-container {
-                flex-wrap: wrap;
-            }
-            
-            .menu-toggle {
-                display: block;
-            }
-            
-            .nav-menu {
-                display: none;
-                width: 100%;
-                order: 3;
-            }
-            
-            .nav-menu.active {
-                display: block;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .nav-links li {
-                margin: 0;
-                border-top: 1px solid rgba(255,255,255,0.1);
-            }
-            
-            .dropdown-menu {
-                position: static;
-                box-shadow: none;
-                background-color: rgba(0,0,0,0.1);
-                display: none;
-            }
-            
-            .dropdown.active .dropdown-menu {
-                display: block;
-            }
-            
-            .wiki-container {
-                flex-direction: column;
-            }
-            
-            .wiki-sidebar {
-                width: 100%;
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
+        blockquote {
+            border-left: 4px solid #eee;
+            padding-left: 1em;
+            margin-left: 0;
+            font-style: italic;
         }
     </style>
+
+    
+    <title>FAQ: Gli incentivi valgono anche per le seconde case?</title>
+    
+
+    
+    <meta name="description" content="Domande Frequenti: Gli incentivi valgono anche per le seconde case?">
+    
 </head>
 
 <body>
-    <!-- Menu Overlay -->
-    <div class="menu-overlay"></div>
-    
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="logo">🏠 Preventivi Canne Fumarie Verona</div>
-            <button aria-expanded="false" aria-label="Toggle menu" class="menu-toggle">
-                <span class="hamburger"></span>
-            </button>
-            <div class="nav-menu">
-                <ul class="nav-links">
-                    <!-- Home -->
-                    <li><a href="../index.html" class="home-link">Home</a></li>
-                    
-                    <!-- Servizi -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">Servizi</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../index.html#servizi" class="spa-link" data-page="servizi">Tutti i Servizi</a></li>
-                            <li><a href="../guida-installazione.html">Guida Installazione</a></li>
-                            <li><a href="../index.html#canna-fumaria-esterna" class="spa-link" data-page="canna-fumaria-esterna">Canna Fumaria Esterna</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Prodotti -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">Prodotti</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                            <li><a href="index.html#caminetti">Caminetti</a></li>
-                            <li><a href="index.html#termostufe">Termostufe</a></li>
-                            <li><a href="index.html#caldaie">Caldaie</a></li>
-                            <li><a href="../materiali.html">Materiali</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- FAQ -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">FAQ</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../index.html#faq" class="spa-link" data-page="faq">Domande Frequenti</a></li>
-                            <li><a href="index.html">Archivio FAQ Completo</a></li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-toggle" href="#">Categorie FAQ</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
-                                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                                    <li><a href="index.html#caminetti">Caminetti</a></li>
-                                    <li><a href="index.html#termostufe">Termostufe</a></li>
-                                    <li><a href="index.html#caldaie">Caldaie</a></li>
-                                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
-                                    <li><a href="index.html#pellet">Pellet</a></li>
-                                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Comuni Serviti -->
-                    <li><a href="../comuni.html">Comuni Serviti</a></li>
-                    
-                    <!-- Normative -->
-                    <li><a href="../normative.html">Normative</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Main Content -->
-    <div class="container">
-        <div class="wiki-container">
-            <!-- Sidebar -->
-            <div class="wiki-sidebar">
-                <h3>Categorie FAQ</h3>
-                <ul>
-                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
-                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                    <li><a href="index.html#caminetti">Caminetti</a></li>
-                    <li><a href="index.html#termostufe">Termostufe</a></li>
-                    <li><a href="index.html#caldaie">Caldaie</a></li>
-                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
-                    <li><a href="index.html#pellet">Pellet</a></li>
-                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
-                </ul>
-                
-                <h3>Nella stessa categoria</h3>
-                <ul>
-                    <li><a href="amazon-stufe-a-legna-quali-sono-le-marche-di-stufe-a-legna-più-affidabili-che-si-possono-acquistare-su-amazon.html">Amazon stufe a legna: Quali sono le marche di stufe a legna più affidabili che si possono acquistare su Amazon?</a></li>
-<li><a href="ariel-energia-stufe-a-pellet-quali-garanzie-offre-ariel-energia-sul-corpo-e-sui-componenti-delle-sue-stufe-a-pellet.html">Ariel Energia stufe a pellet: Quali garanzie offre Ariel Energia sul corpo e sui componenti delle sue stufe a pellet?</a></li>
-<li><a href="ariel-stufa-a-pellet-è-possibile-personalizzare-il-colore-o-il-rivestimento-di-una-stufa-a-pellet-ariel.html">Ariel stufa a pellet: È possibile personalizzare il colore o il rivestimento di una stufa a pellet Ariel?</a></li>
-<li><a href="ariel-stufe-a-legna-il-marchio-ariel-produce-anche-stufe-a-legna-o-è-specializzato-solo-in-pellet.html">Ariel stufe a legna: Il marchio Ariel produce anche stufe a legna o è specializzato solo in pellet?</a></li>
-<li><a href="ariel-stufe-a-pellet-prezzi-è-possibile-trovare-un-listino-prezzi-ufficiale-online-per-le-stufe-a-pellet-ariel.html">Ariel stufe a pellet prezzi: È possibile trovare un listino prezzi ufficiale online per le stufe a pellet Ariel?</a></li>
 
-                </ul>
-            </div>
-            
-            <!-- Content -->
-            <div class="wiki-content">
-                <div class="wiki-breadcrumb">
-                    <a href="../index.html">Home</a> &gt; 
-                    <a href="index.html">FAQ</a> &gt; 
-                    <a href="index.html#stufe-pellet">Stufe a Pellet</a> &gt; 
-                    Gli incentivi valgono anche per le seconde case?
-                </div>
-                
-                <h1>Gli incentivi valgono anche per le seconde case?</h1>
-                
-                <article>
-<!-- 
+    <header>
+        <h1>Gli incentivi valgono anche per le seconde case?</h1> </header>
+
+    <main>
+        <article>
+            <!-- 
             <figure>
                 <img src="{MAIN_IMAGE}" alt="Gli incentivi valgono anche per le seconde case?" title="Gli incentivi valgono anche per le seconde case?" loading="lazy" />
                 </figure>
              -->
-<!-- 
+
+            <!-- 
             <figure>
                 <iframe class="movie" src="https://www.youtube.com/embed/{MAIN_MOVIE}" title="Gli incentivi valgono anche per le seconde case?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </figure>
              -->
-<div>
-<h2>Incentivi fiscali per seconde case: guida completa 2025</h2>
-<p>
+
+            
+            <div>
+  <h2>Incentivi fiscali per seconde case: guida completa 2025</h2>
+  
+  <p>
     Gli <strong>incentivi fiscali per interventi su stufe, canne fumarie, climatizzatori e altri impianti di riscaldamento</strong> sono previsti anche per le <strong>seconde case</strong>, ma con aliquote e condizioni differenti rispetto all’abitazione principale. Di seguito una panoramica aggiornata alle normative 2025, con dettagli tecnici, consigli pratici e aspetti da considerare.
   </p>
-<h3>Aliquote e tipologie di incentivi</h3>
-<ul>
-<li>
-<strong>Abitazione principale:</strong> per il 2025 la detrazione fiscale è del <strong>50%</strong> sulle spese sostenute per interventi di ristrutturazione e sostituzione di impianti termici, inclusi infissi, pompe di calore, sistemi ibridi, impianti a biomassa e microcogenerazione. Dal 2026 l’aliquota scende al 36%<span>[1][3]</span>.
+  
+  <h3>Aliquote e tipologie di incentivi</h3>
+  <ul>
+    <li>
+      <strong>Abitazione principale:</strong> per il 2025 la detrazione fiscale è del <strong>50%</strong> sulle spese sostenute per interventi di ristrutturazione e sostituzione di impianti termici, inclusi infissi, pompe di calore, sistemi ibridi, impianti a biomassa e microcogenerazione. Dal 2026 l’aliquota scende al 36%<span>[1][3]</span>.
     </li>
-<li>
-<strong>Seconde case:</strong> nel 2025 la detrazione scende al <strong>36%</strong> per interventi analoghi, con un massimale di 60.000 € per gli infissi e ripartizione in 10 anni. Dal 2026 l’aliquota può calare ulteriormente, fino al 30% per alcune tipologie di immobili<span>[1][3]</span>.
+    <li>
+      <strong>Seconde case:</strong> nel 2025 la detrazione scende al <strong>36%</strong> per interventi analoghi, con un massimale di 60.000 € per gli infissi e ripartizione in 10 anni. Dal 2026 l’aliquota può calare ulteriormente, fino al 30% per alcune tipologie di immobili<span>[1][3]</span>.
     </li>
-<li>
-<strong>Superbonus:</strong> la detrazione al 65% è riservata solo ai lavori con CILA presentata entro il 15 ottobre 2024<span>[1]</span>.
+    <li>
+      <strong>Superbonus:</strong> la detrazione al 65% è riservata solo ai lavori con CILA presentata entro il 15 ottobre 2024<span>[1]</span>.
     </li>
-<li>
-<strong>Stop agli incentivi per caldaie a gas:</strong> dal 2025 non sono più detraibili gli impianti alimentati da combustibili fossili. Restano ammessi solo sistemi a pompa di calore, climatizzatori, ibridi certificati, biomassa o microcogenerazione<span>[1]</span>.
+    <li>
+      <strong>Stop agli incentivi per caldaie a gas:</strong> dal 2025 non sono più detraibili gli impianti alimentati da combustibili fossili. Restano ammessi solo sistemi a pompa di calore, climatizzatori, ibridi certificati, biomassa o microcogenerazione<span>[1]</span>.
     </li>
-</ul>
-<h3>Considerazioni tecniche e pratiche</h3>
-<ul>
-<li>
-<strong>Documentazione:</strong> per accedere agli incentivi è obbligatorio trasmettere la documentazione tramite i portali ufficiali (es. detrazionifiscali@enea.it, bonusfiscali.it). Occorre conservare fatture, bonifici parlanti e certificazioni degli impianti<span>[1]</span>.
+  </ul>
+  
+  <h3>Considerazioni tecniche e pratiche</h3>
+  <ul>
+    <li>
+      <strong>Documentazione:</strong> per accedere agli incentivi è obbligatorio trasmettere la documentazione tramite i portali ufficiali (es. detrazionifiscali@enea.it, bonusfiscali.it). Occorre conservare fatture, bonifici parlanti e certificazioni degli impianti<span>[1]</span>.
     </li>
-<li>
-<strong>Tipologie di interventi ammessi:</strong> sono incentivati solo gli impianti ad alta efficienza energetica e a basse emissioni. Per stufe e camini a biomassa, è richiesta la certificazione ambientale (es. 4 o 5 stelle).
+    <li>
+      <strong>Tipologie di interventi ammessi:</strong> sono incentivati solo gli impianti ad alta efficienza energetica e a basse emissioni. Per stufe e camini a biomassa, è richiesta la certificazione ambientale (es. 4 o 5 stelle).
     </li>
-<li>
-<strong>Ripartizione della detrazione:</strong> la detrazione viene suddivisa in 10 quote annuali di pari importo<span>[3]</span>.
+    <li>
+      <strong>Ripartizione della detrazione:</strong> la detrazione viene suddivisa in 10 quote annuali di pari importo<span>[3]</span>.
     </li>
-<li>
-<strong>Massimali di spesa:</strong> per gli infissi il tetto massimo è di 60.000 €; per altri interventi (es. pompe di calore, stufe a pellet) occorre verificare i limiti specifici previsti dalla normativa vigente.
+    <li>
+      <strong>Massimali di spesa:</strong> per gli infissi il tetto massimo è di 60.000 €; per altri interventi (es. pompe di calore, stufe a pellet) occorre verificare i limiti specifici previsti dalla normativa vigente.
     </li>
-<li>
-<strong>Compatibilità con altri bonus:</strong> la detrazione per seconde case non è cumulabile con altri incentivi statali per lo stesso intervento, ma può essere abbinata ad agevolazioni locali o regionali, se previste.
+    <li>
+      <strong>Compatibilità con altri bonus:</strong> la detrazione per seconde case non è cumulabile con altri incentivi statali per lo stesso intervento, ma può essere abbinata ad agevolazioni locali o regionali, se previste.
     </li>
-</ul>
-<h3>Consigli utili per chi ristruttura la seconda casa</h3>
-<ul>
-<li>
-<strong>Verifica preventiva:</strong> prima di avviare i lavori, accertarsi che l’intervento sia ammissibile e che l’immobile rientri tra quelli agevolabili (escluse alcune categorie catastali di lusso).
+  </ul>
+  
+  <h3>Consigli utili per chi ristruttura la seconda casa</h3>
+  <ul>
+    <li>
+      <strong>Verifica preventiva:</strong> prima di avviare i lavori, accertarsi che l’intervento sia ammissibile e che l’immobile rientri tra quelli agevolabili (escluse alcune categorie catastali di lusso).
     </li>
-<li>
-<strong>Affidarsi a professionisti abilitati:</strong> la corretta compilazione delle pratiche ENEA e la conformità degli impianti sono fondamentali per non perdere il diritto alla detrazione.
+    <li>
+      <strong>Affidarsi a professionisti abilitati:</strong> la corretta compilazione delle pratiche ENEA e la conformità degli impianti sono fondamentali per non perdere il diritto alla detrazione.
     </li>
-<li>
-<strong>Attenzione alle tempistiche:</strong> le aliquote e le condizioni cambiano di anno in anno; è consigliabile pianificare gli interventi tenendo conto delle scadenze normative.
+    <li>
+      <strong>Attenzione alle tempistiche:</strong> le aliquote e le condizioni cambiano di anno in anno; è consigliabile pianificare gli interventi tenendo conto delle scadenze normative.
     </li>
-<li>
-<strong>Monitoraggio delle novità:</strong> le regole fiscali sono soggette a frequenti aggiornamenti. Consultare fonti ufficiali (Agenzia delle Entrate, ENEA) o rivolgersi a consulenti specializzati per informazioni aggiornate.
+    <li>
+      <strong>Monitoraggio delle novità:</strong> le regole fiscali sono soggette a frequenti aggiornamenti. Consultare fonti ufficiali (Agenzia delle Entrate, ENEA) o rivolgersi a consulenti specializzati per informazioni aggiornate.
     </li>
-</ul>
-<h3>Tabella riepilogativa: detrazioni 2025</h3>
-<table border="1" cellpadding="5" cellspacing="0">
-<thead>
-<tr>
-<th>Tipologia immobile</th>
-<th>Aliquota detrazione 2025</th>
-<th>Interventi ammessi</th>
-<th>Massimale</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Prima casa</td>
-<td><strong>50%</strong></td>
-<td>Ristrutturazioni, sostituzione impianti, infissi, pompe di calore, biomassa</td>
-<td>60.000 € (infissi)</td>
-</tr>
-<tr>
-<td>Seconda casa</td>
-<td><strong>36%</strong></td>
-<td>Come sopra, esclusi impianti a gas</td>
-<td>60.000 € (infissi)</td>
-</tr>
-<tr>
-<td>Altri immobili</td>
-<td>Fino al <strong>30%</strong> (dal 2026)</td>
-<td>Solo impianti ad alta efficienza</td>
-<td>Variabile</td>
-</tr>
-</tbody>
-</table>
-<h3>Domande frequenti</h3>
-<ul>
-<li>
-<strong>Posso detrarre la sostituzione della stufa nella seconda casa?</strong><br/>
+  </ul>
+  
+  <h3>Tabella riepilogativa: detrazioni 2025</h3>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Tipologia immobile</th>
+        <th>Aliquota detrazione 2025</th>
+        <th>Interventi ammessi</th>
+        <th>Massimale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Prima casa</td>
+        <td><strong>50%</strong></td>
+        <td>Ristrutturazioni, sostituzione impianti, infissi, pompe di calore, biomassa</td>
+        <td>60.000 € (infissi)</td>
+      </tr>
+      <tr>
+        <td>Seconda casa</td>
+        <td><strong>36%</strong></td>
+        <td>Come sopra, esclusi impianti a gas</td>
+        <td>60.000 € (infissi)</td>
+      </tr>
+      <tr>
+        <td>Altri immobili</td>
+        <td>Fino al <strong>30%</strong> (dal 2026)</td>
+        <td>Solo impianti ad alta efficienza</td>
+        <td>Variabile</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h3>Domande frequenti</h3>
+  <ul>
+    <li>
+      <strong>Posso detrarre la sostituzione della stufa nella seconda casa?</strong><br>
       Sì, ma solo se si tratta di un impianto a biomassa certificato o pompa di calore, con aliquota al 36% nel 2025<span>[1][3]</span>.
     </li>
-<li>
-<strong>Le caldaie a gas sono ancora incentivate?</strong><br/>
+    <li>
+      <strong>Le caldaie a gas sono ancora incentivate?</strong><br>
       No, dal 2025 non sono più ammesse detrazioni per impianti alimentati da combustibili fossili<span>[1]</span>.
     </li>
-<li>
-<strong>Serve la comunicazione ENEA anche per la seconda casa?</strong><br/>
+    <li>
+      <strong>Serve la comunicazione ENEA anche per la seconda casa?</strong><br>
       Sì, la trasmissione della documentazione tramite portale ENEA è obbligatoria per tutti gli immobili<span>[1]</span>.
     </li>
-</ul>
-<p>
-<strong>In sintesi:</strong> gli incentivi valgono anche per le seconde case, ma con aliquote ridotte e requisiti tecnici stringenti. È fondamentale informarsi sulle regole aggiornate e affidarsi a professionisti qualificati per non perdere il diritto alle detrazioni.
+  </ul>
+  
+  <p>
+    <strong>In sintesi:</strong> gli incentivi valgono anche per le seconde case, ma con aliquote ridotte e requisiti tecnici stringenti. È fondamentale informarsi sulle regole aggiornate e affidarsi a professionisti qualificati per non perdere il diritto alle detrazioni.
   </p>
 </div>
-<div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
-<h3>Hai altre domande?</h3>
-<p>Contattaci direttamente per una consulenza personalizzata:</p>
-<p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
-</div>
-</article>
-                
-                <div class="wiki-related">
-                    <h3>Domande correlate</h3>
-                    <ul>
-                        <li><a href="amazon-stufe-a-legna-quali-sono-le-marche-di-stufe-a-legna-più-affidabili-che-si-possono-acquistare-su-amazon.html">Amazon stufe a legna: Quali sono le marche di stufe a legna più affidabili che si possono acquistare su Amazon?</a></li>
-<li><a href="ariel-energia-stufe-a-pellet-quali-garanzie-offre-ariel-energia-sul-corpo-e-sui-componenti-delle-sue-stufe-a-pellet.html">Ariel Energia stufe a pellet: Quali garanzie offre Ariel Energia sul corpo e sui componenti delle sue stufe a pellet?</a></li>
-<li><a href="ariel-stufa-a-pellet-è-possibile-personalizzare-il-colore-o-il-rivestimento-di-una-stufa-a-pellet-ariel.html">Ariel stufa a pellet: È possibile personalizzare il colore o il rivestimento di una stufa a pellet Ariel?</a></li>
 
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+    <div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
+        <h3>Hai altre domande?</h3>
+        <p>Contattaci direttamente per una consulenza personalizzata:</p>
+        <p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
     </div>
     
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contatti</h3>
-                    <p>📞 Telefono: 380 156 8721</p>
-                    <p>📧 Email: info@cannefumarieverona.it</p>
-                    <p>🏠 Indirizzo: Verona, Italia</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Collegamenti Rapidi</h3>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../index.html#servizi">Servizi</a></li>
-                        <li><a href="index.html">FAQ</a></li>
-                        <li><a href="../comuni.html">Comuni Serviti</a></li>
-                        <li><a href="../normative.html">Normative</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Seguici</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">YouTube</a></li>
-                    </ul>
-                </div>
-            </div>
             
-            <div class="copyright">
-                <p>&copy; 2025 Preventivi Canne Fumarie Verona. Tutti i diritti riservati.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Scripts -->
-    <script src="../js/unified-menu.js"></script>
-</body>
+        </article>
 
+        <!-- 
+        <section>
+            <h2>Caratteristiche</h2> <table>
+                <tbody>
+                    [FUTURES] <tr>
+                        <td>{NAME}</td> <td>{VALUE}</td> </tr>
+                    [/FUTURES] </tbody>
+            </table>
+        </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Breve descrizione</h2> <p>{SHORT}</p>
+        </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Descrizione completa</h2> {FULL} </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Video</h2> [MOVIES] <article>
+                <h3>{MOVIE_TITLE}</h3> <p>{MOVIE_DESCRIPTION}</p> <iframe class="movie" src="https://www.youtube.com/embed/{MOVIE}" title="{MOVIE_TITLE}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </article>
+            [/MOVIES] </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Domande Frequenti (FAQ)</h2> [FAQ] <div>
+                <h4>{QUESTION}</h4> <p>{ANSWER}</p> </div>
+            [/FAQ] </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Recensioni</h2> [REVIEWS] <blockquote>
+                <p>{REVIEW}</p> <footer>— <cite>{AUTHOR}</cite></footer> </blockquote>
+            [/REVIEWS] </section>
+         -->
+
+    </main>
+
+</body>
 </html>

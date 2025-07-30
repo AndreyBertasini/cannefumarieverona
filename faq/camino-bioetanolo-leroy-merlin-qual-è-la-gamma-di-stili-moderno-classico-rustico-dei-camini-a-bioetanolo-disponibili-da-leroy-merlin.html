@@ -4,616 +4,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ: Camino bioetanolo Leroy Merlin: Qual è la gamma di stili (moderno, classico, rustico) dei camini a bioetanolo disponibili da Leroy Merlin? | Preventivi Canne Fumarie Verona | Preventivi Canne Fumarie Verona</title>
-    <meta name="description" content="Domande Frequenti: Camino bioetanolo Leroy Merlin: Qual è la gamma di stili (moderno, classico, rustico) dei camini a bioetanolo disponibili da Leroy Merlin?">
-    
-    <!-- Styles -->
+
     <style>
-        /* Base styles */
         body {
             font-family: sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Navigation styles */
-        .nav {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-        
-        .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-        
-        .nav-menu {
-            display: flex;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .nav-links li {
-            position: relative;
-            margin: 0 10px;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-            transition: background-color 0.3s;
-        }
-        
-        .nav-links a:hover, 
-        .nav-links a.active {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-        
-        /* Dropdown styles */
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 5px 0;
-        }
-        
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        
-        .dropdown-menu a {
-            color: #333;
-            padding: 10px 15px;
-        }
-        
-        .dropdown-menu a:hover {
-            background-color: #f5f5f5;
-        }
-        
-        /* Mobile menu */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 5px;
-        }
-        
-        .hamburger {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: white;
-            position: relative;
-            transition: background 0.2s;
-        }
-        
-        .hamburger:before,
-        .hamburger:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            background: white;
-            transition: transform 0.2s;
-        }
-        
-        .hamburger:before {
-            top: -8px;
-        }
-        
-        .hamburger:after {
-            bottom: -8px;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger {
-            background: transparent;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger:before {
-            transform: rotate(45deg);
-            top: 0;
-        }
-        
-        .menu-toggle[aria-expanded="true"] .hamburger:after {
-            transform: rotate(-45deg);
-            bottom: 0;
-        }
-        
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-        
-        .menu-overlay.active {
-            display: block;
-        }
-        
-        /* Wiki-style content */
-        .wiki-container {
-            display: flex;
-            margin: 20px 0;
-        }
-        
-        .wiki-sidebar {
-            width: 250px;
+            max-width: 800px;
             padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            margin-right: 20px;
         }
-        
-        .wiki-sidebar h3 {
-            margin-top: 0;
-            border-bottom: 2px solid #1e3c72;
-            padding-bottom: 10px;
-            color: #1e3c72;
-        }
-        
-        .wiki-sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .wiki-sidebar li {
-            margin-bottom: 10px;
-        }
-        
-        .wiki-sidebar a {
-            color: #1e3c72;
-            text-decoration: none;
-            display: block;
-            padding: 5px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .wiki-sidebar a:hover {
-            background-color: #f0f0f0;
-        }
-        
-        .wiki-content {
-            flex: 1;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .wiki-content h1 {
-            color: #1e3c72;
-            margin-top: 0;
-        }
-        
-        .wiki-content img {
-            max-width: 100%;
+        img,
+        iframe.movie {
+            max-width: 100%; /* Usa max-width per la responsività */
             height: auto;
-            border-radius: 8px;
-            margin: 20px 0;
+            border-radius: 8px; /* Angoli arrotondati per un look moderno */
         }
-        
-        .wiki-breadcrumb {
-            margin-bottom: 20px;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+        iframe.movie {
+            aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
+            width: 100%;
         }
-        
-        .wiki-breadcrumb a {
-            color: #1e3c72;
-            text-decoration: none;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
         }
-        
-        .wiki-related {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
         }
-        
-        .wiki-related h3 {
-            color: #1e3c72;
-        }
-        
-        .wiki-related ul {
-            padding-left: 20px;
-        }
-        
-        .wiki-related li {
-            margin-bottom: 10px;
-        }
-        
-        .wiki-related a {
-            color: #1e3c72;
-            text-decoration: none;
-        }
-        
-        .wiki-related a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #1e3c72;
-            color: white;
-            padding: 30px 0;
-            margin-top: 40px;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-section h3 {
-            margin-top: 0;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-            padding-bottom: 10px;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-section li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-section a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .footer-section a:hover {
-            text-decoration: underline;
-        }
-        
-        .copyright {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        /* Responsive styles */
-        @media (max-width: 992px) {
-            .nav-container {
-                flex-wrap: wrap;
-            }
-            
-            .menu-toggle {
-                display: block;
-            }
-            
-            .nav-menu {
-                display: none;
-                width: 100%;
-                order: 3;
-            }
-            
-            .nav-menu.active {
-                display: block;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .nav-links li {
-                margin: 0;
-                border-top: 1px solid rgba(255,255,255,0.1);
-            }
-            
-            .dropdown-menu {
-                position: static;
-                box-shadow: none;
-                background-color: rgba(0,0,0,0.1);
-                display: none;
-            }
-            
-            .dropdown.active .dropdown-menu {
-                display: block;
-            }
-            
-            .wiki-container {
-                flex-direction: column;
-            }
-            
-            .wiki-sidebar {
-                width: 100%;
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
+        blockquote {
+            border-left: 4px solid #eee;
+            padding-left: 1em;
+            margin-left: 0;
+            font-style: italic;
         }
     </style>
+
+    
+    <title>FAQ: Camino bioetanolo Leroy Merlin: Qual è la gamma di stili (moderno, classico, rustico) dei camini a bioetanolo disponibili da Leroy Merlin?</title>
+    
+
+    
+    <meta name="description" content="Domande Frequenti: Camino bioetanolo Leroy Merlin: Qual è la gamma di stili (moderno, classico, rustico) dei camini a bioetanolo disponibili da Leroy Merlin?">
+    
 </head>
 
 <body>
-    <!-- Menu Overlay -->
-    <div class="menu-overlay"></div>
-    
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="logo">🏠 Preventivi Canne Fumarie Verona</div>
-            <button aria-expanded="false" aria-label="Toggle menu" class="menu-toggle">
-                <span class="hamburger"></span>
-            </button>
-            <div class="nav-menu">
-                <ul class="nav-links">
-                    <!-- Home -->
-                    <li><a href="../index.html" class="home-link">Home</a></li>
-                    
-                    <!-- Servizi -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">Servizi</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../index.html#servizi" class="spa-link" data-page="servizi">Tutti i Servizi</a></li>
-                            <li><a href="../guida-installazione.html">Guida Installazione</a></li>
-                            <li><a href="../index.html#canna-fumaria-esterna" class="spa-link" data-page="canna-fumaria-esterna">Canna Fumaria Esterna</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Prodotti -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">Prodotti</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                            <li><a href="index.html#caminetti">Caminetti</a></li>
-                            <li><a href="index.html#termostufe">Termostufe</a></li>
-                            <li><a href="index.html#caldaie">Caldaie</a></li>
-                            <li><a href="../materiali.html">Materiali</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- FAQ -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">FAQ</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../index.html#faq" class="spa-link" data-page="faq">Domande Frequenti</a></li>
-                            <li><a href="index.html">Archivio FAQ Completo</a></li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-toggle" href="#">Categorie FAQ</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
-                                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                                    <li><a href="index.html#caminetti">Caminetti</a></li>
-                                    <li><a href="index.html#termostufe">Termostufe</a></li>
-                                    <li><a href="index.html#caldaie">Caldaie</a></li>
-                                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
-                                    <li><a href="index.html#pellet">Pellet</a></li>
-                                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Comuni Serviti -->
-                    <li><a href="../comuni.html">Comuni Serviti</a></li>
-                    
-                    <!-- Normative -->
-                    <li><a href="../normative.html">Normative</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Main Content -->
-    <div class="container">
-        <div class="wiki-container">
-            <!-- Sidebar -->
-            <div class="wiki-sidebar">
-                <h3>Categorie FAQ</h3>
-                <ul>
-                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
-                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
-                    <li><a href="index.html#caminetti">Caminetti</a></li>
-                    <li><a href="index.html#termostufe">Termostufe</a></li>
-                    <li><a href="index.html#caldaie">Caldaie</a></li>
-                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
-                    <li><a href="index.html#pellet">Pellet</a></li>
-                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
-                </ul>
-                
-                <h3>Nella stessa categoria</h3>
-                <ul>
-                    <li><a href="a-caminetti-cosa-significa-la-dicitura-a-caminetti-in-alcuni-contesti-di-vendita.html">A caminetti: Cosa significa la dicitura "a caminetti" in alcuni contesti di vendita?</a></li>
-<li><a href="cade-fuliggine-dai-tubi-come-posso-risolvere.html">Cade fuliggine dai tubi, come posso risolvere?</a></li>
-<li><a href="caminetti-a-bioetanolo-è-possibile-utilizzare-oli-essenziali-nel-bioetanolo-per-profumare-lambiente.html">Caminetti a bioetanolo: È possibile utilizzare oli essenziali nel bioetanolo per profumare l'ambiente?</a></li>
-<li><a href="caminetti-a-legna-per-interni-come-si-sceglie-il-rivestimento-perfetto-per-un-caminetto-a-legna-da-interni-in-base-allo-stile-della-casa.html">Caminetti a legna per interni: Come si sceglie il rivestimento perfetto per un caminetto a legna da interni in base allo stile della casa?</a></li>
-<li><a href="caminetti-a-legna-per-interni-prezzi-quanto-costa-in-media-il-rivestimento-su-misura-per-un-caminetto-a-legna-interno.html">Caminetti a legna per interni prezzi: Quanto costa in media il rivestimento su misura per un caminetto a legna interno?</a></li>
 
-                </ul>
-            </div>
-            
-            <!-- Content -->
-            <div class="wiki-content">
-                <div class="wiki-breadcrumb">
-                    <a href="../index.html">Home</a> &gt; 
-                    <a href="index.html">FAQ</a> &gt; 
-                    <a href="index.html#caminetti">Caminetti</a> &gt; 
-                    Camino bioetanolo Leroy Merlin: Qual è la gamma di stili (moderno, classico, rustico) dei camini a bioetanolo disponibili da Leroy Merlin?
-                </div>
-                
-                <h1>Camino bioetanolo Leroy Merlin: Qual è la gamma di stili (moderno, classico, rustico) dei camini a bioetanolo disponibili da Leroy Merlin?</h1>
-                
-                <article>
-<!-- 
+    <header>
+        <h1>Camino bioetanolo Leroy Merlin: Qual è la gamma di stili (moderno, classico, rustico) dei camini a bioetanolo disponibili da Leroy Merlin?</h1> </header>
+
+    <main>
+        <article>
+            <!-- 
             <figure>
                 <img src="{MAIN_IMAGE}" alt="Camino bioetanolo Leroy Merlin: Qual è la gamma di stili (moderno, classico, rustico) dei camini a bioetanolo disponibili da Leroy Merlin?" title="Camino bioetanolo Leroy Merlin: Qual è la gamma di stili (moderno, classico, rustico) dei camini a bioetanolo disponibili da Leroy Merlin?" loading="lazy" />
                 </figure>
              -->
-<!-- 
+
+            <!-- 
             <figure>
                 <iframe class="movie" src="https://www.youtube.com/embed/{MAIN_MOVIE}" title="Camino bioetanolo Leroy Merlin: Qual è la gamma di stili (moderno, classico, rustico) dei camini a bioetanolo disponibili da Leroy Merlin?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </figure>
              -->
-<section>
-<h2>Gamma di Stili dei Camini a Bioetanolo da Leroy Merlin</h2>
-<p>
+
+            
+            <section>
+  <h2>Gamma di Stili dei Camini a Bioetanolo da Leroy Merlin</h2>
+  <p>
     I <strong>camini a bioetanolo</strong> disponibili da Leroy Merlin coprono una vasta gamma di stili per adattarsi a diverse esigenze estetiche e di arredamento. Questi prodotti sono progettati per offrire una soluzione di riscaldamento pulita, senza necessità di canna fumaria, e si distinguono soprattutto per la loro versatilità stilistica.
   </p>
-<h3>Stili Principali Disponibili</h3>
-<ul>
-<li>
-<strong>Moderno</strong>: La maggior parte dei camini a bioetanolo Leroy Merlin presenta un design <strong>minimalista</strong> e <strong>contemporaneo</strong>. Sono caratterizzati da linee pulite, forme geometriche essenziali, finiture in vetro temperato, acciaio inox o metallo verniciato. Questi modelli sono ideali per ambienti urbani, loft e appartamenti dallo stile attuale.
+
+  <h3>Stili Principali Disponibili</h3>
+  <ul>
+    <li>
+      <strong>Moderno</strong>: La maggior parte dei camini a bioetanolo Leroy Merlin presenta un design <strong>minimalista</strong> e <strong>contemporaneo</strong>. Sono caratterizzati da linee pulite, forme geometriche essenziali, finiture in vetro temperato, acciaio inox o metallo verniciato. Questi modelli sono ideali per ambienti urbani, loft e appartamenti dallo stile attuale.
     </li>
-<li>
-<strong>Classico</strong>: Sono disponibili anche camini con <strong>cornici decorative</strong> e dettagli tradizionali, spesso in finitura bianca, effetto pietra o legno. Questi modelli si ispirano ai camini tradizionali e si integrano perfettamente in soggiorni eleganti o case dallo stile più raffinato.
+    <li>
+      <strong>Classico</strong>: Sono disponibili anche camini con <strong>cornici decorative</strong> e dettagli tradizionali, spesso in finitura bianca, effetto pietra o legno. Questi modelli si ispirano ai camini tradizionali e si integrano perfettamente in soggiorni eleganti o case dallo stile più raffinato.
     </li>
-<li>
-<strong>Rustico</strong>: Sebbene meno diffusi rispetto agli stili moderno e classico, alcuni camini a bioetanolo presentano dettagli in <strong>legno naturale</strong> o finiture effetto pietra, pensati per ambienti rustici, case di campagna o chalet di montagna.
+    <li>
+      <strong>Rustico</strong>: Sebbene meno diffusi rispetto agli stili moderno e classico, alcuni camini a bioetanolo presentano dettagli in <strong>legno naturale</strong> o finiture effetto pietra, pensati per ambienti rustici, case di campagna o chalet di montagna.
     </li>
-</ul>
-<h3>Tipologie di Installazione e Formati</h3>
-<ul>
-<li>
-<strong>Da parete</strong>: Modelli sospesi o incassati, spesso dal design moderno, ideali per ottimizzare lo spazio.
+  </ul>
+
+  <h3>Tipologie di Installazione e Formati</h3>
+  <ul>
+    <li>
+      <strong>Da parete</strong>: Modelli sospesi o incassati, spesso dal design moderno, ideali per ottimizzare lo spazio.
     </li>
-<li>
-<strong>Da appoggio</strong>: Caminetti portatili, disponibili sia in versione moderna che classica, facilmente posizionabili su mobili o a terra.
+    <li>
+      <strong>Da appoggio</strong>: Caminetti portatili, disponibili sia in versione moderna che classica, facilmente posizionabili su mobili o a terra.
     </li>
-<li>
-<strong>Da incasso</strong>: Soluzioni eleganti che si integrano nella muratura o in strutture su misura, disponibili in vari stili.
+    <li>
+      <strong>Da incasso</strong>: Soluzioni eleganti che si integrano nella muratura o in strutture su misura, disponibili in vari stili.
     </li>
-</ul>
-<h3>Consigli Pratici per la Scelta</h3>
-<ul>
-<li>
-<strong>Armonia con l’arredo</strong>: Scegli uno stile che si integri con il design della stanza. Il moderno valorizza ambienti minimal, il classico si abbina a mobili tradizionali, il rustico a materiali naturali.
+  </ul>
+
+  <h3>Consigli Pratici per la Scelta</h3>
+  <ul>
+    <li>
+      <strong>Armonia con l’arredo</strong>: Scegli uno stile che si integri con il design della stanza. Il moderno valorizza ambienti minimal, il classico si abbina a mobili tradizionali, il rustico a materiali naturali.
     </li>
-<li>
-<strong>Dimensioni</strong>: Valuta lo spazio disponibile. I modelli da appoggio sono più flessibili, quelli da incasso richiedono una progettazione accurata.
+    <li>
+      <strong>Dimensioni</strong>: Valuta lo spazio disponibile. I modelli da appoggio sono più flessibili, quelli da incasso richiedono una progettazione accurata.
     </li>
-<li>
-<strong>Materiali</strong>: Preferisci materiali di qualità come acciaio inox, vetro temperato e legno trattato per garantire durata e sicurezza.
+    <li>
+      <strong>Materiali</strong>: Preferisci materiali di qualità come acciaio inox, vetro temperato e legno trattato per garantire durata e sicurezza.
     </li>
-</ul>
-<h3>Considerazioni Importanti</h3>
-<ul>
-<li>
-<strong>Sicurezza</strong>: I camini a bioetanolo non richiedono canna fumaria, ma è fondamentale rispettare le distanze di sicurezza da materiali infiammabili e seguire le istruzioni del produttore.
+  </ul>
+
+  <h3>Considerazioni Importanti</h3>
+  <ul>
+    <li>
+      <strong>Sicurezza</strong>: I camini a bioetanolo non richiedono canna fumaria, ma è fondamentale rispettare le distanze di sicurezza da materiali infiammabili e seguire le istruzioni del produttore.
     </li>
-<li>
-<strong>Effetto estetico</strong>: Oltre al calore, questi camini sono scelti per l’atmosfera e il design; la fiamma vera aggiunge un tocco scenografico all’ambiente.
+    <li>
+      <strong>Effetto estetico</strong>: Oltre al calore, questi camini sono scelti per l’atmosfera e il design; la fiamma vera aggiunge un tocco scenografico all’ambiente.
     </li>
-<li>
-<strong>Manutenzione</strong>: Richiedono poca manutenzione, ma è importante utilizzare solo bioetanolo di qualità per evitare odori e residui.
+    <li>
+      <strong>Manutenzione</strong>: Richiedono poca manutenzione, ma è importante utilizzare solo bioetanolo di qualità per evitare odori e residui.
     </li>
-</ul>
-<h3>Limiti e Aggiornamenti</h3>
-<p>
+  </ul>
+
+  <h3>Limiti e Aggiornamenti</h3>
+  <p>
     La gamma di stili può variare nel tempo in base alle tendenze di mercato e alle disponibilità stagionali. Si consiglia di consultare periodicamente il catalogo Leroy Merlin per verificare le ultime novità e le collezioni aggiornate.
   </p>
 </section>
-<div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
-<h3>Hai altre domande?</h3>
-<p>Contattaci direttamente per una consulenza personalizzata:</p>
-<p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
-</div>
-</article>
-                
-                <div class="wiki-related">
-                    <h3>Domande correlate</h3>
-                    <ul>
-                        <li><a href="a-caminetti-cosa-significa-la-dicitura-a-caminetti-in-alcuni-contesti-di-vendita.html">A caminetti: Cosa significa la dicitura "a caminetti" in alcuni contesti di vendita?</a></li>
-<li><a href="cade-fuliggine-dai-tubi-come-posso-risolvere.html">Cade fuliggine dai tubi, come posso risolvere?</a></li>
-<li><a href="caminetti-a-bioetanolo-è-possibile-utilizzare-oli-essenziali-nel-bioetanolo-per-profumare-lambiente.html">Caminetti a bioetanolo: È possibile utilizzare oli essenziali nel bioetanolo per profumare l'ambiente?</a></li>
 
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+    <div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
+        <h3>Hai altre domande?</h3>
+        <p>Contattaci direttamente per una consulenza personalizzata:</p>
+        <p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
     </div>
     
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contatti</h3>
-                    <p>📞 Telefono: 380 156 8721</p>
-                    <p>📧 Email: info@cannefumarieverona.it</p>
-                    <p>🏠 Indirizzo: Verona, Italia</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Collegamenti Rapidi</h3>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../index.html#servizi">Servizi</a></li>
-                        <li><a href="index.html">FAQ</a></li>
-                        <li><a href="../comuni.html">Comuni Serviti</a></li>
-                        <li><a href="../normative.html">Normative</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Seguici</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">YouTube</a></li>
-                    </ul>
-                </div>
-            </div>
             
-            <div class="copyright">
-                <p>&copy; 2025 Preventivi Canne Fumarie Verona. Tutti i diritti riservati.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Scripts -->
-    <script src="../js/unified-menu.js"></script>
-</body>
+        </article>
 
+        <!-- 
+        <section>
+            <h2>Caratteristiche</h2> <table>
+                <tbody>
+                    [FUTURES] <tr>
+                        <td>{NAME}</td> <td>{VALUE}</td> </tr>
+                    [/FUTURES] </tbody>
+            </table>
+        </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Breve descrizione</h2> <p>{SHORT}</p>
+        </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Descrizione completa</h2> {FULL} </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Video</h2> [MOVIES] <article>
+                <h3>{MOVIE_TITLE}</h3> <p>{MOVIE_DESCRIPTION}</p> <iframe class="movie" src="https://www.youtube.com/embed/{MOVIE}" title="{MOVIE_TITLE}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </article>
+            [/MOVIES] </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Domande Frequenti (FAQ)</h2> [FAQ] <div>
+                <h4>{QUESTION}</h4> <p>{ANSWER}</p> </div>
+            [/FAQ] </section>
+         -->
+
+        <!-- 
+        <section>
+            <h2>Recensioni</h2> [REVIEWS] <blockquote>
+                <p>{REVIEW}</p> <footer>— <cite>{AUTHOR}</cite></footer> </blockquote>
+            [/REVIEWS] </section>
+         -->
+
+    </main>
+
+</body>
 </html>
