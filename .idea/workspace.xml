@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="787f9bdb-c94f-4295-94d4-a7e8e62b66b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.junie/guidelines.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Installazione Canne Fumarie a Verona.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README_FAQ.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domande.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fix_html_structure.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html.backup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remove_stufe_pellet_sections.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_faq_pages.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_main_pages.py" beforeDir="false" />
+    <list default="true" id="787f9bdb-c94f-4295-94d4-a7e8e62b66b5" name="Changes" comment="The information provided is incomplete. Could you please provide the content of the previous commit messages for better understanding, and specify the exact changes made within the &quot;diff&quot;? This will help me craft a more precise and consistent commit message.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,21 +36,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -85,11 +68,32 @@
       <option name="presentableId" value="Default" />
       <updated>1753881411139</updated>
       <workItem from="1753881412216" duration="211000" />
-      <workItem from="1753881632879" duration="1880000" />
+      <workItem from="1753881632879" duration="4564000" />
     </task>
+    <task id="LOCAL-00001" summary="The information provided is incomplete. Could you please provide the content of the previous commit messages for better understanding, and specify the exact changes made within the &quot;diff&quot;? This will help me craft a more precise and consistent commit message.">
+      <option name="closed" value="true" />
+      <created>1753883569948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1753883569948</updated>
+    </task>
+    <task id="LOCAL-00002" summary="The information provided is incomplete. Could you please provide the content of the previous commit messages for better understanding, and specify the exact changes made within the &quot;diff&quot;? This will help me craft a more precise and consistent commit message.">
+      <option name="closed" value="true" />
+      <created>1753883595054</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1753883595054</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="The information provided is incomplete. Could you please provide the content of the previous commit messages for better understanding, and specify the exact changes made within the &quot;diff&quot;? This will help me craft a more precise and consistent commit message." />
+    <option name="LAST_COMMIT_MESSAGE" value="The information provided is incomplete. Could you please provide the content of the previous commit messages for better understanding, and specify the exact changes made within the &quot;diff&quot;? This will help me craft a more precise and consistent commit message." />
   </component>
 </project>
