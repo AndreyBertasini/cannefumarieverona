@@ -4,184 +4,607 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>FAQ: Stufe a pellet MCZ: Quali sono le opzioni di rivestimento (ceramica, pietra, acciaio) disponibili per le stufe a pellet MCZ? | Preventivi Canne Fumarie Verona | Preventivi Canne Fumarie Verona</title>
+    <meta name="description" content="Domande Frequenti: Stufe a pellet MCZ: Quali sono le opzioni di rivestimento (ceramica, pietra, acciaio) disponibili per le stufe a pellet MCZ?">
+    
+    <!-- Styles -->
     <style>
+        /* Base styles */
         body {
             font-family: sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        /* Navigation styles */
+        .nav {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            position: relative;
+            margin: 0 10px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links a:hover, 
+        .nav-links a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        
+        /* Dropdown styles */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            padding: 5px 0;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-menu a {
+            color: #333;
+            padding: 10px 15px;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            position: relative;
+            transition: background 0.2s;
+        }
+        
+        .hamburger:before,
+        .hamburger:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: white;
+            transition: transform 0.2s;
+        }
+        
+        .hamburger:before {
+            top: -8px;
+        }
+        
+        .hamburger:after {
+            bottom: -8px;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger {
+            background: transparent;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger:before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger:after {
+            transform: rotate(-45deg);
+            bottom: 0;
+        }
+        
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        
+        .menu-overlay.active {
+            display: block;
+        }
+        
+        /* Wiki-style content */
+        .wiki-container {
+            display: flex;
+            margin: 20px 0;
+        }
+        
+        .wiki-sidebar {
+            width: 250px;
             padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-right: 20px;
         }
-        img,
-        iframe.movie {
-            max-width: 100%; /* Usa max-width per la responsività */
+        
+        .wiki-sidebar h3 {
+            margin-top: 0;
+            border-bottom: 2px solid #1e3c72;
+            padding-bottom: 10px;
+            color: #1e3c72;
+        }
+        
+        .wiki-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .wiki-sidebar li {
+            margin-bottom: 10px;
+        }
+        
+        .wiki-sidebar a {
+            color: #1e3c72;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .wiki-sidebar a:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .wiki-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .wiki-content h1 {
+            color: #1e3c72;
+            margin-top: 0;
+        }
+        
+        .wiki-content img {
+            max-width: 100%;
             height: auto;
-            border-radius: 8px; /* Angoli arrotondati per un look moderno */
+            border-radius: 8px;
+            margin: 20px 0;
         }
-        iframe.movie {
-            aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
-            width: 100%;
+        
+        .wiki-breadcrumb {
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1em;
+        
+        .wiki-breadcrumb a {
+            color: #1e3c72;
+            text-decoration: none;
         }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
+        
+        .wiki-related {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
         }
-        blockquote {
-            border-left: 4px solid #eee;
-            padding-left: 1em;
-            margin-left: 0;
-            font-style: italic;
+        
+        .wiki-related h3 {
+            color: #1e3c72;
+        }
+        
+        .wiki-related ul {
+            padding-left: 20px;
+        }
+        
+        .wiki-related li {
+            margin-bottom: 10px;
+        }
+        
+        .wiki-related a {
+            color: #1e3c72;
+            text-decoration: none;
+        }
+        
+        .wiki-related a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-top: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                display: none;
+                width: 100%;
+                order: 3;
+            }
+            
+            .nav-menu.active {
+                display: block;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-links li {
+                margin: 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                background-color: rgba(0,0,0,0.1);
+                display: none;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+            
+            .wiki-container {
+                flex-direction: column;
+            }
+            
+            .wiki-sidebar {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
         }
     </style>
-
-    
-    <title>FAQ: Stufe a pellet MCZ: Quali sono le opzioni di rivestimento (ceramica, pietra, acciaio) disponibili per le stufe a pellet MCZ?</title>
-    
-
-    
-    <meta name="description" content="Domande Frequenti: Stufe a pellet MCZ: Quali sono le opzioni di rivestimento (ceramica, pietra, acciaio) disponibili per le stufe a pellet MCZ?">
-    
 </head>
 
 <body>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">🏠 Preventivi Canne Fumarie Verona</div>
+            <button aria-expanded="false" aria-label="Toggle menu" class="menu-toggle">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <!-- Home -->
+                    <li><a href="../index.html" class="home-link">Home</a></li>
+                    
+                    <!-- Servizi -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">Servizi</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#servizi" class="spa-link" data-page="servizi">Tutti i Servizi</a></li>
+                            <li><a href="../guida-installazione.html">Guida Installazione</a></li>
+                            <li><a href="../index.html#canna-fumaria-esterna" class="spa-link" data-page="canna-fumaria-esterna">Canna Fumaria Esterna</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Prodotti -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">Prodotti</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                            <li><a href="index.html#caminetti">Caminetti</a></li>
+                            <li><a href="index.html#termostufe">Termostufe</a></li>
+                            <li><a href="index.html#caldaie">Caldaie</a></li>
+                            <li><a href="../materiali.html">Materiali</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- FAQ -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">FAQ</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#faq" class="spa-link" data-page="faq">Domande Frequenti</a></li>
+                            <li><a href="index.html">Archivio FAQ Completo</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-toggle" href="#">Categorie FAQ</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
+                                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                                    <li><a href="index.html#caminetti">Caminetti</a></li>
+                                    <li><a href="index.html#termostufe">Termostufe</a></li>
+                                    <li><a href="index.html#caldaie">Caldaie</a></li>
+                                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
+                                    <li><a href="index.html#pellet">Pellet</a></li>
+                                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Comuni Serviti -->
+                    <li><a href="../comuni.html">Comuni Serviti</a></li>
+                    
+                    <!-- Normative -->
+                    <li><a href="../normative.html">Normative</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="wiki-container">
+            <!-- Sidebar -->
+            <div class="wiki-sidebar">
+                <h3>Categorie FAQ</h3>
+                <ul>
+                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
+                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                    <li><a href="index.html#caminetti">Caminetti</a></li>
+                    <li><a href="index.html#termostufe">Termostufe</a></li>
+                    <li><a href="index.html#caldaie">Caldaie</a></li>
+                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
+                    <li><a href="index.html#pellet">Pellet</a></li>
+                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
+                </ul>
+                
+                <h3>Nella stessa categoria</h3>
+                <ul>
+                    <li><a href="amazon-stufe-a-legna-quali-sono-le-marche-di-stufe-a-legna-più-affidabili-che-si-possono-acquistare-su-amazon.html">Amazon stufe a legna: Quali sono le marche di stufe a legna più affidabili che si possono acquistare su Amazon?</a></li>
+<li><a href="ariel-energia-stufe-a-pellet-quali-garanzie-offre-ariel-energia-sul-corpo-e-sui-componenti-delle-sue-stufe-a-pellet.html">Ariel Energia stufe a pellet: Quali garanzie offre Ariel Energia sul corpo e sui componenti delle sue stufe a pellet?</a></li>
+<li><a href="ariel-stufa-a-pellet-è-possibile-personalizzare-il-colore-o-il-rivestimento-di-una-stufa-a-pellet-ariel.html">Ariel stufa a pellet: È possibile personalizzare il colore o il rivestimento di una stufa a pellet Ariel?</a></li>
+<li><a href="ariel-stufe-a-legna-il-marchio-ariel-produce-anche-stufe-a-legna-o-è-specializzato-solo-in-pellet.html">Ariel stufe a legna: Il marchio Ariel produce anche stufe a legna o è specializzato solo in pellet?</a></li>
+<li><a href="ariel-stufe-a-pellet-prezzi-è-possibile-trovare-un-listino-prezzi-ufficiale-online-per-le-stufe-a-pellet-ariel.html">Ariel stufe a pellet prezzi: È possibile trovare un listino prezzi ufficiale online per le stufe a pellet Ariel?</a></li>
 
-    <header>
-        <h1>Stufe a pellet MCZ: Quali sono le opzioni di rivestimento (ceramica, pietra, acciaio) disponibili per le stufe a pellet MCZ?</h1> </header>
-
-    <main>
-        <article>
-            <!-- 
+                </ul>
+            </div>
+            
+            <!-- Content -->
+            <div class="wiki-content">
+                <div class="wiki-breadcrumb">
+                    <a href="../index.html">Home</a> &gt; 
+                    <a href="index.html">FAQ</a> &gt; 
+                    <a href="index.html#stufe-pellet">Stufe a Pellet</a> &gt; 
+                    Stufe a pellet MCZ: Quali sono le opzioni di rivestimento (ceramica, pietra, acciaio) disponibili per le stufe a pellet MCZ?
+                </div>
+                
+                <h1>Stufe a pellet MCZ: Quali sono le opzioni di rivestimento (ceramica, pietra, acciaio) disponibili per le stufe a pellet MCZ?</h1>
+                
+                <article>
+<!-- 
             <figure>
                 <img src="{MAIN_IMAGE}" alt="Stufe a pellet MCZ: Quali sono le opzioni di rivestimento (ceramica, pietra, acciaio) disponibili per le stufe a pellet MCZ?" title="Stufe a pellet MCZ: Quali sono le opzioni di rivestimento (ceramica, pietra, acciaio) disponibili per le stufe a pellet MCZ?" loading="lazy" />
                 </figure>
              -->
-
-            <!-- 
+<!-- 
             <figure>
                 <iframe class="movie" src="https://www.youtube.com/embed/{MAIN_MOVIE}" title="Stufe a pellet MCZ: Quali sono le opzioni di rivestimento (ceramica, pietra, acciaio) disponibili per le stufe a pellet MCZ?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </figure>
              -->
-
-            
-            <h1>Guida completa ai rivestimenti delle stufe a pellet MCZ</h1>
-
+<h1>Guida completa ai rivestimenti delle stufe a pellet MCZ</h1>
 <p>
 Le stufe a pellet MCZ sono tra le più apprezzate sul mercato per efficienza, design e possibilità di personalizzazione. Uno degli aspetti più importanti nella scelta di una stufa MCZ riguarda il tipo di <strong>rivestimento</strong>, che influisce sia sull’estetica che sulle prestazioni termiche dell’apparecchio. In questa guida analizziamo nel dettaglio le opzioni disponibili: <strong>ceramica</strong>, <strong>pietra</strong> e <strong>acciaio</strong>.
 </p>
-
 <h2>1. Rivestimento in ceramica</h2>
 <p>
 La ceramica è un materiale tradizionale, molto utilizzato per le stufe grazie alle sue proprietà estetiche e termiche.
 </p>
 <ul>
-  <li><strong>Estetica:</strong> disponibile in vari colori e finiture (lucida, opaca, decorata), dona un aspetto classico o moderno a seconda della lavorazione.</li>
-  <li><strong>Proprietà termiche:</strong> la ceramica trattiene il calore e lo rilascia gradualmente, contribuendo a mantenere l’ambiente caldo anche dopo lo spegnimento della stufa.</li>
-  <li><strong>Manutenzione:</strong> facile da pulire, resistente a graffi e urti moderati.</li>
-  <li><strong>Applicazioni:</strong> ideale per chi cerca una stufa dal design raffinato e desidera sfruttare la capacità di accumulo termico della ceramica.</li>
+<li><strong>Estetica:</strong> disponibile in vari colori e finiture (lucida, opaca, decorata), dona un aspetto classico o moderno a seconda della lavorazione.</li>
+<li><strong>Proprietà termiche:</strong> la ceramica trattiene il calore e lo rilascia gradualmente, contribuendo a mantenere l’ambiente caldo anche dopo lo spegnimento della stufa.</li>
+<li><strong>Manutenzione:</strong> facile da pulire, resistente a graffi e urti moderati.</li>
+<li><strong>Applicazioni:</strong> ideale per chi cerca una stufa dal design raffinato e desidera sfruttare la capacità di accumulo termico della ceramica.</li>
 </ul>
-
 <h2>2. Rivestimento in pietra naturale (pietra ollare/steatite)</h2>
 <p>
 La pietra naturale, in particolare la <strong>pietra ollare</strong> (detta anche steatite), è molto apprezzata per le sue eccellenti proprietà di accumulo e rilascio del calore.
 </p>
 <ul>
-  <li><strong>Estetica:</strong> ogni pezzo è unico per venature e sfumature; dona un aspetto elegante e naturale all’ambiente.</li>
-  <li><strong>Proprietà termiche:</strong> la pietra ollare accumula calore durante il funzionamento della stufa e lo rilascia lentamente, garantendo un comfort termico prolungato.</li>
-  <li><strong>Manutenzione:</strong> richiede attenzione per evitare macchie; pulizia con prodotti specifici non aggressivi.</li>
-  <li><strong>Applicazioni:</strong> consigliata per chi desidera una stufa con elevata inerzia termica e un design naturale.</li>
+<li><strong>Estetica:</strong> ogni pezzo è unico per venature e sfumature; dona un aspetto elegante e naturale all’ambiente.</li>
+<li><strong>Proprietà termiche:</strong> la pietra ollare accumula calore durante il funzionamento della stufa e lo rilascia lentamente, garantendo un comfort termico prolungato.</li>
+<li><strong>Manutenzione:</strong> richiede attenzione per evitare macchie; pulizia con prodotti specifici non aggressivi.</li>
+<li><strong>Applicazioni:</strong> consigliata per chi desidera una stufa con elevata inerzia termica e un design naturale.</li>
 </ul>
-
 <h2>3. Rivestimento in acciaio</h2>
 <p>
 L’acciaio è il materiale più moderno e versatile tra quelli disponibili per i rivestimenti delle stufe MCZ.
 </p>
 <ul>
-  <li><strong>Estetica:</strong> disponibile in molteplici colori e finiture (opaco, lucido, satinato), si adatta a stili contemporanei e minimalisti.</li>
-  <li><strong>Proprietà termiche:</strong> si scalda rapidamente e cede calore in modo veloce, ideale per riscaldare rapidamente l’ambiente.</li>
-  <li><strong>Manutenzione:</strong> semplice da pulire, ma può essere soggetto a graffi e impronte; si consiglia l’uso di panni morbidi e detergenti non abrasivi.</li>
-  <li><strong>Applicazioni:</strong> perfetto per chi cerca una soluzione moderna, leggera e dal design essenziale.</li>
+<li><strong>Estetica:</strong> disponibile in molteplici colori e finiture (opaco, lucido, satinato), si adatta a stili contemporanei e minimalisti.</li>
+<li><strong>Proprietà termiche:</strong> si scalda rapidamente e cede calore in modo veloce, ideale per riscaldare rapidamente l’ambiente.</li>
+<li><strong>Manutenzione:</strong> semplice da pulire, ma può essere soggetto a graffi e impronte; si consiglia l’uso di panni morbidi e detergenti non abrasivi.</li>
+<li><strong>Applicazioni:</strong> perfetto per chi cerca una soluzione moderna, leggera e dal design essenziale.</li>
 </ul>
-
 <h2>Considerazioni pratiche nella scelta del rivestimento</h2>
 <ul>
-  <li><strong>Estetica dell’ambiente:</strong> scegli il materiale che meglio si integra con l’arredamento della tua casa.</li>
-  <li><strong>Prestazioni termiche:</strong> valuta se preferisci un calore rapido (acciaio) o un rilascio graduale e prolungato (ceramica, pietra).</li>
-  <li><strong>Manutenzione:</strong> considera la facilità di pulizia e la resistenza del materiale scelto.</li>
-  <li><strong>Budget:</strong> la ceramica e la pietra naturale hanno generalmente un costo superiore rispetto all’acciaio.</li>
+<li><strong>Estetica dell’ambiente:</strong> scegli il materiale che meglio si integra con l’arredamento della tua casa.</li>
+<li><strong>Prestazioni termiche:</strong> valuta se preferisci un calore rapido (acciaio) o un rilascio graduale e prolungato (ceramica, pietra).</li>
+<li><strong>Manutenzione:</strong> considera la facilità di pulizia e la resistenza del materiale scelto.</li>
+<li><strong>Budget:</strong> la ceramica e la pietra naturale hanno generalmente un costo superiore rispetto all’acciaio.</li>
 </ul>
-
 <h2>Modelli MCZ e combinazioni di rivestimento</h2>
 <p>
 MCZ offre numerosi modelli di stufe a pellet che possono essere personalizzati con diversi rivestimenti. Alcuni modelli permettono di scegliere tra più materiali e colori, mentre altri sono disponibili con un solo tipo di rivestimento. È importante consultare il catalogo aggiornato MCZ o rivolgersi a un rivenditore autorizzato per conoscere tutte le opzioni disponibili per il modello di interesse.
 </p>
-
 <h2>Conclusioni</h2>
 <p>
 La scelta del rivestimento per una stufa a pellet MCZ è fondamentale sia per l’estetica sia per le prestazioni. Valuta attentamente le caratteristiche di ceramica, pietra e acciaio in base alle tue esigenze di comfort, design e manutenzione. Un rivenditore specializzato potrà aiutarti a individuare la soluzione più adatta per la tua abitazione.
 </p>
+<div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
+<h3>Hai altre domande?</h3>
+<p>Contattaci direttamente per una consulenza personalizzata:</p>
+<p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
+</div>
+</article>
+                
+                <div class="wiki-related">
+                    <h3>Domande correlate</h3>
+                    <ul>
+                        <li><a href="amazon-stufe-a-legna-quali-sono-le-marche-di-stufe-a-legna-più-affidabili-che-si-possono-acquistare-su-amazon.html">Amazon stufe a legna: Quali sono le marche di stufe a legna più affidabili che si possono acquistare su Amazon?</a></li>
+<li><a href="ariel-energia-stufe-a-pellet-quali-garanzie-offre-ariel-energia-sul-corpo-e-sui-componenti-delle-sue-stufe-a-pellet.html">Ariel Energia stufe a pellet: Quali garanzie offre Ariel Energia sul corpo e sui componenti delle sue stufe a pellet?</a></li>
+<li><a href="ariel-stufa-a-pellet-è-possibile-personalizzare-il-colore-o-il-rivestimento-di-una-stufa-a-pellet-ariel.html">Ariel stufa a pellet: È possibile personalizzare il colore o il rivestimento di una stufa a pellet Ariel?</a></li>
 
-
-    <div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
-        <h3>Hai altre domande?</h3>
-        <p>Contattaci direttamente per una consulenza personalizzata:</p>
-        <p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p>📞 Telefono: 380 156 8721</p>
+                    <p>📧 Email: info@cannefumarieverona.it</p>
+                    <p>🏠 Indirizzo: Verona, Italia</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Collegamenti Rapidi</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#servizi">Servizi</a></li>
+                        <li><a href="index.html">FAQ</a></li>
+                        <li><a href="../comuni.html">Comuni Serviti</a></li>
+                        <li><a href="../normative.html">Normative</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Seguici</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
             
-        </article>
-
-        <!-- 
-        <section>
-            <h2>Caratteristiche</h2> <table>
-                <tbody>
-                    [FUTURES] <tr>
-                        <td>{NAME}</td> <td>{VALUE}</td> </tr>
-                    [/FUTURES] </tbody>
-            </table>
-        </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Breve descrizione</h2> <p>{SHORT}</p>
-        </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Descrizione completa</h2> {FULL} </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Video</h2> [MOVIES] <article>
-                <h3>{MOVIE_TITLE}</h3> <p>{MOVIE_DESCRIPTION}</p> <iframe class="movie" src="https://www.youtube.com/embed/{MOVIE}" title="{MOVIE_TITLE}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            </article>
-            [/MOVIES] </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Domande Frequenti (FAQ)</h2> [FAQ] <div>
-                <h4>{QUESTION}</h4> <p>{ANSWER}</p> </div>
-            [/FAQ] </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Recensioni</h2> [REVIEWS] <blockquote>
-                <p>{REVIEW}</p> <footer>— <cite>{AUTHOR}</cite></footer> </blockquote>
-            [/REVIEWS] </section>
-         -->
-
-    </main>
-
+            <div class="copyright">
+                <p>&copy; 2025 Preventivi Canne Fumarie Verona. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/unified-menu.js"></script>
 </body>
+
 </html>

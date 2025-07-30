@@ -4,199 +4,621 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>FAQ: Caminetti a legna: Quali sono le tendenze attuali nel design dei caminetti a legna moderni? | Preventivi Canne Fumarie Verona | Preventivi Canne Fumarie Verona</title>
+    <meta name="description" content="Domande Frequenti: Caminetti a legna: Quali sono le tendenze attuali nel design dei caminetti a legna moderni?">
+    
+    <!-- Styles -->
     <style>
+        /* Base styles */
         body {
             font-family: sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        /* Navigation styles */
+        .nav {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            position: relative;
+            margin: 0 10px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links a:hover, 
+        .nav-links a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        
+        /* Dropdown styles */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            padding: 5px 0;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-menu a {
+            color: #333;
+            padding: 10px 15px;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            position: relative;
+            transition: background 0.2s;
+        }
+        
+        .hamburger:before,
+        .hamburger:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: white;
+            transition: transform 0.2s;
+        }
+        
+        .hamburger:before {
+            top: -8px;
+        }
+        
+        .hamburger:after {
+            bottom: -8px;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger {
+            background: transparent;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger:before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger:after {
+            transform: rotate(-45deg);
+            bottom: 0;
+        }
+        
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        
+        .menu-overlay.active {
+            display: block;
+        }
+        
+        /* Wiki-style content */
+        .wiki-container {
+            display: flex;
+            margin: 20px 0;
+        }
+        
+        .wiki-sidebar {
+            width: 250px;
             padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-right: 20px;
         }
-        img,
-        iframe.movie {
-            max-width: 100%; /* Usa max-width per la responsività */
+        
+        .wiki-sidebar h3 {
+            margin-top: 0;
+            border-bottom: 2px solid #1e3c72;
+            padding-bottom: 10px;
+            color: #1e3c72;
+        }
+        
+        .wiki-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .wiki-sidebar li {
+            margin-bottom: 10px;
+        }
+        
+        .wiki-sidebar a {
+            color: #1e3c72;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .wiki-sidebar a:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .wiki-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .wiki-content h1 {
+            color: #1e3c72;
+            margin-top: 0;
+        }
+        
+        .wiki-content img {
+            max-width: 100%;
             height: auto;
-            border-radius: 8px; /* Angoli arrotondati per un look moderno */
+            border-radius: 8px;
+            margin: 20px 0;
         }
-        iframe.movie {
-            aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
-            width: 100%;
+        
+        .wiki-breadcrumb {
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1em;
+        
+        .wiki-breadcrumb a {
+            color: #1e3c72;
+            text-decoration: none;
         }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
+        
+        .wiki-related {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
         }
-        blockquote {
-            border-left: 4px solid #eee;
-            padding-left: 1em;
-            margin-left: 0;
-            font-style: italic;
+        
+        .wiki-related h3 {
+            color: #1e3c72;
+        }
+        
+        .wiki-related ul {
+            padding-left: 20px;
+        }
+        
+        .wiki-related li {
+            margin-bottom: 10px;
+        }
+        
+        .wiki-related a {
+            color: #1e3c72;
+            text-decoration: none;
+        }
+        
+        .wiki-related a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-top: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                display: none;
+                width: 100%;
+                order: 3;
+            }
+            
+            .nav-menu.active {
+                display: block;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-links li {
+                margin: 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                background-color: rgba(0,0,0,0.1);
+                display: none;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+            
+            .wiki-container {
+                flex-direction: column;
+            }
+            
+            .wiki-sidebar {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
         }
     </style>
-
-    
-    <title>FAQ: Caminetti a legna: Quali sono le tendenze attuali nel design dei caminetti a legna moderni?</title>
-    
-
-    
-    <meta name="description" content="Domande Frequenti: Caminetti a legna: Quali sono le tendenze attuali nel design dei caminetti a legna moderni?">
-    
 </head>
 
 <body>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">🏠 Preventivi Canne Fumarie Verona</div>
+            <button aria-expanded="false" aria-label="Toggle menu" class="menu-toggle">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <!-- Home -->
+                    <li><a href="../index.html" class="home-link">Home</a></li>
+                    
+                    <!-- Servizi -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">Servizi</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#servizi" class="spa-link" data-page="servizi">Tutti i Servizi</a></li>
+                            <li><a href="../guida-installazione.html">Guida Installazione</a></li>
+                            <li><a href="../index.html#canna-fumaria-esterna" class="spa-link" data-page="canna-fumaria-esterna">Canna Fumaria Esterna</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Prodotti -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">Prodotti</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                            <li><a href="index.html#caminetti">Caminetti</a></li>
+                            <li><a href="index.html#termostufe">Termostufe</a></li>
+                            <li><a href="index.html#caldaie">Caldaie</a></li>
+                            <li><a href="../materiali.html">Materiali</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- FAQ -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">FAQ</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#faq" class="spa-link" data-page="faq">Domande Frequenti</a></li>
+                            <li><a href="index.html">Archivio FAQ Completo</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-toggle" href="#">Categorie FAQ</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
+                                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                                    <li><a href="index.html#caminetti">Caminetti</a></li>
+                                    <li><a href="index.html#termostufe">Termostufe</a></li>
+                                    <li><a href="index.html#caldaie">Caldaie</a></li>
+                                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
+                                    <li><a href="index.html#pellet">Pellet</a></li>
+                                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Comuni Serviti -->
+                    <li><a href="../comuni.html">Comuni Serviti</a></li>
+                    
+                    <!-- Normative -->
+                    <li><a href="../normative.html">Normative</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="wiki-container">
+            <!-- Sidebar -->
+            <div class="wiki-sidebar">
+                <h3>Categorie FAQ</h3>
+                <ul>
+                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
+                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                    <li><a href="index.html#caminetti">Caminetti</a></li>
+                    <li><a href="index.html#termostufe">Termostufe</a></li>
+                    <li><a href="index.html#caldaie">Caldaie</a></li>
+                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
+                    <li><a href="index.html#pellet">Pellet</a></li>
+                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
+                </ul>
+                
+                <h3>Nella stessa categoria</h3>
+                <ul>
+                    <li><a href="a-caminetti-cosa-significa-la-dicitura-a-caminetti-in-alcuni-contesti-di-vendita.html">A caminetti: Cosa significa la dicitura "a caminetti" in alcuni contesti di vendita?</a></li>
+<li><a href="cade-fuliggine-dai-tubi-come-posso-risolvere.html">Cade fuliggine dai tubi, come posso risolvere?</a></li>
+<li><a href="caminetti-a-bioetanolo-è-possibile-utilizzare-oli-essenziali-nel-bioetanolo-per-profumare-lambiente.html">Caminetti a bioetanolo: È possibile utilizzare oli essenziali nel bioetanolo per profumare l'ambiente?</a></li>
+<li><a href="caminetti-a-legna-per-interni-come-si-sceglie-il-rivestimento-perfetto-per-un-caminetto-a-legna-da-interni-in-base-allo-stile-della-casa.html">Caminetti a legna per interni: Come si sceglie il rivestimento perfetto per un caminetto a legna da interni in base allo stile della casa?</a></li>
+<li><a href="caminetti-a-legna-per-interni-prezzi-quanto-costa-in-media-il-rivestimento-su-misura-per-un-caminetto-a-legna-interno.html">Caminetti a legna per interni prezzi: Quanto costa in media il rivestimento su misura per un caminetto a legna interno?</a></li>
 
-    <header>
-        <h1>Caminetti a legna: Quali sono le tendenze attuali nel design dei caminetti a legna moderni?</h1> </header>
-
-    <main>
-        <article>
-            <!-- 
+                </ul>
+            </div>
+            
+            <!-- Content -->
+            <div class="wiki-content">
+                <div class="wiki-breadcrumb">
+                    <a href="../index.html">Home</a> &gt; 
+                    <a href="index.html">FAQ</a> &gt; 
+                    <a href="index.html#caminetti">Caminetti</a> &gt; 
+                    Caminetti a legna: Quali sono le tendenze attuali nel design dei caminetti a legna moderni?
+                </div>
+                
+                <h1>Caminetti a legna: Quali sono le tendenze attuali nel design dei caminetti a legna moderni?</h1>
+                
+                <article>
+<!-- 
             <figure>
                 <img src="{MAIN_IMAGE}" alt="Caminetti a legna: Quali sono le tendenze attuali nel design dei caminetti a legna moderni?" title="Caminetti a legna: Quali sono le tendenze attuali nel design dei caminetti a legna moderni?" loading="lazy" />
                 </figure>
              -->
-
-            <!-- 
+<!-- 
             <figure>
                 <iframe class="movie" src="https://www.youtube.com/embed/{MAIN_MOVIE}" title="Caminetti a legna: Quali sono le tendenze attuali nel design dei caminetti a legna moderni?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </figure>
              -->
-
-            
-            <div>
-  <h2>Tendenze Attuali nel Design dei Caminetti a Legna Moderni</h2>
-  
-  <p>
+<div>
+<h2>Tendenze Attuali nel Design dei Caminetti a Legna Moderni</h2>
+<p>
     Il <strong>design dei caminetti a legna</strong> si è evoluto notevolmente negli ultimi anni, integrando soluzioni estetiche e funzionali che rispondono sia alle esigenze di efficienza energetica sia a quelle di stile contemporaneo. Di seguito una panoramica delle principali tendenze attuali.
   </p>
-  
-  <h3>1. Minimalismo e Linee Pulite</h3>
-  <p>
+<h3>1. Minimalismo e Linee Pulite</h3>
+<p>
     I caminetti moderni prediligono <strong>forme essenziali</strong> e linee geometriche, spesso con cornici sottili o completamente integrate nella parete. Questo approccio minimalista valorizza il fuoco come elemento centrale e riduce l’impatto visivo della struttura.
   </p>
-  
-  <h3>2. Materiali Innovativi e Finiture di Tendenza</h3>
-  <ul>
-    <li>
-      <strong>Legno laccato e finiture 3D</strong>: L’uso di pannelli in legno laccato con effetti tridimensionali dona carattere e raffinatezza agli ambienti, creando giochi di luce e texture che valorizzano il caminetto come elemento d’arredo distintivo<sup>[1]</sup>.
+<h3>2. Materiali Innovativi e Finiture di Tendenza</h3>
+<ul>
+<li>
+<strong>Legno laccato e finiture 3D</strong>: L’uso di pannelli in legno laccato con effetti tridimensionali dona carattere e raffinatezza agli ambienti, creando giochi di luce e texture che valorizzano il caminetto come elemento d’arredo distintivo<sup>[1]</sup>.
     </li>
-    <li>
-      <strong>Pietra naturale, cemento e metallo</strong>: Questi materiali sono spesso scelti per la loro resistenza e per l’aspetto contemporaneo, offrendo soluzioni sia rustiche che ultramoderne.
+<li>
+<strong>Pietra naturale, cemento e metallo</strong>: Questi materiali sono spesso scelti per la loro resistenza e per l’aspetto contemporaneo, offrendo soluzioni sia rustiche che ultramoderne.
     </li>
-    <li>
-      <strong>Colori neutri e palette moderne</strong>: Toni come grigio, nero, bianco e beige dominano le scelte cromatiche, garantendo eleganza e facilità di abbinamento con altri elementi d’arredo.
+<li>
+<strong>Colori neutri e palette moderne</strong>: Toni come grigio, nero, bianco e beige dominano le scelte cromatiche, garantendo eleganza e facilità di abbinamento con altri elementi d’arredo.
     </li>
-  </ul>
-  
-  <h3>3. Integrazione Architettonica e Soluzioni su Misura</h3>
-  <ul>
-    <li>
-      <strong>Camini a filo muro</strong>: L’inserimento del caminetto direttamente nella parete, senza cornici sporgenti, crea un effetto di continuità visiva e pulizia formale<sup>[2]</sup>.
+</ul>
+<h3>3. Integrazione Architettonica e Soluzioni su Misura</h3>
+<ul>
+<li>
+<strong>Camini a filo muro</strong>: L’inserimento del caminetto direttamente nella parete, senza cornici sporgenti, crea un effetto di continuità visiva e pulizia formale<sup>[2]</sup>.
     </li>
-    <li>
-      <strong>Soluzioni personalizzate</strong>: Sempre più richieste sono le installazioni su misura che si adattano perfettamente alle dimensioni e allo stile dell’ambiente, spesso integrate con mobili, librerie o pareti attrezzate.
+<li>
+<strong>Soluzioni personalizzate</strong>: Sempre più richieste sono le installazioni su misura che si adattano perfettamente alle dimensioni e allo stile dell’ambiente, spesso integrate con mobili, librerie o pareti attrezzate.
     </li>
-    <li>
-      <strong>Combinazione con tecnologia</strong>: L’integrazione di sistemi di ventilazione nascosti, vetri autopulenti e comandi digitali migliora la funzionalità senza compromettere l’estetica<sup>[2]</sup>.
+<li>
+<strong>Combinazione con tecnologia</strong>: L’integrazione di sistemi di ventilazione nascosti, vetri autopulenti e comandi digitali migliora la funzionalità senza compromettere l’estetica<sup>[2]</sup>.
     </li>
-  </ul>
-  
-  <h3>4. Efficienza Energetica e Sostenibilità</h3>
-  <p>
+</ul>
+<h3>4. Efficienza Energetica e Sostenibilità</h3>
+<p>
     I caminetti a legna moderni sono progettati per garantire <strong>alte prestazioni energetiche</strong>, con sistemi di combustione avanzati che riducono le emissioni e aumentano il rendimento. L’attenzione alla sostenibilità si riflette anche nella scelta di materiali riciclabili e nell’uso di legna certificata.
   </p>
-  
-  <h3>5. Flessibilità d’Uso e Multifunzionalità</h3>
-  <ul>
-    <li>
-      <strong>Camini bifacciali o trifacciali</strong>: Permettono la visione della fiamma da più angolazioni, diventando veri e propri divisori di ambienti open space.
+<h3>5. Flessibilità d’Uso e Multifunzionalità</h3>
+<ul>
+<li>
+<strong>Camini bifacciali o trifacciali</strong>: Permettono la visione della fiamma da più angolazioni, diventando veri e propri divisori di ambienti open space.
     </li>
-    <li>
-      <strong>Integrazione con altri elementi</strong>: Sempre più diffusa è la combinazione di caminetto e parete TV, oppure l’inserimento di nicchie porta legna o mensole decorative<sup>[1]</sup>.
+<li>
+<strong>Integrazione con altri elementi</strong>: Sempre più diffusa è la combinazione di caminetto e parete TV, oppure l’inserimento di nicchie porta legna o mensole decorative<sup>[1]</sup>.
     </li>
-  </ul>
-  
-  <h3>Considerazioni Pratiche e Tecniche</h3>
-  <ul>
-    <li>
-      <strong>Installazione</strong>: È fondamentale affidarsi a professionisti per garantire la corretta progettazione della canna fumaria e il rispetto delle normative di sicurezza.
+</ul>
+<h3>Considerazioni Pratiche e Tecniche</h3>
+<ul>
+<li>
+<strong>Installazione</strong>: È fondamentale affidarsi a professionisti per garantire la corretta progettazione della canna fumaria e il rispetto delle normative di sicurezza.
     </li>
-    <li>
-      <strong>Manutenzione</strong>: I caminetti moderni sono spesso dotati di sistemi che facilitano la pulizia, ma è comunque necessario programmare controlli periodici per assicurare efficienza e sicurezza.
+<li>
+<strong>Manutenzione</strong>: I caminetti moderni sono spesso dotati di sistemi che facilitano la pulizia, ma è comunque necessario programmare controlli periodici per assicurare efficienza e sicurezza.
     </li>
-    <li>
-      <strong>Normative</strong>: Verificare sempre la conformità alle normative locali in materia di emissioni e installazione di apparecchi a legna.
+<li>
+<strong>Normative</strong>: Verificare sempre la conformità alle normative locali in materia di emissioni e installazione di apparecchi a legna.
     </li>
-  </ul>
-  
-  <h3>Conclusioni</h3>
-  <p>
+</ul>
+<h3>Conclusioni</h3>
+<p>
     Le tendenze attuali nel design dei caminetti a legna puntano su <strong>integrazione architettonica</strong>, <strong>materiali innovativi</strong> e <strong>tecnologie avanzate</strong>, senza trascurare l’efficienza energetica e la sostenibilità. La personalizzazione e la multifunzionalità sono elementi chiave per rispondere alle esigenze di comfort, estetica e praticità degli ambienti contemporanei.
   </p>
 </div>
+<div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
+<h3>Hai altre domande?</h3>
+<p>Contattaci direttamente per una consulenza personalizzata:</p>
+<p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
+</div>
+</article>
+                
+                <div class="wiki-related">
+                    <h3>Domande correlate</h3>
+                    <ul>
+                        <li><a href="a-caminetti-cosa-significa-la-dicitura-a-caminetti-in-alcuni-contesti-di-vendita.html">A caminetti: Cosa significa la dicitura "a caminetti" in alcuni contesti di vendita?</a></li>
+<li><a href="cade-fuliggine-dai-tubi-come-posso-risolvere.html">Cade fuliggine dai tubi, come posso risolvere?</a></li>
+<li><a href="caminetti-a-bioetanolo-è-possibile-utilizzare-oli-essenziali-nel-bioetanolo-per-profumare-lambiente.html">Caminetti a bioetanolo: È possibile utilizzare oli essenziali nel bioetanolo per profumare l'ambiente?</a></li>
 
-
-    <div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
-        <h3>Hai altre domande?</h3>
-        <p>Contattaci direttamente per una consulenza personalizzata:</p>
-        <p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p>📞 Telefono: 380 156 8721</p>
+                    <p>📧 Email: info@cannefumarieverona.it</p>
+                    <p>🏠 Indirizzo: Verona, Italia</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Collegamenti Rapidi</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#servizi">Servizi</a></li>
+                        <li><a href="index.html">FAQ</a></li>
+                        <li><a href="../comuni.html">Comuni Serviti</a></li>
+                        <li><a href="../normative.html">Normative</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Seguici</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
             
-        </article>
-
-        <!-- 
-        <section>
-            <h2>Caratteristiche</h2> <table>
-                <tbody>
-                    [FUTURES] <tr>
-                        <td>{NAME}</td> <td>{VALUE}</td> </tr>
-                    [/FUTURES] </tbody>
-            </table>
-        </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Breve descrizione</h2> <p>{SHORT}</p>
-        </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Descrizione completa</h2> {FULL} </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Video</h2> [MOVIES] <article>
-                <h3>{MOVIE_TITLE}</h3> <p>{MOVIE_DESCRIPTION}</p> <iframe class="movie" src="https://www.youtube.com/embed/{MOVIE}" title="{MOVIE_TITLE}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            </article>
-            [/MOVIES] </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Domande Frequenti (FAQ)</h2> [FAQ] <div>
-                <h4>{QUESTION}</h4> <p>{ANSWER}</p> </div>
-            [/FAQ] </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Recensioni</h2> [REVIEWS] <blockquote>
-                <p>{REVIEW}</p> <footer>— <cite>{AUTHOR}</cite></footer> </blockquote>
-            [/REVIEWS] </section>
-         -->
-
-    </main>
-
+            <div class="copyright">
+                <p>&copy; 2025 Preventivi Canne Fumarie Verona. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/unified-menu.js"></script>
 </body>
+
 </html>

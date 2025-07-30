@@ -4,217 +4,640 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>FAQ: Come influisce la nuova direttiva "Case Green" su questi incentivi? | Preventivi Canne Fumarie Verona | Preventivi Canne Fumarie Verona</title>
+    <meta name="description" content="Domande Frequenti: Come influisce la nuova direttiva ">
+    
+    <!-- Styles -->
     <style>
+        /* Base styles */
         body {
             font-family: sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        /* Navigation styles */
+        .nav {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            position: relative;
+            margin: 0 10px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links a:hover, 
+        .nav-links a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        
+        /* Dropdown styles */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            padding: 5px 0;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-menu a {
+            color: #333;
+            padding: 10px 15px;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            position: relative;
+            transition: background 0.2s;
+        }
+        
+        .hamburger:before,
+        .hamburger:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: white;
+            transition: transform 0.2s;
+        }
+        
+        .hamburger:before {
+            top: -8px;
+        }
+        
+        .hamburger:after {
+            bottom: -8px;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger {
+            background: transparent;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger:before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger:after {
+            transform: rotate(-45deg);
+            bottom: 0;
+        }
+        
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        
+        .menu-overlay.active {
+            display: block;
+        }
+        
+        /* Wiki-style content */
+        .wiki-container {
+            display: flex;
+            margin: 20px 0;
+        }
+        
+        .wiki-sidebar {
+            width: 250px;
             padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-right: 20px;
         }
-        img,
-        iframe.movie {
-            max-width: 100%; /* Usa max-width per la responsività */
+        
+        .wiki-sidebar h3 {
+            margin-top: 0;
+            border-bottom: 2px solid #1e3c72;
+            padding-bottom: 10px;
+            color: #1e3c72;
+        }
+        
+        .wiki-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .wiki-sidebar li {
+            margin-bottom: 10px;
+        }
+        
+        .wiki-sidebar a {
+            color: #1e3c72;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .wiki-sidebar a:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .wiki-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .wiki-content h1 {
+            color: #1e3c72;
+            margin-top: 0;
+        }
+        
+        .wiki-content img {
+            max-width: 100%;
             height: auto;
-            border-radius: 8px; /* Angoli arrotondati per un look moderno */
+            border-radius: 8px;
+            margin: 20px 0;
         }
-        iframe.movie {
-            aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
-            width: 100%;
+        
+        .wiki-breadcrumb {
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1em;
+        
+        .wiki-breadcrumb a {
+            color: #1e3c72;
+            text-decoration: none;
         }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
+        
+        .wiki-related {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
         }
-        blockquote {
-            border-left: 4px solid #eee;
-            padding-left: 1em;
-            margin-left: 0;
-            font-style: italic;
+        
+        .wiki-related h3 {
+            color: #1e3c72;
+        }
+        
+        .wiki-related ul {
+            padding-left: 20px;
+        }
+        
+        .wiki-related li {
+            margin-bottom: 10px;
+        }
+        
+        .wiki-related a {
+            color: #1e3c72;
+            text-decoration: none;
+        }
+        
+        .wiki-related a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-top: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                display: none;
+                width: 100%;
+                order: 3;
+            }
+            
+            .nav-menu.active {
+                display: block;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-links li {
+                margin: 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                background-color: rgba(0,0,0,0.1);
+                display: none;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+            
+            .wiki-container {
+                flex-direction: column;
+            }
+            
+            .wiki-sidebar {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
         }
     </style>
-
-    
-    <title>FAQ: Come influisce la nuova direttiva "Case Green" su questi incentivi?</title>
-    
-
-    
-    <meta name="description" content="Domande Frequenti: Come influisce la nuova direttiva "Case Green" su questi incentivi?">
-    
 </head>
 
 <body>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">🏠 Preventivi Canne Fumarie Verona</div>
+            <button aria-expanded="false" aria-label="Toggle menu" class="menu-toggle">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <!-- Home -->
+                    <li><a href="../index.html" class="home-link">Home</a></li>
+                    
+                    <!-- Servizi -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">Servizi</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#servizi" class="spa-link" data-page="servizi">Tutti i Servizi</a></li>
+                            <li><a href="../guida-installazione.html">Guida Installazione</a></li>
+                            <li><a href="../index.html#canna-fumaria-esterna" class="spa-link" data-page="canna-fumaria-esterna">Canna Fumaria Esterna</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Prodotti -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">Prodotti</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                            <li><a href="index.html#caminetti">Caminetti</a></li>
+                            <li><a href="index.html#termostufe">Termostufe</a></li>
+                            <li><a href="index.html#caldaie">Caldaie</a></li>
+                            <li><a href="../materiali.html">Materiali</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- FAQ -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">FAQ</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#faq" class="spa-link" data-page="faq">Domande Frequenti</a></li>
+                            <li><a href="index.html">Archivio FAQ Completo</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-toggle" href="#">Categorie FAQ</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
+                                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                                    <li><a href="index.html#caminetti">Caminetti</a></li>
+                                    <li><a href="index.html#termostufe">Termostufe</a></li>
+                                    <li><a href="index.html#caldaie">Caldaie</a></li>
+                                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
+                                    <li><a href="index.html#pellet">Pellet</a></li>
+                                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Comuni Serviti -->
+                    <li><a href="../comuni.html">Comuni Serviti</a></li>
+                    
+                    <!-- Normative -->
+                    <li><a href="../normative.html">Normative</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="wiki-container">
+            <!-- Sidebar -->
+            <div class="wiki-sidebar">
+                <h3>Categorie FAQ</h3>
+                <ul>
+                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
+                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                    <li><a href="index.html#caminetti">Caminetti</a></li>
+                    <li><a href="index.html#termostufe">Termostufe</a></li>
+                    <li><a href="index.html#caldaie">Caldaie</a></li>
+                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
+                    <li><a href="index.html#pellet">Pellet</a></li>
+                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
+                </ul>
+                
+                <h3>Nella stessa categoria</h3>
+                <ul>
+                    <li><a href="amazon-stufe-a-legna-quali-sono-le-marche-di-stufe-a-legna-più-affidabili-che-si-possono-acquistare-su-amazon.html">Amazon stufe a legna: Quali sono le marche di stufe a legna più affidabili che si possono acquistare su Amazon?</a></li>
+<li><a href="ariel-energia-stufe-a-pellet-quali-garanzie-offre-ariel-energia-sul-corpo-e-sui-componenti-delle-sue-stufe-a-pellet.html">Ariel Energia stufe a pellet: Quali garanzie offre Ariel Energia sul corpo e sui componenti delle sue stufe a pellet?</a></li>
+<li><a href="ariel-stufa-a-pellet-è-possibile-personalizzare-il-colore-o-il-rivestimento-di-una-stufa-a-pellet-ariel.html">Ariel stufa a pellet: È possibile personalizzare il colore o il rivestimento di una stufa a pellet Ariel?</a></li>
+<li><a href="ariel-stufe-a-legna-il-marchio-ariel-produce-anche-stufe-a-legna-o-è-specializzato-solo-in-pellet.html">Ariel stufe a legna: Il marchio Ariel produce anche stufe a legna o è specializzato solo in pellet?</a></li>
+<li><a href="ariel-stufe-a-pellet-prezzi-è-possibile-trovare-un-listino-prezzi-ufficiale-online-per-le-stufe-a-pellet-ariel.html">Ariel stufe a pellet prezzi: È possibile trovare un listino prezzi ufficiale online per le stufe a pellet Ariel?</a></li>
 
-    <header>
-        <h1>Come influisce la nuova direttiva "Case Green" su questi incentivi?</h1> </header>
-
-    <main>
-        <article>
-            <!-- 
+                </ul>
+            </div>
+            
+            <!-- Content -->
+            <div class="wiki-content">
+                <div class="wiki-breadcrumb">
+                    <a href="../index.html">Home</a> &gt; 
+                    <a href="index.html">FAQ</a> &gt; 
+                    <a href="index.html#stufe-pellet">Stufe a Pellet</a> &gt; 
+                    Come influisce la nuova direttiva "Case Green" su questi incentivi?
+                </div>
+                
+                <h1>Come influisce la nuova direttiva "Case Green" su questi incentivi?</h1>
+                
+                <article>
+<!-- 
             <figure>
                 <img src="{MAIN_IMAGE}" alt="Come influisce la nuova direttiva "Case Green" su questi incentivi?" title="Come influisce la nuova direttiva "Case Green" su questi incentivi?" loading="lazy" />
                 </figure>
              -->
-
-            <!-- 
+<!-- 
             <figure>
                 <iframe class="movie" src="https://www.youtube.com/embed/{MAIN_MOVIE}" title="Come influisce la nuova direttiva "Case Green" su questi incentivi?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </figure>
              -->
-
-            
-            <section>
-  <h2>Impatto della Direttiva "Case Green" sugli Incentivi per Riscaldamento, Stufe e Canne Fumarie</h2>
-  
-  <p>
+<section>
+<h2>Impatto della Direttiva "Case Green" sugli Incentivi per Riscaldamento, Stufe e Canne Fumarie</h2>
+<p>
     La nuova <strong>Direttiva Case Green (EPBD 2024)</strong> avrà un impatto profondo sugli <strong>incentivi per la riqualificazione energetica</strong> degli edifici, con particolare attenzione ai sistemi di riscaldamento, stufe e canne fumarie. La direttiva, entrata in vigore il 28 maggio 2024, stabilisce obiettivi stringenti per la decarbonizzazione del patrimonio edilizio europeo e impone scadenze precise per l’eliminazione delle caldaie a combustibili fossili e la promozione di soluzioni più efficienti e sostenibili<sup>[1]</sup>.
   </p>
-  
-  <h3>Principali Novità della Direttiva</h3>
-  <ul>
-    <li>
-      <strong>Stop alle caldaie fossili entro il 2040:</strong> La direttiva prevede la progressiva eliminazione delle caldaie alimentate da gas, gasolio e altri combustibili fossili, con l’obiettivo di arrivare a uno stop totale entro il 2040<sup>[1]</sup>.
+<h3>Principali Novità della Direttiva</h3>
+<ul>
+<li>
+<strong>Stop alle caldaie fossili entro il 2040:</strong> La direttiva prevede la progressiva eliminazione delle caldaie alimentate da gas, gasolio e altri combustibili fossili, con l’obiettivo di arrivare a uno stop totale entro il 2040<sup>[1]</sup>.
     </li>
-    <li>
-      <strong>Edifici a zero emissioni:</strong> Dal 2030 (dal 2028 per gli edifici pubblici), tutti i nuovi edifici dovranno essere a zero emissioni. Questo comporterà l’adozione di sistemi di riscaldamento a basso impatto ambientale, come pompe di calore, biomassa certificata, solare termico e altre tecnologie innovative<sup>[1]</sup>.
+<li>
+<strong>Edifici a zero emissioni:</strong> Dal 2030 (dal 2028 per gli edifici pubblici), tutti i nuovi edifici dovranno essere a zero emissioni. Questo comporterà l’adozione di sistemi di riscaldamento a basso impatto ambientale, come pompe di calore, biomassa certificata, solare termico e altre tecnologie innovative<sup>[1]</sup>.
     </li>
-    <li>
-      <strong>Obbligo di ristrutturazione degli edifici meno efficienti:</strong> Gli edifici con le peggiori prestazioni energetiche saranno soggetti a obblighi di ristrutturazione, con incentivi mirati per favorire l’adeguamento degli impianti di riscaldamento e la riqualificazione delle canne fumarie<sup>[1]</sup>.
+<li>
+<strong>Obbligo di ristrutturazione degli edifici meno efficienti:</strong> Gli edifici con le peggiori prestazioni energetiche saranno soggetti a obblighi di ristrutturazione, con incentivi mirati per favorire l’adeguamento degli impianti di riscaldamento e la riqualificazione delle canne fumarie<sup>[1]</sup>.
     </li>
-    <li>
-      <strong>Nuovo Piano Nazionale di Ristrutturazione:</strong> L’Italia dovrà presentare entro fine 2025 una bozza di piano che definirà le modalità di utilizzo dei fondi, le regole e la struttura degli incentivi<sup>[1]</sup>.
+<li>
+<strong>Nuovo Piano Nazionale di Ristrutturazione:</strong> L’Italia dovrà presentare entro fine 2025 una bozza di piano che definirà le modalità di utilizzo dei fondi, le regole e la struttura degli incentivi<sup>[1]</sup>.
     </li>
-  </ul>
-  
-  <h3>Implicazioni sugli Incentivi</h3>
-  <ul>
-    <li>
-      <strong>Riorientamento degli incentivi:</strong> Gli incentivi saranno sempre più <strong>vincolati all’efficienza energetica</strong> e alla <strong>sostenibilità ambientale</strong> dei sistemi installati. Saranno privilegiati interventi che prevedano la sostituzione di vecchie caldaie con tecnologie a basse emissioni o rinnovabili.
+</ul>
+<h3>Implicazioni sugli Incentivi</h3>
+<ul>
+<li>
+<strong>Riorientamento degli incentivi:</strong> Gli incentivi saranno sempre più <strong>vincolati all’efficienza energetica</strong> e alla <strong>sostenibilità ambientale</strong> dei sistemi installati. Saranno privilegiati interventi che prevedano la sostituzione di vecchie caldaie con tecnologie a basse emissioni o rinnovabili.
     </li>
-    <li>
-      <strong>Maggiore selettività:</strong> Si prevede una <strong>maggiore selettività nell’accesso agli incentivi</strong>, con priorità per le famiglie vulnerabili (ISEE basso) e per gli edifici con le peggiori classi energetiche<sup>[1]</sup>.
+<li>
+<strong>Maggiore selettività:</strong> Si prevede una <strong>maggiore selettività nell’accesso agli incentivi</strong>, con priorità per le famiglie vulnerabili (ISEE basso) e per gli edifici con le peggiori classi energetiche<sup>[1]</sup>.
     </li>
-    <li>
-      <strong>Semplificazione e digitalizzazione:</strong> La direttiva promuove la semplificazione delle procedure e l’adozione di strumenti digitali (smart building, gemelli digitali) per monitorare e certificare gli interventi incentivati<sup>[1]</sup>.
+<li>
+<strong>Semplificazione e digitalizzazione:</strong> La direttiva promuove la semplificazione delle procedure e l’adozione di strumenti digitali (smart building, gemelli digitali) per monitorare e certificare gli interventi incentivati<sup>[1]</sup>.
     </li>
-    <li>
-      <strong>Formazione tecnica:</strong> Sarà valorizzato il ruolo dei professionisti abilitati, con incentivi anche per la formazione e l’aggiornamento tecnico<sup>[1]</sup>.
+<li>
+<strong>Formazione tecnica:</strong> Sarà valorizzato il ruolo dei professionisti abilitati, con incentivi anche per la formazione e l’aggiornamento tecnico<sup>[1]</sup>.
     </li>
-  </ul>
-  
-  <h3>Considerazioni Pratiche per Riscaldamento, Stufe e Canne Fumarie</h3>
-  <ul>
-    <li>
-      <strong>Caldaie a biomassa e pompe di calore:</strong> Gli incentivi saranno orientati verso la sostituzione delle caldaie tradizionali con sistemi a biomassa certificata, pompe di calore aria-acqua o geotermiche, e altre soluzioni a basso impatto ambientale.
+</ul>
+<h3>Considerazioni Pratiche per Riscaldamento, Stufe e Canne Fumarie</h3>
+<ul>
+<li>
+<strong>Caldaie a biomassa e pompe di calore:</strong> Gli incentivi saranno orientati verso la sostituzione delle caldaie tradizionali con sistemi a biomassa certificata, pompe di calore aria-acqua o geotermiche, e altre soluzioni a basso impatto ambientale.
     </li>
-    <li>
-      <strong>Stufe a pellet e legna:</strong> Solo i modelli ad alta efficienza e basse emissioni continueranno a beneficiare di incentivi. Sarà fondamentale installare prodotti certificati secondo le normative europee più recenti.
+<li>
+<strong>Stufe a pellet e legna:</strong> Solo i modelli ad alta efficienza e basse emissioni continueranno a beneficiare di incentivi. Sarà fondamentale installare prodotti certificati secondo le normative europee più recenti.
     </li>
-    <li>
-      <strong>Canne fumarie:</strong> Gli interventi di adeguamento e messa a norma delle canne fumarie saranno incentivati solo se funzionali alla riqualificazione energetica dell’edificio e all’installazione di generatori a basse emissioni.
+<li>
+<strong>Canne fumarie:</strong> Gli interventi di adeguamento e messa a norma delle canne fumarie saranno incentivati solo se funzionali alla riqualificazione energetica dell’edificio e all’installazione di generatori a basse emissioni.
     </li>
-    <li>
-      <strong>Obblighi di sostituzione:</strong> In caso di ristrutturazioni importanti o cambio di destinazione d’uso, la sostituzione dei vecchi generatori sarà spesso obbligatoria per poter accedere agli incentivi.
+<li>
+<strong>Obblighi di sostituzione:</strong> In caso di ristrutturazioni importanti o cambio di destinazione d’uso, la sostituzione dei vecchi generatori sarà spesso obbligatoria per poter accedere agli incentivi.
     </li>
-  </ul>
-  
-  <h3>Tempistiche e Prospettive</h3>
-  <ul>
-    <li>
-      <strong>Recepimento nazionale:</strong> L’Italia dovrà recepire la direttiva entro maggio 2026, ma il percorso normativo è ancora in evoluzione e richiederà l’adozione di decreti attuativi specifici<sup>[2][3]</sup>.
+</ul>
+<h3>Tempistiche e Prospettive</h3>
+<ul>
+<li>
+<strong>Recepimento nazionale:</strong> L’Italia dovrà recepire la direttiva entro maggio 2026, ma il percorso normativo è ancora in evoluzione e richiederà l’adozione di decreti attuativi specifici<sup>[2][3]</sup>.
     </li>
-    <li>
-      <strong>Transizione graduale:</strong> Gli incentivi attuali saranno progressivamente modificati per allinearsi agli obiettivi europei. È previsto un periodo transitorio in cui coesisteranno vecchi e nuovi criteri di accesso.
+<li>
+<strong>Transizione graduale:</strong> Gli incentivi attuali saranno progressivamente modificati per allinearsi agli obiettivi europei. È previsto un periodo transitorio in cui coesisteranno vecchi e nuovi criteri di accesso.
     </li>
-    <li>
-      <strong>Investimenti necessari:</strong> Gli studi stimano investimenti per decine di miliardi di euro nei prossimi anni, con un costo medio di riqualificazione per unità abitativa di circa 28.000 euro<sup>[4]</sup>.
+<li>
+<strong>Investimenti necessari:</strong> Gli studi stimano investimenti per decine di miliardi di euro nei prossimi anni, con un costo medio di riqualificazione per unità abitativa di circa 28.000 euro<sup>[4]</sup>.
     </li>
-  </ul>
-  
-  <h3>Consigli Operativi</h3>
-  <ul>
-    <li>
-      <strong>Verificare la classe energetica dell’edificio</strong> e pianificare per tempo eventuali interventi di riqualificazione.
+</ul>
+<h3>Consigli Operativi</h3>
+<ul>
+<li>
+<strong>Verificare la classe energetica dell’edificio</strong> e pianificare per tempo eventuali interventi di riqualificazione.
     </li>
-    <li>
-      <strong>Affidarsi a professionisti abilitati</strong> per la progettazione e la realizzazione degli interventi, in modo da massimizzare l’accesso agli incentivi e garantire la conformità alle nuove normative.
+<li>
+<strong>Affidarsi a professionisti abilitati</strong> per la progettazione e la realizzazione degli interventi, in modo da massimizzare l’accesso agli incentivi e garantire la conformità alle nuove normative.
     </li>
-    <li>
-      <strong>Monitorare l’evoluzione normativa</strong> e le nuove linee guida che saranno pubblicate nei prossimi mesi, in particolare il Piano Nazionale di Ristrutturazione degli Edifici.
+<li>
+<strong>Monitorare l’evoluzione normativa</strong> e le nuove linee guida che saranno pubblicate nei prossimi mesi, in particolare il Piano Nazionale di Ristrutturazione degli Edifici.
     </li>
-    <li>
-      <strong>Prediligere tecnologie certificate</strong> e soluzioni innovative che garantiscano efficienza, sicurezza e sostenibilità nel lungo periodo.
+<li>
+<strong>Prediligere tecnologie certificate</strong> e soluzioni innovative che garantiscano efficienza, sicurezza e sostenibilità nel lungo periodo.
     </li>
-  </ul>
-  
-  <h3>Conclusioni</h3>
-  <p>
+</ul>
+<h3>Conclusioni</h3>
+<p>
     La Direttiva Case Green rappresenta una svolta epocale per il settore del riscaldamento domestico e degli incentivi collegati. Nei prossimi anni, l’accesso agli incentivi sarà sempre più legato all’efficienza energetica, alla sostenibilità e alla capacità di ridurre le emissioni, con un’attenzione particolare alle fasce più deboli della popolazione e agli edifici meno performanti.
   </p>
 </section>
+<div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
+<h3>Hai altre domande?</h3>
+<p>Contattaci direttamente per una consulenza personalizzata:</p>
+<p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
+</div>
+</article>
+                
+                <div class="wiki-related">
+                    <h3>Domande correlate</h3>
+                    <ul>
+                        <li><a href="amazon-stufe-a-legna-quali-sono-le-marche-di-stufe-a-legna-più-affidabili-che-si-possono-acquistare-su-amazon.html">Amazon stufe a legna: Quali sono le marche di stufe a legna più affidabili che si possono acquistare su Amazon?</a></li>
+<li><a href="ariel-energia-stufe-a-pellet-quali-garanzie-offre-ariel-energia-sul-corpo-e-sui-componenti-delle-sue-stufe-a-pellet.html">Ariel Energia stufe a pellet: Quali garanzie offre Ariel Energia sul corpo e sui componenti delle sue stufe a pellet?</a></li>
+<li><a href="ariel-stufa-a-pellet-è-possibile-personalizzare-il-colore-o-il-rivestimento-di-una-stufa-a-pellet-ariel.html">Ariel stufa a pellet: È possibile personalizzare il colore o il rivestimento di una stufa a pellet Ariel?</a></li>
 
-
-    <div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
-        <h3>Hai altre domande?</h3>
-        <p>Contattaci direttamente per una consulenza personalizzata:</p>
-        <p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p>📞 Telefono: 380 156 8721</p>
+                    <p>📧 Email: info@cannefumarieverona.it</p>
+                    <p>🏠 Indirizzo: Verona, Italia</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Collegamenti Rapidi</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#servizi">Servizi</a></li>
+                        <li><a href="index.html">FAQ</a></li>
+                        <li><a href="../comuni.html">Comuni Serviti</a></li>
+                        <li><a href="../normative.html">Normative</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Seguici</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
             
-        </article>
-
-        <!-- 
-        <section>
-            <h2>Caratteristiche</h2> <table>
-                <tbody>
-                    [FUTURES] <tr>
-                        <td>{NAME}</td> <td>{VALUE}</td> </tr>
-                    [/FUTURES] </tbody>
-            </table>
-        </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Breve descrizione</h2> <p>{SHORT}</p>
-        </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Descrizione completa</h2> {FULL} </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Video</h2> [MOVIES] <article>
-                <h3>{MOVIE_TITLE}</h3> <p>{MOVIE_DESCRIPTION}</p> <iframe class="movie" src="https://www.youtube.com/embed/{MOVIE}" title="{MOVIE_TITLE}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            </article>
-            [/MOVIES] </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Domande Frequenti (FAQ)</h2> [FAQ] <div>
-                <h4>{QUESTION}</h4> <p>{ANSWER}</p> </div>
-            [/FAQ] </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Recensioni</h2> [REVIEWS] <blockquote>
-                <p>{REVIEW}</p> <footer>— <cite>{AUTHOR}</cite></footer> </blockquote>
-            [/REVIEWS] </section>
-         -->
-
-    </main>
-
+            <div class="copyright">
+                <p>&copy; 2025 Preventivi Canne Fumarie Verona. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/unified-menu.js"></script>
 </body>
+
 </html>

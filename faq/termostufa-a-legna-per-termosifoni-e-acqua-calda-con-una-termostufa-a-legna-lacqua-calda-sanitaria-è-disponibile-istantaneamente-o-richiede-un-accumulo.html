@@ -4,198 +4,621 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>FAQ: Termostufa a legna per termosifoni e acqua calda: Con una termostufa a legna, l'acqua calda sanitaria è disponibile istantaneamente o richiede un accumulo? | Preventivi Canne Fumarie Verona | Preventivi Canne Fumarie Verona</title>
+    <meta name="description" content="Domande Frequenti: Termostufa a legna per termosifoni e acqua calda: Con una termostufa a legna, l'acqua calda sanitaria è disponibile istantaneamente o richiede un accumulo?">
+    
+    <!-- Styles -->
     <style>
+        /* Base styles */
         body {
             font-family: sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        /* Navigation styles */
+        .nav {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            position: relative;
+            margin: 0 10px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links a:hover, 
+        .nav-links a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        
+        /* Dropdown styles */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            padding: 5px 0;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-menu a {
+            color: #333;
+            padding: 10px 15px;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            position: relative;
+            transition: background 0.2s;
+        }
+        
+        .hamburger:before,
+        .hamburger:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: white;
+            transition: transform 0.2s;
+        }
+        
+        .hamburger:before {
+            top: -8px;
+        }
+        
+        .hamburger:after {
+            bottom: -8px;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger {
+            background: transparent;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger:before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        
+        .menu-toggle[aria-expanded="true"] .hamburger:after {
+            transform: rotate(-45deg);
+            bottom: 0;
+        }
+        
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        
+        .menu-overlay.active {
+            display: block;
+        }
+        
+        /* Wiki-style content */
+        .wiki-container {
+            display: flex;
+            margin: 20px 0;
+        }
+        
+        .wiki-sidebar {
+            width: 250px;
             padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-right: 20px;
         }
-        img,
-        iframe.movie {
-            max-width: 100%; /* Usa max-width per la responsività */
+        
+        .wiki-sidebar h3 {
+            margin-top: 0;
+            border-bottom: 2px solid #1e3c72;
+            padding-bottom: 10px;
+            color: #1e3c72;
+        }
+        
+        .wiki-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .wiki-sidebar li {
+            margin-bottom: 10px;
+        }
+        
+        .wiki-sidebar a {
+            color: #1e3c72;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .wiki-sidebar a:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .wiki-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .wiki-content h1 {
+            color: #1e3c72;
+            margin-top: 0;
+        }
+        
+        .wiki-content img {
+            max-width: 100%;
             height: auto;
-            border-radius: 8px; /* Angoli arrotondati per un look moderno */
+            border-radius: 8px;
+            margin: 20px 0;
         }
-        iframe.movie {
-            aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
-            width: 100%;
+        
+        .wiki-breadcrumb {
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1em;
+        
+        .wiki-breadcrumb a {
+            color: #1e3c72;
+            text-decoration: none;
         }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
+        
+        .wiki-related {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
         }
-        blockquote {
-            border-left: 4px solid #eee;
-            padding-left: 1em;
-            margin-left: 0;
-            font-style: italic;
+        
+        .wiki-related h3 {
+            color: #1e3c72;
+        }
+        
+        .wiki-related ul {
+            padding-left: 20px;
+        }
+        
+        .wiki-related li {
+            margin-bottom: 10px;
+        }
+        
+        .wiki-related a {
+            color: #1e3c72;
+            text-decoration: none;
+        }
+        
+        .wiki-related a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-top: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                display: none;
+                width: 100%;
+                order: 3;
+            }
+            
+            .nav-menu.active {
+                display: block;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-links li {
+                margin: 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                background-color: rgba(0,0,0,0.1);
+                display: none;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+            
+            .wiki-container {
+                flex-direction: column;
+            }
+            
+            .wiki-sidebar {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
         }
     </style>
-
-    
-    <title>FAQ: Termostufa a legna per termosifoni e acqua calda: Con una termostufa a legna, l'acqua calda sanitaria è disponibile istantaneamente o richiede un accumulo?</title>
-    
-
-    
-    <meta name="description" content="Domande Frequenti: Termostufa a legna per termosifoni e acqua calda: Con una termostufa a legna, l'acqua calda sanitaria è disponibile istantaneamente o richiede un accumulo?">
-    
 </head>
 
 <body>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">🏠 Preventivi Canne Fumarie Verona</div>
+            <button aria-expanded="false" aria-label="Toggle menu" class="menu-toggle">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <!-- Home -->
+                    <li><a href="../index.html" class="home-link">Home</a></li>
+                    
+                    <!-- Servizi -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">Servizi</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#servizi" class="spa-link" data-page="servizi">Tutti i Servizi</a></li>
+                            <li><a href="../guida-installazione.html">Guida Installazione</a></li>
+                            <li><a href="../index.html#canna-fumaria-esterna" class="spa-link" data-page="canna-fumaria-esterna">Canna Fumaria Esterna</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Prodotti -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">Prodotti</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                            <li><a href="index.html#caminetti">Caminetti</a></li>
+                            <li><a href="index.html#termostufe">Termostufe</a></li>
+                            <li><a href="index.html#caldaie">Caldaie</a></li>
+                            <li><a href="../materiali.html">Materiali</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- FAQ -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">FAQ</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#faq" class="spa-link" data-page="faq">Domande Frequenti</a></li>
+                            <li><a href="index.html">Archivio FAQ Completo</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-toggle" href="#">Categorie FAQ</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
+                                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                                    <li><a href="index.html#caminetti">Caminetti</a></li>
+                                    <li><a href="index.html#termostufe">Termostufe</a></li>
+                                    <li><a href="index.html#caldaie">Caldaie</a></li>
+                                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
+                                    <li><a href="index.html#pellet">Pellet</a></li>
+                                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Comuni Serviti -->
+                    <li><a href="../comuni.html">Comuni Serviti</a></li>
+                    
+                    <!-- Normative -->
+                    <li><a href="../normative.html">Normative</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="wiki-container">
+            <!-- Sidebar -->
+            <div class="wiki-sidebar">
+                <h3>Categorie FAQ</h3>
+                <ul>
+                    <li><a href="index.html#stufe-pellet">Stufe a Pellet</a></li>
+                    <li><a href="index.html#stufe-legna">Stufe a Legna</a></li>
+                    <li><a href="index.html#caminetti">Caminetti</a></li>
+                    <li><a href="index.html#termostufe">Termostufe</a></li>
+                    <li><a href="index.html#caldaie">Caldaie</a></li>
+                    <li><a href="index.html#canne-fumarie">Canne Fumarie</a></li>
+                    <li><a href="index.html#pellet">Pellet</a></li>
+                    <li><a href="index.html#bioetanolo">Bioetanolo</a></li>
+                </ul>
+                
+                <h3>Nella stessa categoria</h3>
+                <ul>
+                    <li><a href="canna-fumaria-stufa-a-legna-quali-sono-i-materiali-migliori-e-più-sicuri-per-la-realizzazione-di-una-canna-fumaria-per-stufa-a-legna.html">Canna fumaria stufa a legna: Quali sono i materiali migliori e più sicuri per la realizzazione di una canna fumaria per stufa a legna?</a></li>
+<li><a href="come-la-coibentazione-della-canna-fumaria-mi-fa-risparmiare-sulla-bolletta.html">Come la coibentazione della canna fumaria mi fa risparmiare sulla bolletta.</a></li>
+<li><a href="come-si-capisce-se-il-problema-è-della-stufa-o-della-canna-fumaria.html">Come si capisce se il problema è della stufa o della canna fumaria?</a></li>
+<li><a href="come-si-gestisce-la-coesistenza-di-impianti-a-gas-e-impianti-a-legna-nello-stesso-edificio.html">Come si gestisce la coesistenza di impianti a gas e impianti a legna nello stesso edificio?</a></li>
+<li><a href="come-si-produce-il-monossido-di-carbonio-in-un-impianto-di-riscaldamento.html">Come si produce il monossido di carbonio in un impianto di riscaldamento?</a></li>
 
-    <header>
-        <h1>Termostufa a legna per termosifoni e acqua calda: Con una termostufa a legna, l'acqua calda sanitaria è disponibile istantaneamente o richiede un accumulo?</h1> </header>
-
-    <main>
-        <article>
-            <!-- 
+                </ul>
+            </div>
+            
+            <!-- Content -->
+            <div class="wiki-content">
+                <div class="wiki-breadcrumb">
+                    <a href="../index.html">Home</a> &gt; 
+                    <a href="index.html">FAQ</a> &gt; 
+                    <a href="index.html#stufe-legna">Stufe a Legna</a> &gt; 
+                    Termostufa a legna per termosifoni e acqua calda: Con una termostufa a legna, l'acqua calda sanitaria è disponibile istantaneamente o richiede un accumulo?
+                </div>
+                
+                <h1>Termostufa a legna per termosifoni e acqua calda: Con una termostufa a legna, l'acqua calda sanitaria è disponibile istantaneamente o richiede un accumulo?</h1>
+                
+                <article>
+<!-- 
             <figure>
                 <img src="{MAIN_IMAGE}" alt="Termostufa a legna per termosifoni e acqua calda: Con una termostufa a legna, l'acqua calda sanitaria è disponibile istantaneamente o richiede un accumulo?" title="Termostufa a legna per termosifoni e acqua calda: Con una termostufa a legna, l'acqua calda sanitaria è disponibile istantaneamente o richiede un accumulo?" loading="lazy" />
                 </figure>
              -->
-
-            <!-- 
+<!-- 
             <figure>
                 <iframe class="movie" src="https://www.youtube.com/embed/{MAIN_MOVIE}" title="Termostufa a legna per termosifoni e acqua calda: Con una termostufa a legna, l'acqua calda sanitaria è disponibile istantaneamente o richiede un accumulo?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </figure>
              -->
-
-            
-            <div>
-  <h1>Guida completa: Termostufa a legna per termosifoni e acqua calda sanitaria</h1>
-  
-  <h2>Disponibilità di acqua calda sanitaria con termostufa a legna</h2>
-  <p>
+<div>
+<h1>Guida completa: Termostufa a legna per termosifoni e acqua calda sanitaria</h1>
+<h2>Disponibilità di acqua calda sanitaria con termostufa a legna</h2>
+<p>
     Una <strong>termostufa a legna</strong> può essere utilizzata sia per alimentare i termosifoni che per produrre <strong>acqua calda sanitaria (ACS)</strong>. Tuttavia, <strong>l’acqua calda sanitaria non è generalmente disponibile in modo istantaneo</strong> come avviene con alcune caldaie a gas o scaldabagni elettrici. La produzione di ACS tramite termostufa a legna <strong>richiede quasi sempre un sistema di accumulo</strong> (boiler o puffer) per garantire la disponibilità di acqua calda quando serve.
   </p>
-  
-  <h2>Come funziona la produzione di acqua calda sanitaria</h2>
-  <ul>
-    <li>
-      <strong>Scambio termico indiretto:</strong> La termostufa riscalda l’acqua tecnica (circuito chiuso), che a sua volta cede calore all’acqua sanitaria tramite uno scambiatore di calore all’interno di un <strong>bollitore ad accumulo</strong>.
+<h2>Come funziona la produzione di acqua calda sanitaria</h2>
+<ul>
+<li>
+<strong>Scambio termico indiretto:</strong> La termostufa riscalda l’acqua tecnica (circuito chiuso), che a sua volta cede calore all’acqua sanitaria tramite uno scambiatore di calore all’interno di un <strong>bollitore ad accumulo</strong>.
     </li>
-    <li>
-      <strong>Accumulo necessario:</strong> L’acqua sanitaria viene riscaldata e mantenuta a temperatura nel bollitore, così da essere disponibile anche quando la termostufa è spenta o non sta bruciando legna.
+<li>
+<strong>Accumulo necessario:</strong> L’acqua sanitaria viene riscaldata e mantenuta a temperatura nel bollitore, così da essere disponibile anche quando la termostufa è spenta o non sta bruciando legna.
     </li>
-    <li>
-      <strong>Tempi di attesa:</strong> Dopo l’accensione della termostufa, occorre attendere che il sistema raggiunga la temperatura di esercizio e che il bollitore accumuli abbastanza acqua calda. Il tempo varia in base alla potenza della termostufa, alla quantità di legna caricata e alla capacità del bollitore.
+<li>
+<strong>Tempi di attesa:</strong> Dopo l’accensione della termostufa, occorre attendere che il sistema raggiunga la temperatura di esercizio e che il bollitore accumuli abbastanza acqua calda. Il tempo varia in base alla potenza della termostufa, alla quantità di legna caricata e alla capacità del bollitore.
     </li>
-  </ul>
-  
-  <h2>Perché non è istantanea?</h2>
-  <p>
+</ul>
+<h2>Perché non è istantanea?</h2>
+<p>
     La <strong>combustione della legna</strong> non può essere regolata in modo rapido e preciso come un bruciatore a gas. Inoltre, la produzione di calore non è continua: dipende dal carico di legna e dalla gestione della combustione. L’accumulo serve proprio a compensare queste variazioni, garantendo una riserva di acqua calda pronta all’uso.
   </p>
-  
-  <h2>Consigli pratici per l’impianto</h2>
-  <ul>
-    <li>
-      <strong>Installare un bollitore adeguato:</strong> Scegli un <strong>bollitore ad accumulo</strong> dimensionato in base al numero di utenti e alle abitudini di consumo (tipicamente da 100 a 300 litri per uso domestico).
+<h2>Consigli pratici per l’impianto</h2>
+<ul>
+<li>
+<strong>Installare un bollitore adeguato:</strong> Scegli un <strong>bollitore ad accumulo</strong> dimensionato in base al numero di utenti e alle abitudini di consumo (tipicamente da 100 a 300 litri per uso domestico).
     </li>
-    <li>
-      <strong>Valutare un sistema integrato:</strong> Per garantire acqua calda anche quando la termostufa è spenta (ad esempio in estate), è consigliabile integrare un <strong>resistenza elettrica</strong> o un <strong>secondo generatore</strong> (come una caldaia a gas o una pompa di calore).
+<li>
+<strong>Valutare un sistema integrato:</strong> Per garantire acqua calda anche quando la termostufa è spenta (ad esempio in estate), è consigliabile integrare un <strong>resistenza elettrica</strong> o un <strong>secondo generatore</strong> (come una caldaia a gas o una pompa di calore).
     </li>
-    <li>
-      <strong>Manutenzione:</strong> Pulire regolarmente la termostufa e il bollitore per mantenere l’efficienza e la sicurezza dell’impianto.
+<li>
+<strong>Manutenzione:</strong> Pulire regolarmente la termostufa e il bollitore per mantenere l’efficienza e la sicurezza dell’impianto.
     </li>
-    <li>
-      <strong>Controllare la qualità dell’acqua:</strong> Se l’acqua è molto dura, valuta l’installazione di un <strong>addolcitore</strong> per proteggere il bollitore e gli scambiatori da incrostazioni.
+<li>
+<strong>Controllare la qualità dell’acqua:</strong> Se l’acqua è molto dura, valuta l’installazione di un <strong>addolcitore</strong> per proteggere il bollitore e gli scambiatori da incrostazioni.
     </li>
-  </ul>
-  
-  <h2>Considerazioni tecniche importanti</h2>
-  <ul>
-    <li>
-      <strong>Dimensionamento:</strong> La potenza della termostufa deve essere adeguata sia al riscaldamento degli ambienti sia alla produzione di ACS. Un tecnico qualificato può calcolare il fabbisogno termico corretto.
+</ul>
+<h2>Considerazioni tecniche importanti</h2>
+<ul>
+<li>
+<strong>Dimensionamento:</strong> La potenza della termostufa deve essere adeguata sia al riscaldamento degli ambienti sia alla produzione di ACS. Un tecnico qualificato può calcolare il fabbisogno termico corretto.
     </li>
-    <li>
-      <strong>Sicurezza:</strong> L’impianto deve essere dotato di <strong>valvole di sicurezza</strong>, <strong>vaso di espansione</strong> e <strong>centralina di controllo</strong> per gestire temperature e pressioni.
+<li>
+<strong>Sicurezza:</strong> L’impianto deve essere dotato di <strong>valvole di sicurezza</strong>, <strong>vaso di espansione</strong> e <strong>centralina di controllo</strong> per gestire temperature e pressioni.
     </li>
-    <li>
-      <strong>Normative:</strong> L’installazione deve rispettare le normative locali su canne fumarie, distanze di sicurezza e certificazioni degli apparecchi.
+<li>
+<strong>Normative:</strong> L’installazione deve rispettare le normative locali su canne fumarie, distanze di sicurezza e certificazioni degli apparecchi.
     </li>
-  </ul>
-  
-  <h2>Vantaggi e limiti della termostufa a legna per ACS</h2>
-  <ul>
-    <li>
-      <strong>Vantaggi:</strong> Risparmio sui costi energetici, utilizzo di fonte rinnovabile, autonomia dal gas metano.
+</ul>
+<h2>Vantaggi e limiti della termostufa a legna per ACS</h2>
+<ul>
+<li>
+<strong>Vantaggi:</strong> Risparmio sui costi energetici, utilizzo di fonte rinnovabile, autonomia dal gas metano.
     </li>
-    <li>
-      <strong>Limiti:</strong> Necessità di caricare la legna, tempi di attesa per l’acqua calda, produzione di ACS non istantanea, richiesta di spazio per l’accumulo.
+<li>
+<strong>Limiti:</strong> Necessità di caricare la legna, tempi di attesa per l’acqua calda, produzione di ACS non istantanea, richiesta di spazio per l’accumulo.
     </li>
-  </ul>
-  
-  <h2>Conclusione</h2>
-  <p>
-    <strong>L’acqua calda sanitaria con una termostufa a legna non è disponibile istantaneamente, ma richiede un sistema di accumulo</strong> per garantire comfort e continuità di servizio. Una progettazione accurata e una corretta integrazione con altri sistemi possono ottimizzare le prestazioni e la praticità dell’impianto.
+</ul>
+<h2>Conclusione</h2>
+<p>
+<strong>L’acqua calda sanitaria con una termostufa a legna non è disponibile istantaneamente, ma richiede un sistema di accumulo</strong> per garantire comfort e continuità di servizio. Una progettazione accurata e una corretta integrazione con altri sistemi possono ottimizzare le prestazioni e la praticità dell’impianto.
   </p>
 </div>
+<div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
+<h3>Hai altre domande?</h3>
+<p>Contattaci direttamente per una consulenza personalizzata:</p>
+<p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
+</div>
+</article>
+                
+                <div class="wiki-related">
+                    <h3>Domande correlate</h3>
+                    <ul>
+                        <li><a href="canna-fumaria-stufa-a-legna-quali-sono-i-materiali-migliori-e-più-sicuri-per-la-realizzazione-di-una-canna-fumaria-per-stufa-a-legna.html">Canna fumaria stufa a legna: Quali sono i materiali migliori e più sicuri per la realizzazione di una canna fumaria per stufa a legna?</a></li>
+<li><a href="come-la-coibentazione-della-canna-fumaria-mi-fa-risparmiare-sulla-bolletta.html">Come la coibentazione della canna fumaria mi fa risparmiare sulla bolletta.</a></li>
+<li><a href="come-si-capisce-se-il-problema-è-della-stufa-o-della-canna-fumaria.html">Come si capisce se il problema è della stufa o della canna fumaria?</a></li>
 
-
-    <div class="contact-info" style="margin: 2rem 0; padding: 1rem; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #1e3c72;">
-        <h3>Hai altre domande?</h3>
-        <p>Contattaci direttamente per una consulenza personalizzata:</p>
-        <p><a href="tel:+393801568721" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">📞 Chiama Ora: 380 156 8721</a></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contatti</h3>
+                    <p>📞 Telefono: 380 156 8721</p>
+                    <p>📧 Email: info@cannefumarieverona.it</p>
+                    <p>🏠 Indirizzo: Verona, Italia</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Collegamenti Rapidi</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#servizi">Servizi</a></li>
+                        <li><a href="index.html">FAQ</a></li>
+                        <li><a href="../comuni.html">Comuni Serviti</a></li>
+                        <li><a href="../normative.html">Normative</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Seguici</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
             
-        </article>
-
-        <!-- 
-        <section>
-            <h2>Caratteristiche</h2> <table>
-                <tbody>
-                    [FUTURES] <tr>
-                        <td>{NAME}</td> <td>{VALUE}</td> </tr>
-                    [/FUTURES] </tbody>
-            </table>
-        </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Breve descrizione</h2> <p>{SHORT}</p>
-        </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Descrizione completa</h2> {FULL} </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Video</h2> [MOVIES] <article>
-                <h3>{MOVIE_TITLE}</h3> <p>{MOVIE_DESCRIPTION}</p> <iframe class="movie" src="https://www.youtube.com/embed/{MOVIE}" title="{MOVIE_TITLE}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            </article>
-            [/MOVIES] </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Domande Frequenti (FAQ)</h2> [FAQ] <div>
-                <h4>{QUESTION}</h4> <p>{ANSWER}</p> </div>
-            [/FAQ] </section>
-         -->
-
-        <!-- 
-        <section>
-            <h2>Recensioni</h2> [REVIEWS] <blockquote>
-                <p>{REVIEW}</p> <footer>— <cite>{AUTHOR}</cite></footer> </blockquote>
-            [/REVIEWS] </section>
-         -->
-
-    </main>
-
+            <div class="copyright">
+                <p>&copy; 2025 Preventivi Canne Fumarie Verona. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/unified-menu.js"></script>
 </body>
+
 </html>
