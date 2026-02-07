@@ -12,45 +12,10 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/custom.css">
     
     <style>
-        body {
-            font-family: sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .breadcrumb {
-            background-color: #f8f9fa;
-            padding: 10px 0;
-            margin-bottom: 20px;
-        }
-        
-        .breadcrumb a {
-            color: #1e3c72;
-            text-decoration: none;
-        }
-        
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        
-        .section {
-            padding: 40px 0;
-        }
-        
-        h1 {
-            color: #1e3c72;
-            margin-bottom: 20px;
-        }
-        
         .contact-form {
             max-width: 800px;
             margin: 0 auto;
@@ -123,16 +88,15 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#">Servizi</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#" onclick="showPage('servizi')">Tutti i Servizi</a></li>
+                            <li><a href="servizi.html">Tutti i Servizi</a></li>
                             <li><a href="guida-installazione.html">Guida Installazione</a></li>
-                            <li><a href="#" onclick="showPage('canna-fumaria-esterna')">Canna Fumaria Esterna</a></li>
+                            <li><a href="canna-fumaria-esterna.html">Canna Fumaria Esterna</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#">FAQ</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#" onclick="showPage('faq')">Tutte le Domande Frequenti</a></li>
-                            <li><a href="faq/index.html">Archivio FAQ Completo</a></li>
+                            <li><a href="faq/index.html">Tutte le Domande Frequenti</a></li>
                             <li class="dropdown-submenu">
                                 <a class="dropdown-toggle" href="#">Categorie FAQ</a>
                                 <ul class="dropdown-menu">
@@ -148,24 +112,10 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="#">Stufe a Pellet</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" onclick="showPage('stufe-pellet-intro')">Introduzione e Normativa</a></li>
-                            <li><a href="#" onclick="showPage('stufe-pellet-tipologie')">Tipologie di Stufe</a></li>
-                            <li><a href="#" onclick="showPage('stufe-pellet-confronto')">Con o Senza Canna Fumaria</a></li>
-                            <li><a href="#" onclick="showPage('stufe-pellet-dimensioni')">Dimensioni e Materiali</a></li>
-                            <li><a href="#" onclick="showPage('stufe-pellet-marche')">Migliori Marche</a></li>
-                            <li><a href="#" onclick="showPage('stufe-pellet-installazione')">Installazione</a></li>
-                            <li><a href="#" onclick="showPage('stufe-pellet-ibridi')">Sistemi Ibridi</a></li>
-                            <li><a href="#" onclick="showPage('stufe-pellet-prezzi')">Prezzi e Accessori</a></li>
-                            <li><a href="faq/index.html#stufe-pellet">FAQ Stufe a Pellet</a></li>
-                            <li><a href="#" onclick="showPage('stufe-pellet-manutenzione')">Manutenzione</a></li>
-                        </ul>
-                    </li>
                     <li><a href="materiali.html">Materiali</a></li>
                     <li><a href="comuni.html">Comuni Serviti</a></li>
                     <li><a href="normative.html">Normative</a></li>
+                    <li><a href="preventivo.html" class="active cta-nav">Richiedi Preventivo</a></li>
                 </ul>
             </div>
         </div>
@@ -242,56 +192,12 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/cookie-consent.js"></script>
     <script>
-        // Mobile menu functionality
+        // Form submission handling
         document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            const menuOverlay = document.querySelector('.menu-overlay');
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-            // Toggle mobile menu
-            if (menuToggle) {
-                menuToggle.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                    menuOverlay.classList.toggle('active');
-                    document.body.classList.toggle('menu-open');
-                });
-            }
-
-            // Close menu when clicking overlay
-            if (menuOverlay) {
-                menuOverlay.addEventListener('click', function() {
-                    menuToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    menuOverlay.classList.remove('active');
-                    document.body.classList.remove('menu-open');
-                });
-            }
-
-            // Toggle dropdowns on mobile
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
-                    // Only handle click for mobile view
-                    if (window.innerWidth <= 992) {
-                        e.preventDefault();
-                        const dropdown = this.closest('.dropdown');
-
-                        // Close other open dropdowns
-                        document.querySelectorAll('.dropdown.active').forEach(item => {
-                            if (item !== dropdown) {
-                                item.classList.remove('active');
-                            }
-                        });
-
-                        // Toggle current dropdown
-                        dropdown.classList.toggle('active');
-                    }
-                });
-            });
-            
-            // Form submission handling
             const form = document.getElementById('preventivo-form');
             if (form) {
                 form.addEventListener('submit', function(e) {
