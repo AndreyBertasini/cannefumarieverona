@@ -1,0 +1,13 @@
+{
+  "name": "canne-fumarie-verona",
+  "version": "1.0.0",
+  "description": "Unified Menu JavaScript for Canne Fumarie Verona",
+  "main": "js/unified-menu.js",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
