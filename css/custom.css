@@ -1,0 +1,252 @@
+/* Modern Mobile Optimization - 2025 Edition */
+@media (max-width: 768px) {
+    /* General Layout Improvements */
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .container {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Typography for Mobile */
+    h1 {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    /* Navigation Improvements */
+    .nav-container {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        padding: 8px;
+    }
+
+    /* Button Optimization */
+    .cta-button, .phone-cta {
+        display: block;
+        width: 100%;
+        padding: 12px 15px;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    /* Separate margin for phone-cta to avoid conflicts */
+    .phone-cta {
+        margin: 15px 0;
+    }
+
+    /* Content Cards */
+    .content-card {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 30px 0;
+    }
+
+    .hero-content {
+        padding: 20px 15px;
+    }
+
+    /* Section Spacing */
+    .section {
+        padding: 30px 0;
+    }
+
+    /* FAQ Specific */
+    .faq-question-item {
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    .faq-breadcrumb {
+        margin-bottom: 15px;
+    }
+
+    #faq-search-input {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    /* Touch Targets */
+    a, button, .nav-links li a, .dropdown-toggle {
+        padding: 10px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Form Elements */
+    input, select, textarea {
+        font-size: 16px;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+/* iPhone Specific Optimizations */
+@media (max-width: 428px) {
+    .hero-content h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .content-card {
+        padding: 12px;
+    }
+}
+
+/* Samsung/Android Specific Optimizations */
+@media (min-width: 360px) and (max-width: 412px) {
+    body {
+        font-size: 15px;
+    }
+
+    .nav-container {
+        padding: 8px 12px;
+    }
+}
+
+/* Cookie Consent Styles */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cookie-consent-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cookie-consent h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffd700;
+    font-size: 1.3rem;
+}
+
+.cookie-consent p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.cookie-consent-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.cookie-accept-btn {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.cookie-decline-btn {
+    background: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cookie-accept-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.cookie-decline-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .cookie-consent {
+        padding: 15px;
+    }
+
+    .cookie-consent h3 {
+        font-size: 1.1rem;
+    }
+
+    .cookie-consent p {
+        font-size: 0.9rem;
+    }
+
+    .cookie-consent-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .cookie-accept-btn, .cookie-decline-btn {
+        width: 100%;
+        padding: 12px 15px;
+    }
+}
