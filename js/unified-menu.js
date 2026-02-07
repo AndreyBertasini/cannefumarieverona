@@ -75,8 +75,10 @@ function isIndexPage() {
  * Highlight the current page in the navigation menu
  */
 function highlightCurrentPage() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+
     // Remove active class from all nav links
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    navLinks.forEach(link => {
         link.classList.remove('active');
     });
     
@@ -85,7 +87,7 @@ function highlightCurrentPage() {
     const currentHash = window.location.hash;
     
     // Find matching link and add active class
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    navLinks.forEach(link => {
         const href = link.getAttribute('href');
         
         if (href) {
