@@ -256,42 +256,6 @@
     document.addEventListener('DOMContentLoaded', function() {
         setupFaqSearch();
     });
-
-    // FAQ Search functionality
-    function setupFaqSearch() {
-        const searchInput = document.getElementById('faq-search-input');
-        if (searchInput) {
-            searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase();
-                const questionItems = document.querySelectorAll('.faq-question-item');
-
-                questionItems.forEach(item => {
-                    const questionText = item.textContent.toLowerCase();
-                    if (questionText.includes(searchTerm)) {
-                        item.style.display = '';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-
-                // Show/hide categories based on visible questions
-                const categories = document.querySelectorAll('.faq-category');
-                categories.forEach(category => {
-                    const visibleQuestions = category.querySelectorAll('.faq-question-item[style=""]').length;
-                    if (visibleQuestions === 0) {
-                        category.style.display = 'none';
-                    } else {
-                        category.style.display = '';
-                    }
-                });
-            });
-        }
-    }
-
-    // Initialize FAQ functionality when DOM is loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        setupFaqSearch();
-    });
     </script>
 <style>
         * {
