@@ -28,18 +28,58 @@ function showPage(pageId) {
     highlightCurrentPage(pageId);
 }
 
+// Global cache for navigation links to optimize repeated DOM queries
+let navLinksCache = null;
+let pageIdToLinksMap = new Map();
+
+/**
+ * Initializes the navigation links cache
+ */
+function initNavigationCache() {
+    navLinksCache = document.querySelectorAll('.nav-links a');
+    pageIdToLinksMap.clear();
+
+    navLinksCache.forEach(link => {
+        const onclick = link.getAttribute('onclick');
+        if (onclick) {
+            const match = onclick.match(/showPage\('([^']+)'\)/);
+            if (match) {
+                const pageId = match[1];
+                if (!pageIdToLinksMap.has(pageId)) {
+                    pageIdToLinksMap.set(pageId, []);
+                }
+                pageIdToLinksMap.get(pageId).push(link);
+            }
+        }
+    });
+}
+
 /**
  * Highlights the current page in the navigation menu
  * @param {string} pageId - The ID of the current page
  */
 function highlightCurrentPage(pageId) {
-    // Remove active class from all nav links
-    document.querySelectorAll('.nav-links > li > a').forEach(link => {
+    // If cache is not initialized, initialize it
+    if (!navLinksCache) {
+        initNavigationCache();
+    }
+
+    // Remove active class from all nav links in cache
+    navLinksCache.forEach(link => {
         link.classList.remove('active');
+
+        // Also clear active from parent dropdown toggle if any
+        const parentLi = link.closest('li').closest('.dropdown');
+        if (parentLi) {
+            const dropdownToggle = parentLi.querySelector('.dropdown-toggle');
+            if (dropdownToggle) {
+                dropdownToggle.classList.remove('active');
+            }
+        }
     });
 
-    // Add active class to current page link
-    const currentPageLinks = document.querySelectorAll(`.nav-links a[onclick="showPage('${pageId}')"]`);
+    // Add active class to current page links using the Map for O(1) lookup
+    const currentPageLinks = pageIdToLinksMap.get(pageId) || [];
     currentPageLinks.forEach(link => {
         // If link is in dropdown, activate parent dropdown
         const parentLi = link.closest('li').closest('.dropdown');
@@ -58,6 +98,9 @@ function highlightCurrentPage(pageId) {
  * Initialize navigation when DOM is loaded
  */
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize navigation cache
+    initNavigationCache();
+
     // Get the current page from URL hash or default to home
     const currentPage = window.location.hash.substring(1) || 'home';
     
