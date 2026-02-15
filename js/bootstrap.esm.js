@@ -749,27 +749,6 @@ const SelectorEngine = {
     }
     return parents;
   },
-  prev(element, selector) {
-    let previous = element.previousElementSibling;
-    while (previous) {
-      if (previous.matches(selector)) {
-        return [previous];
-      }
-      previous = previous.previousElementSibling;
-    }
-    return [];
-  },
-  // TODO: this is now unused; remove later along with prev()
-  next(element, selector) {
-    let next = element.nextElementSibling;
-    while (next) {
-      if (next.matches(selector)) {
-        return [next];
-      }
-      next = next.nextElementSibling;
-    }
-    return [];
-  },
   focusableChildren(element) {
     const focusables = ['a', 'button', 'input', 'textarea', 'select', 'details', '[tabindex]', '[contenteditable="true"]'].map(selector => `${selector}:not([tabindex^="-"])`).join(',');
     return this.find(focusables, element).filter(el => !isDisabled(el) && isVisible(el));
@@ -1758,7 +1737,7 @@ class Dropdown extends BaseComponent {
     this._popper = null;
     this._parent = this._element.parentNode; // dropdown wrapper
     // TODO: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.3/forms/input-group/
-    this._menu = SelectorEngine.next(this._element, SELECTOR_MENU)[0] || SelectorEngine.prev(this._element, SELECTOR_MENU)[0] || SelectorEngine.findOne(SELECTOR_MENU, this._parent);
+    this._menu = SelectorEngine.findOne(SELECTOR_MENU, this._parent);
     this._inNavbar = this._detectNavbar();
   }
 
@@ -2017,7 +1996,7 @@ class Dropdown extends BaseComponent {
     event.preventDefault();
 
     // TODO: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.3/forms/input-group/
-    const getToggleButton = this.matches(SELECTOR_DATA_TOGGLE$3) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$3)[0] || SelectorEngine.next(this, SELECTOR_DATA_TOGGLE$3)[0] || SelectorEngine.findOne(SELECTOR_DATA_TOGGLE$3, event.delegateTarget.parentNode);
+    const getToggleButton = this.matches(SELECTOR_DATA_TOGGLE$3) ? this : SelectorEngine.findOne(SELECTOR_DATA_TOGGLE$3, event.delegateTarget.parentNode);
     const instance = Dropdown.getOrCreateInstance(getToggleButton);
     if (isUpOrDownEvent) {
       event.stopPropagation();
@@ -3949,7 +3928,7 @@ class ScrollSpy extends BaseComponent {
     for (const listGroup of SelectorEngine.parents(target, SELECTOR_NAV_LIST_GROUP)) {
       // Set triggered links parents as active
       // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
-      for (const item of SelectorEngine.prev(listGroup, SELECTOR_LINK_ITEMS)) {
+      for (const item of SelectorEngine.find(SELECTOR_LINK_ITEMS, listGroup.parentElement).filter(el => el.nextElementSibling === listGroup)) {
         item.classList.add(CLASS_NAME_ACTIVE$1);
       }
     }
