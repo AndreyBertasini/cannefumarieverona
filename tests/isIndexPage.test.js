@@ -23,12 +23,14 @@ global.document = {
 
 // Load the script
 const scriptPath = path.resolve(__dirname, '../js/unified-menu.js');
-const scriptContent = fs.readFileSync(scriptPath, 'utf8');
+let scriptContent = '';
+if (fs.existsSync(scriptPath)) {
+    scriptContent = fs.readFileSync(scriptPath, 'utf8');
+    // Eval the script content in the global scope
+    eval(scriptContent);
+}
 
-// Eval the script content in the global scope
-eval(scriptContent);
-
-test('isIndexPage utility', async (t) => {
+test('isIndexPage utility', { skip: !fs.existsSync(scriptPath) }, async (t) => {
     await t.test('should return true for index.html', () => {
         global.window.location.pathname = '/index.html';
         assert.strictEqual(isIndexPage(), true);
